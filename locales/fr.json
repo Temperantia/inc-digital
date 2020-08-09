@@ -1,0 +1,87 @@
+{
+    "links": {
+        "english": "Version Anglaise",
+        "french": "Version Française"
+    },
+    "navbar": {
+        "home": "Accueil",
+        "expertise": "Expertise"
+    },
+    "footer": {
+        "copyright": "INC-Digital Tous Droits réservés.",
+        "descriptionPrefix": "INC-DIGITAL EST UNE ENTREPRISE",
+        "descriptionSuffix": ""
+    },
+    "index": {
+        "home": {
+            "hello": "Bonjour !",
+            "whoWeAre": "Nous sommes une agence localisée à Paris, France.",
+            "weFocusOn": "Nous portons notre attention sur",
+            "research": "Recherche",
+            "planning": "Planification",
+            "delivery": "Livraison"
+        },
+        "workflow": {
+            "title": "Workflow",
+            "ourStrategy": "Notre stratégie est de vous aider à améliorer l'efficacité, le chiffre d'affaire global, et les opérations quotidiennes de votre entreprise. Notre méthode de travail nous permet d'anticiper les besoins, et d'apporter de la flexibilité et du pragmatisme pour la livraison des produits finis.",
+            "communicate": {
+                "title": "Communiquer",
+                "description": "Nous commençons chacun de nos project client avec une curiosité stratégique. Nous posons les questions qui nous permette de comprendre ce que nos client veulent, et ce dont ils ont besoin."
+            },
+            "evaluate": {
+                "title": "Évaluer",
+                "description": "Le principal objectif de l'évaluation, en plus de mieux comprendre les initiatives antérieures ou existantes, est de permettre la réflexion et d'aider à l'identification des changements futurs."
+            },
+            "design": {
+                "title": "Concevoir",
+                "description": "Nous adaptons votre vision du concept à l'intégration pour apporter à votre projet une conception élégante et optimisée pour l'utilisateur."
+            },
+            "develop": {
+                "title": "Développer",
+                "description": "La phase de développement est l'implémentation du programme dans un language machine. Nous traduisons les spécifications de conception dans le code source."
+            },
+            "test": {
+                "title": "Tester",
+                "description": "Les tests permettent aux développeurs de fournir des logiciels qui répondent aux attentes, empêchent les résultats inattendus et améliorent la maintenance à long terme de l'application."
+            },
+            "release": {
+                "title": "Déployer",
+                "description": "Un déploiement est la distribution de la version finale d'une application. Nous nous assurons que le projet est livré à temps et que nous sommes en accord avec nos clients."
+            },
+            "support": {
+                "title": "Assister",
+                "description": "Nous nous assurons de répondre aux besoins de maintenance pour prendre en charge les nouvelles fonctionnalités souhaitées par les utilisateurs ou pour modifier différents types de fonctionnalités du système en fonction des demandes des clients."
+            }
+        },
+        "expertise": {
+            "title": "Un ensemble de compétences puissantes et solides",
+            "description": "Des solutions variées et innovantes pour tirer le meilleur parti de votre potentiel.",
+            "software": {
+                "title": "Logiciel",
+                "mobileDevelopment": "Développement mobile",
+                "desktopApplications": "Applications de bureau",
+                "scriptAutomation": "Automatisation de scripts",
+                "fullStack": "Full Stack",
+                "QATesting": "Contrôle qualité et tests",
+                "websiteDevelopment": "Développement de site Web",
+                "ourPhilosophy": "Lors de la création d'un logiciel, nous mettons l'utilisateur final au cœur du processus de conception. Nous veillons à performer au-delà des attentes. Nous nous soucions de l'expérience utilisateur, de l'interface utilisateur, mais aussi de la portabilité, de la fiabilité, de la flexibilité, de la maintenabilité et de la rentabilité. Nos logiciels font ce pour quoi ils sont conçus, ni plus ni moins."
+            },
+            "marketingAndDesign": {
+                "title": "Marketing & Design",
+                "uiUxDesign": "Design UI/UX",
+                "illustration": "Illustration",
+                "designConsulting": "Conseil en Design",
+                "branding": "Image de Marque",
+                "dataAnalysis": "Analyse des Données",
+                "seoSocialCampaigns": "Référencement & Campagnes Sociales",
+                "businessPlanning": "Planning d'affaires",
+                "advertisementAndContent": "Publicité & Contenu",
+                "ourPhilosophy": "Notre philosophie marketing repose vraiment sur une empathie honnête avec vos clients. Notre objectif est de permettre aux entreprises de communiquer avec les gens aussi efficacement que possible. En ce qui concerne notre conception, nous créons de l'art à partir des attentes des clients. Notre objectif est de nous intégrer à votre équipe pour vous aider à identifier et atteindre vos objectifs et développer votre entreprise."
+            }
+        },
+        "technology": {
+            "title": "La technologie est ce que nous sommes",
+            "description": "Nous utilisons de nombreux outils et technologies pour réaliser votre vision."
+        }
+    }
+}
