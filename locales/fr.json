@@ -14,6 +14,9 @@
     },
     "index": {
         "home": {
+            "bannerLine1": "Nous vous aidons à ",
+            "bannerLine2": "construire une nouvelle ",
+            "bannerLine3": "version de votre business",
             "hello": "Bonjour !",
             "whoWeAre": "Nous sommes une agence localisée à Paris, France.",
             "weFocusOn": "Nous portons notre attention sur",
