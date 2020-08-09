@@ -25,7 +25,7 @@
       <NuxtLink
         v-if="$i18n.locale === 'en'"
         :to="`/fr` + $route.fullPath"
-        class="Header__Link"
+        style="margin-right: 150px; color: #adecf4; text-decoration: none;"
         active-class="none"
         exact
       >{{ $t('links.french') }}</NuxtLink>
@@ -33,7 +33,7 @@
       <NuxtLink
         v-else
         :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-        class="Header__Link"
+        style="margin-right: 150px; color: #adecf4; text-decoration: none;"
         active-class="none"
         exact
       >{{ $t('links.english') }}</NuxtLink>
