@@ -14,6 +14,9 @@
     },
     "index": {
         "home": {
+            "bannerLine1": "We help you build",
+            "bannerLine2": "a new version",
+            "bannerLine3": "of your business",
             "hello": "Bonjour !",
             "whoWeAre": "We are a software development agency located in Paris, France.",
             "weFocusOn": "We focus on",

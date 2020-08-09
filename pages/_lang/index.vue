@@ -2,10 +2,12 @@
   <v-layout column justify-center align-center>
     <v-img width="100%" src="/header.png">
       <v-col cols="4" offset="8" style="height: 100%;">
-        <div style="position: absolute; right: 10%; bottom: 10%; font-size: 3vw; color: white;">
-          <div class="pl-10">We help you build</div>
-          <div class="pl-5">a new version</div>
-          <div>of your business</div>
+        <div
+          style="position: absolute; left: 62%; bottom: 10%; font-size: 3vw; color: white; white-space:nowrap;"
+        >
+          <div class="pl-16">{{$t('index.home.bannerLine1')}}</div>
+          <div class="pl-8">{{$t('index.home.bannerLine2')}}</div>
+          <div>{{$t('index.home.bannerLine3')}}</div>
         </div>
       </v-col>
     </v-img>
