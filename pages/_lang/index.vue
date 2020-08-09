@@ -14,12 +14,12 @@
     <v-container id="home" width="50" class="text-center">
       <v-row>
         <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">Bonjour!</h2>
+          <h2 class="pa-3">{{$t('index.home.hello')}}</h2>
           <v-divider width="20%" color="black"></v-divider>
         </v-col>
       </v-row>
       <v-container class="text-center">
-        <h3 class="pa=2">We are a software development agency located in Paris, France.</h3>
+        <h3 class="pa=2">{{$t('index.home.whoWeAre')}}</h3>
       </v-container>
     
       </br>
@@ -27,7 +27,7 @@
 
       <v-row>
         <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">We focus on </h2>
+          <h2 class="pa-3">{{$t('index.home.weFocusOn')}}</h2>
           <v-divider width="20%" color="black"></v-divider>
         </v-col>
 
@@ -35,15 +35,15 @@
       <v-row>
         <v-col cols="4" align="center">
           <v-img width="250" src="/icon-research.png"></v-img>
-          <h4>Research</h4>
+          <h4>{{$t('index.home.research')}}</h4>
         </v-col>
         <v-col cols="4" align="center">
           <v-img width="250" src="/icon-planning.png"></v-img>
-          <h4>Planning</h4>
+          <h4>{{$t('index.home.planning')}}</h4>
         </v-col>
         <v-col cols="4" align="center">
           <v-img width="250" src="/icon-delivery.png"></v-img>
-          <h4>Delivery</h4>
+          <h4>{{$t('index.home.delivery')}}</h4>
         </v-col>
       </v-row>
 
@@ -52,13 +52,13 @@
 
       <v-row>
         <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">Workflow</h2>
+          <h2 class="pa-3">{{$t('index.workflow.title')}}</h2>
           <v-divider width="20%" color="black"></v-divider>
         </v-col>
       </v-row>
       </br>
       <v-row>
-        <v-col>Our strategy is to help you improve the efficiency, overall revenue, and day-to-day operations of your business. The workflow allows us anticipates the need for flexibility and applies a level of pragmatism to the delivery of the finished product.</v-col>
+        <v-col>{{$t('index.workflow.ourStrategy')}}</v-col>
       </v-row>
 
       </br>
@@ -66,62 +66,62 @@
       <v-row>
         <v-col align="center">
           <v-img width="100" src="/icon-communicate.png"></v-img>
-          <h4>01. Communicate</h4>
+          <h4>01. {{$t('index.workflow.communicate.title')}}</h4>
           </br>
-          <p>We begin every client project with strategic curiosity. We ask questions designed to understand what our clients want and need. </p>
+          <p>{{$t('index.workflow.communicate.description')}} </p>
         </v-col>
         <v-col align="center">
           <v-img width="100" src="/icon-evaluate.png"></v-img>
-          <h4>02. Evaluate</h4>
+          <h4>02. {{$t('index.workflow.evaluate.title')}}</h4>
           </br>
-          <p>The primary purpose of evaluation, in addition to gaining insight into prior or existing initiatives, is to enable reflection and assist in the identification of future change.</p>
+          <p>{{$t('index.workflow.evaluate.description')}}</p>
         </v-col>
         <v-col align="center">
           <v-img width="100" src="/icon-design.png"></v-img>
-          <h4>03. Design</h4>
+          <h4>03. {{$t('index.workflow.design.title')}}</h4>
           </br>
-          <p>We actualize your vision from concept to integration to bring beautiful, user-optimized design to your project</p>
+          <p>{{$t('index.workflow.design.description')}}</p>
         </v-col>
         <v-col align="center">
           <v-img width="100" src="/icon-develop.png"></v-img>
-          <h4>04. Develop</h4>
+          <h4>04. {{$t('index.workflow.develop.title')}}</h4>
           </br>
-          <p>Development phase is about transforming the design of a system into a computer language format. We translate design specifications into the source code.</p>
+          <p>{{$t('index.workflow.develop.description')}}</p>
         </v-col>
       </v-row>
       <v-row>
         <v-col align="center">
           <v-img width="100" src="/icon-test.png"></v-img>
-          <h4>05. Test</h4>
+          <h4>05. {{$t('index.workflow.test.title')}}</h4>
           </br>
-          <p>Testing allows developers to deliver software that meets expectations, prevents unexpected results, and improves the long term maintenance of the application.</p>
+          <p>{{$t('index.workflow.test.description')}}</p>
         </v-col>
         <v-col align="center">
           <v-img width="100" src="/icon-release.png"></v-img>
-          <h4>06. Release</h4>
-          <p>A release is the distribution of the final version of an application. We ensure that the project is delivered in time and that we are in phase with our customers.</p>
+          <h4>06. {{$t('index.workflow.release.title')}}</h4>
+          <p>{{$t('index.workflow.release.description')}}</p>
         </v-col>
         <v-col align="center">
           <v-img width="100" src="/icon-support.png"></v-img>
-          <h4>07. Support</h4>
-          <p>We make sure to meet the needs of maintenance to support the new features that the users want or to change different types of functionalities of the system according to the customer demands.</p>
+          <h4>07. {{$t('index.workflow.support.title')}}</h4>
+          <p>{{$t('index.workflow.support.description')}}</p>
         </v-col>
       </v-row>
       <v-row id="expertise">
         <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">A powerful and robust skillset</h2>
+          <h2 class="pa-3">{{$t('index.expertise.title')}}</h2>
           <v-divider width="20%" color="black"></v-divider>
         </v-col>
       </v-row>
       <v-row>
-        <v-col>Extensive and innovative to get the most out of your bottom line.</v-col>
+        <v-col>{{$t('index.expertise.description')}}</v-col>
       </v-row>
         <v-row class="text-left">
         <v-col col="7">
           <v-img src="/section-software.png"></v-img>
         </v-col>
         <v-col col="5">
-          <h3 class="py-3">Software</h3>
+          <h3 class="py-3">{{$t('index.expertise.software.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
@@ -129,13 +129,13 @@
                 <v-img width="50" src="/small-icon-mobile.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Mobile Development</h4>
+                <h4>{{$t('index.expertise.software.mobileDevelopment')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-app.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Desktop Applications</h4>
+                <h4>{{$t('index.expertise.software.desktopApplications')}}</h4>
               </v-col>
             </v-row>
             <v-row>
@@ -143,13 +143,13 @@
                 <v-img width="50" src="/small-icon-script.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Script Automation</h4>
+                <h4>{{$t('index.expertise.software.scriptAutomation')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-stack.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Full Stack</h4>
+                <h4>{{$t('index.expertise.software.fullStack')}}</h4>
               </v-col>
             </v-row>
             <v-row>
@@ -157,18 +157,18 @@
                 <v-img width="50" src="/small-icon-QA.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>QA & Testing</h4>
+                <h4>{{$t('index.expertise.software.QATesting')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-web.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Website Development</h4>
+                <h4>{{$t('index.expertise.software.websiteDevelopment')}}</h4>
               </v-col>
             </v-row>
             <v-row>
               <v-col cols="12">
-                <p>While making software, we take into account the final user point of view. We ensure to perform above and beyond expectations. We care about User Experience, User Interface but also Portability, Reliability, Flexibility, Maintainability & Cost Effectiveness. They do what they are designed to, not more or less.</p>
+                <p>{{$t('index.expertise.software.ourPhilosophy')}}</p>
               </v-col>
             </v-row>
           </v-container>
@@ -176,7 +176,7 @@
       </v-row>
       <v-row class="text-left">
         <v-col col="5">
-          <h3 class="py-3">Marketing & Design</h3>
+          <h3 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
@@ -184,13 +184,13 @@
                 <v-img width="50" src="/small-icon-UI.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>UI/UX Design</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.uiUxDesign')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-illus.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Illustration</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.illustration')}}</h4>
               </v-col>
             </v-row>
             <v-row>
@@ -198,13 +198,13 @@
                 <v-img width="50" src="/small-icon-consult.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Design Consulting</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.designConsulting')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-brand.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Branding</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.branding')}}</h4>
               </v-col>
             </v-row>
             <v-row>
@@ -212,13 +212,13 @@
                 <v-img width="50" src="/small-icon-analysis.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Data Analysis</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.dataAnalysis')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-SEO.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>SEO & Social Campaigns</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.seoSocialCampaigns')}}</h4>
               </v-col>
             </v-row>
             <v-row>
@@ -226,20 +226,19 @@
                 <v-img width="50" src="/small-icon-strategy.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Business Planning</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.businessPlanning')}}</h4>
               </v-col>
               <v-col cols="2" align-self="center">
                 <v-img width="50" src="/small-icon-advert.png"></v-img>
               </v-col>
               <v-col cols="4" align-self="center">
-                <h4>Advertisements & Content</h4>
+                <h4>{{$t('index.expertise.marketingAndDesign.advertisementAndContent')}}</h4>
               </v-col>
             </v-row>
             <v-row>
               <v-col cols="12">
                 <p>
-                  Our marketing philosophy is really all about honest empathy with your customers. Our goal is to be able to make business communicating with people as efficiently as possible.
-                  As for our design thinking, We create Art from client expectations. Our goal is to integrate with your team to help you identify and achieve your objectives and grow your business.
+                  {{$t('index.expertise.marketingAndDesign.ourPhilosophy')}}
                 </p>
               </v-col>
             </v-row>
@@ -252,16 +251,16 @@
     
       <v-row>
         <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">Technology is who we are</h2>
+          <h2 class="pa-3"> {{$t('index.technology.title')}}</h2>
           <v-divider width="20%" color="black"></v-divider>
         </v-col>
       </v-row>
       <v-row>
-        <v-col>We utilize many platforms and frameworks to accomplish your vision.</v-col>
+        <v-col>{{$t('index.technology.description')}}</v-col>
       </v-row>
       <v-row>
         <v-col>
-          <v-img src="section-tech.png"></v-img>
+          <v-img src="/section-tech.png"></v-img>
         </v-col>
       </v-row>
     </v-container>

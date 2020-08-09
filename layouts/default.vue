@@ -21,6 +21,7 @@
         style="margin-right: 150px; color: #adecf4; text-decoration: none;"
         href="#expertise"
       >{{$t('navbar.expertise')}}</a>
+
       <NuxtLink
         v-if="$i18n.locale === 'en'"
         :to="`/fr` + $route.fullPath"
@@ -28,6 +29,7 @@
         active-class="none"
         exact
       >{{ $t('links.french') }}</NuxtLink>
+
       <NuxtLink
         v-else
         :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
@@ -53,11 +55,11 @@
           <v-col
             cols="8"
             align-self="center"
-          >&copy; {{ new Date().getFullYear() }} INC-Digital All Rights reserved.</v-col>
+          >&copy; {{ new Date().getFullYear() }} {{$t('footer.copyright')}}</v-col>
           <v-col cols="4" style="display: flex; align-items: center;">
-            <span>INC-DIGITAL IS AN</span>
+            <span>{{$t('footer.descriptionPrefix')}}</span>
             <img class="mx-2" width="100" src="/inclusiveLogotype.png" />
-            COMPANY
+            {{$t('footer.descriptionSuffix')}}
           </v-col>
         </v-row>
       </v-container>
