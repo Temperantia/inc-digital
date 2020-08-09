@@ -1,0 +1,10 @@
+{
+    "links": {
+        "english": "English Version",
+        "french": "French Version"
+    },
+    "navbar": {
+        "home": "Home",
+        "expertise": "Expertise"
+    }
+}

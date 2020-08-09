@@ -13,9 +13,29 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <a style="margin-right: 150px; color: #ff9800; text-decoration: none;" href="#home">Home</a>
-      <a style="margin-right: 150px; color: #adecf4; text-decoration: none;" href="#expertise">Expertise</a>
-      <a  style="margin-right: 100px;"></a>
+      <a
+        style="margin-right: 150px; color: #ff9800; text-decoration: none;"
+        href="#home"
+      >{{$t('navbar.home')}}</a>
+      <a
+        style="margin-right: 150px; color: #adecf4; text-decoration: none;"
+        href="#expertise"
+      >{{$t('navbar.expertise')}}</a>
+      <NuxtLink
+        v-if="$i18n.locale === 'en'"
+        :to="`/fr` + $route.fullPath"
+        class="Header__Link"
+        active-class="none"
+        exact
+      >{{ $t('links.french') }}</NuxtLink>
+      <NuxtLink
+        v-else
+        :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
+        class="Header__Link"
+        active-class="none"
+        exact
+      >{{ $t('links.english') }}</NuxtLink>
+      <a style="margin-right: 100px;"></a>
     </v-toolbar>
 
     <v-main>
@@ -30,10 +50,13 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="8" align-self="center">&copy; {{ new Date().getFullYear() }} INC-Digital All Rights reserved.</v-col>
+          <v-col
+            cols="8"
+            align-self="center"
+          >&copy; {{ new Date().getFullYear() }} INC-Digital All Rights reserved.</v-col>
           <v-col cols="4" style="display: flex; align-items: center;">
             <span>INC-DIGITAL IS AN</span>
-            <img class="mx-2" width="100" src="/inclusiveLogotype.png">
+            <img class="mx-2" width="100" src="/inclusiveLogotype.png" />
             COMPANY
           </v-col>
         </v-row>
