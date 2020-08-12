@@ -260,10 +260,214 @@
           <v-img src="/section-tech.png"></v-img>
         </v-col>
       </v-row>
+      <h1>Get in touch</h1>
+
+      <v-row align="center" justify="center">
+        <v-col cols="9">
+          <v-card-text>
+            <v-form>
+              <v-text-field
+                placeholder="Your Name here"
+                label="What should we call you?"
+                name="contactname"
+                type="text"
+              ></v-text-field>
+              <v-text-field
+                id="name"
+                label="What is the name of your compagny / organization?"
+                placeholder="Widgets Inc"
+                name="compagny"
+                type="text"
+              ></v-text-field>
+              <!--  -->
+
+              <v-row justify="center">
+                <v-col cols="6">
+                  <v-text-field
+                    placeholder="Email address"
+                    label="How shall we contact you?"
+                    name="contactemail"
+                    type="email"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="6">
+                  <v-text-field
+                    id="name"
+                    placeholder="Phone number"
+                    name="contactphone"
+                    type="phone"
+                  ></v-text-field>
+                  <!--  -->
+                </v-col>
+              </v-row>
+              <v-card-actions>
+                <v-col class="text-left nextbtn">
+                  <v-btn color="warning">Next -></v-btn>
+                </v-col>
+              </v-card-actions>
+            </v-form>
+          </v-card-text>
+        </v-col>
+
+        <!-- there etape 2-->
+
+        <v-col cols="9">
+          <v-card-text>
+            <v-form>
+              <v-text class="text-left">
+                <h2>What can we help you with ?</h2>
+              </v-text>
+              <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
+              <v-card flat class="py-12">
+                <v-card-text >
+                  <v-row align="center" justify="center">
+
+      <v-col class="custCol" col="2">
+        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
+          <v-row>
+           <v-img width="110" src="webOrange.png"></v-img>
+            <span class="v-btn__content">
+               <i aria-hidden="true"</i>
+                <v-text class="title" >Web</v-text>
+            </span>
+          </v-row>
+          <v-img width="20"  src="Checkbox.png"></v-img>
+        </button>
+        </v-col>
+
+    <v-col class="custCol" col="2">
+        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
+          <v-row>
+           <v-img width="60" src="appOrange.png"></v-img>
+            <span class="v-btn__content">
+               <i aria-hidden="true"</i>
+                <v-text class="title" >App</v-text>
+            </span>
+          </v-row>
+          <v-img width="20"  src="Checkbox.png"></v-img>
+        </button>
+        </v-col>
+
+    <v-col class="custCol" col="2">
+        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
+          <v-row>
+           <v-img width="110" src="ecommerceOrange.png"></v-img>
+            <span class="v-btn__content">
+               <i aria-hidden="true"</i>
+                <v-text class="title" >Ecommerce</v-text>
+            </span>
+          </v-row>
+          <v-img width="20"  src="Checkbox.png"></v-img>
+        </button>
+        </v-col>
+
+    <v-col class="custCol" col="2">
+        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
+          <v-row>
+           <v-img width="110" src="uiuxOrange.png"></v-img>
+            <span class="v-btn__content">
+               <i aria-hidden="true"</i>
+                <v-text class="title" >UI/UX</v-text>
+            </span>
+          </v-row>
+          <v-img width="20"  src="Checkbox.png"></v-img>
+        </button>
+        </v-col>
+
+    <v-col class="custCol" col="2">
+        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
+          <v-row>
+           <v-img width="110" src="otherOrange.png"></v-img>
+            <span class="v-btn__content">
+               <i aria-hidden="true"</i>
+                <v-text class="title" >Other</v-text>
+            </span>
+          </v-row>
+          <v-img width="20"  src="Checkbox.png"></v-img>
+        </button>
+        </v-col>
+
+                  </v-row>
+
+                </v-card-text>
+
+              </v-card>
+
+
+              <v-card-actions>
+                <v-col class="text-left nextbtn">
+                  <v-btn color="warning">Next -></v-btn>
+                </v-col>
+              </v-card-actions>
+
+            </v-form>
+
+          </v-card-text>
+        </v-col>
+      </v-row>
     </v-container>
   </v-layout>
 </template>
 
 
 <script>
+export default {
+  data() {
+    return {
+      toggle_exclusive: undefined,
+    };
+  },
+
+  middleware(ctx) {
+    ctx.$gtm.push({ event: "ssr" });
+  },
+};
 </script>
+
+<style>
+.v-btn.product {
+    padding: 40px 70px 140px 70px;
+}
+
+.col.custCol {
+  padding: 0;
+  flex-grow: 0;
+
+}
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):hover:before:focus {
+   opacity: 1;
+}
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):hover:before {
+ opacity: 0;
+}
+.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before {
+ opacity: 1;
+}
+.v-btn {
+background-color: transparent;
+background-size: cover;
+border:none;
+}
+.v-text-field {
+  font-weight: bold;
+  padding: 10px;
+  margin: 10px;
+}
+
+.v-text-field input {
+  padding: 25px 0px 25px;
+}
+
+.v-text-field--placeholder {
+  padding-top: 10px;
+}
+
+.v-text-field label {
+  font-size: 25px;
+}
+/* text left has pddining by default */
+
+.nextbtn {
+  padding: 12px;
+}
+</style>

@@ -1,7 +1,7 @@
 {
     "links": {
-        "english": "Version Anglaise",
-        "french": "Version Française"
+        "english": "EN",
+        "french": "FR"
     },
     "navbar": {
         "home": "Accueil",
@@ -14,9 +14,9 @@
     },
     "index": {
         "home": {
-            "bannerLine1": "Nous vous aidons à ",
-            "bannerLine2": "construire une nouvelle ",
-            "bannerLine3": "version de votre business",
+            "bannerLine1": "    Nous construisons ",
+            "bannerLine2": "  avec vous ",
+            "bannerLine3": "votre business 2.0",
             "hello": "Bonjour !",
             "whoWeAre": "Nous sommes une agence localisée à Paris, France.",
             "weFocusOn": "Nous portons notre attention sur",

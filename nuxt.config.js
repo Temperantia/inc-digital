@@ -62,7 +62,23 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/gtm'
   ],
+  gtm: {
+    id: 'GTM-MCW5B4X',
+    enabled:true,
+    scriptDefer: true,
+    pageTracking: true,
+    // layer: 'test',
+    variables: {
+      test: '1'
+    }
+  },
+  publicRuntimeConfig: {
+    gtm: {
+      id: 'GTM-MCW5B4X&runtime'
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

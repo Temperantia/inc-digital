@@ -1,7 +1,7 @@
 {
     "links": {
-        "english": "English Version",
-        "french": "French Version"
+        "english": "EN",
+        "french": "FR"
     },
     "navbar": {
         "home": "Home",
