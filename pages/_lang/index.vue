@@ -319,89 +319,67 @@
               </v-text>
               <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
               <v-card flat class="py-12">
-                <v-card-text >
-                  <v-row align="center" justify="center">
+                <v-item-group>
+                  <v-container>
+                    <v-row no-gutters>
+                      <v-col v-for="item in items" :key="item.index" cols="12" md="2">
+                        <v-item v-slot:default="{ active, toggle }">
+                          <v-card
+                            :color="active ? 'orange' : 'white'"
+                            text-color="red"
+                            class="d-flex align-center"
+                            dark
+                            tile
+                            outlined
+                            height="250"
+                            width="200"
+                            @click="toggle"
+                          >
+                            <v-scroll-y-transition>
+                              <v-row no-gutters>
+                                <v-col
+                                  align="center"
+                                  justify="center"
+                                  class="businessCategory"
+                                  no-gutters
+                                  v-if="active"
+                                >
+                                  <v-img width="80" height="80" contain :src="`/${item.srcActive}`"></v-img>
+                                  <p class="title" style="color:white" v-text="item.text"></p>
+                                  <v-img width="25" src="/Checkbox.png"></v-img>
+                                </v-col>
 
-      <v-col class="custCol" col="2">
-        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
-          <v-row>
-           <v-img width="110" src="webOrange.png"></v-img>
-            <span class="v-btn__content">
-               <i aria-hidden="true"</i>
-                <v-text class="title" >Web</v-text>
-            </span>
-          </v-row>
-          <v-img width="20"  src="Checkbox.png"></v-img>
-        </button>
-        </v-col>
-
-    <v-col class="custCol" col="2">
-        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
-          <v-row>
-           <v-img width="60" src="appOrange.png"></v-img>
-            <span class="v-btn__content">
-               <i aria-hidden="true"</i>
-                <v-text class="title" >App</v-text>
-            </span>
-          </v-row>
-          <v-img width="20"  src="Checkbox.png"></v-img>
-        </button>
-        </v-col>
-
-    <v-col class="custCol" col="2">
-        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
-          <v-row>
-           <v-img width="110" src="ecommerceOrange.png"></v-img>
-            <span class="v-btn__content">
-               <i aria-hidden="true"</i>
-                <v-text class="title" >Ecommerce</v-text>
-            </span>
-          </v-row>
-          <v-img width="20"  src="Checkbox.png"></v-img>
-        </button>
-        </v-col>
-
-    <v-col class="custCol" col="2">
-        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
-          <v-row>
-           <v-img width="110" src="uiuxOrange.png"></v-img>
-            <span class="v-btn__content">
-               <i aria-hidden="true"</i>
-                <v-text class="title" >UI/UX</v-text>
-            </span>
-          </v-row>
-          <v-img width="20"  src="Checkbox.png"></v-img>
-        </button>
-        </v-col>
-
-    <v-col class="custCol" col="2">
-        <button  type="button" class="v-btn v-btn--flat v-btn--square theme--light  orange--text product" >
-          <v-row>
-           <v-img width="110" src="otherOrange.png"></v-img>
-            <span class="v-btn__content">
-               <i aria-hidden="true"</i>
-                <v-text class="title" >Other</v-text>
-            </span>
-          </v-row>
-          <v-img width="20"  src="Checkbox.png"></v-img>
-        </button>
-        </v-col>
-
-                  </v-row>
-
-                </v-card-text>
-
+                                <v-col
+                                  align="center"
+                                  justify="center"
+                                  class="businessCategory"
+                                  v-else
+                                >
+                                  <v-img
+                                    width="80"
+                                    height="80"
+                                    contain
+                                    :src="`/${item.srcNotActive}`"
+                                  ></v-img>
+                                  <p class="title" style="color:black" v-text="item.text"></p>
+                                  <v-img width="25" src="/Checkbox.png"></v-img>
+                                </v-col>
+                              </v-row>
+                            </v-scroll-y-transition>
+                          </v-card>
+                        </v-item>
+                      </v-col>
+                    </v-row>
+                  </v-container>
+                </v-item-group>
               </v-card>
-
 
               <v-card-actions>
                 <v-col class="text-left nextbtn">
                   <v-btn color="warning">Next -></v-btn>
                 </v-col>
               </v-card-actions>
-
             </v-form>
-
           </v-card-text>
         </v-col>
       </v-row>
@@ -424,29 +402,51 @@ export default {
 };
 </script>
 
-<style>
-.v-btn.product {
-    padding: 40px 70px 140px 70px;
-}
 
+<script>
+export default {
+  data: () => ({
+    items: [
+      {
+        srcActive: "webWhite.png",
+        srcNotActive: "webOrange.png",
+        text: "Web",
+      },
+      {
+        srcActive: "appWhite.png",
+        srcNotActive: "appOrange.png",
+        text: "App",
+      },
+      {
+        srcActive: "ecommerceWhite.png",
+        srcNotActive: "ecommerceOrange.png",
+        text: "eCommerce",
+      },
+      {
+        srcActive: "uiuxWhite.png",
+        srcNotActive: "uiuxOrange.png",
+        text: "UI / UX",
+      },
+      {
+        srcActive: "otherWhite.png",
+        srcNotActive: "otherOrange.png",
+        text: "Other",
+      },
+    ],
+    selected: [],
+  }),
+};
+</script>
+
+<style>
 .col.custCol {
   padding: 0;
   flex-grow: 0;
+}
 
-}
-.v-btn:not(.v-btn--text):not(.v-btn--outlined):hover:before:focus {
-   opacity: 1;
-}
-.v-btn:not(.v-btn--text):not(.v-btn--outlined):hover:before {
- opacity: 0;
-}
-.v-btn:not(.v-btn--text):not(.v-btn--outlined):focus:before {
- opacity: 1;
-}
 .v-btn {
-background-color: transparent;
-background-size: cover;
-border:none;
+  background-size: cover;
+  border: none;
 }
 .v-text-field {
   font-weight: bold;
@@ -467,7 +467,21 @@ border:none;
 }
 /* text left has pddining by default */
 
+.businessCategory {
+  width: 110px;
+}
+
+.businessCategoryImage {
+  height: 80px;
+  width: 80px;
+}
+
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .nextbtn {
-  padding: 12px;
+  padding: 0px;
 }
 </style>
