@@ -265,27 +265,34 @@
       <v-row align="center" justify="center">
         <v-col cols="9">
           <v-card-text>
-            <v-form>
+            <v-form align="start" justify="start">
+              <label class="fieldTitle">What should we call you?</label>
+
               <v-text-field
+                id="name"
+                class="fieldTextInput"
                 placeholder="Your Name here"
-                label="What should we call you?"
                 name="contactname"
                 type="text"
               ></v-text-field>
+
+              <label class="fieldTitle">What the name of compagny / organization?</label>
               <v-text-field
-                id="name"
-                label="What is the name of your compagny / organization?"
+                id="company"
+                class="fieldTextInput"
                 placeholder="Widgets Inc"
                 name="compagny"
                 type="text"
               ></v-text-field>
               <!--  -->
+              <label class="fieldTitle">How shall we contact you?</label>
 
               <v-row justify="center">
                 <v-col cols="6">
                   <v-text-field
+                    id="email"
+                    class="fieldTextInput"
                     placeholder="Email address"
-                    label="How shall we contact you?"
                     name="contactemail"
                     type="email"
                   ></v-text-field>
@@ -293,6 +300,7 @@
                 <v-col cols="6">
                   <v-text-field
                     id="name"
+                    class="fieldTextInput"
                     placeholder="Phone number"
                     name="contactphone"
                     type="phone"
@@ -479,6 +487,19 @@ export default {
 .title {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.fieldTitle {
+  padding: 5px 10px 5px 10px;
+  margin: 0px 10px 0px 10px;
+  font-size: 18px;
+  font-weight: 500;
+
+  color: black;
+}
+
+.fieldTextInput {
+  margin-top: 0px;
 }
 
 .nextbtn {
