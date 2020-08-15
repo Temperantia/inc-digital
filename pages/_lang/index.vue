@@ -263,137 +263,40 @@
       <h1>Get in touch</h1>
 
       <v-row align="center" justify="center">
-        <v-col cols="9">
-          <v-card-text>
-            <v-form align="start" justify="start">
-              <label class="fieldTitle">What should we call you?</label>
+        <v-stepper v-model="e1">
+          <v-stepper-header>
+            <v-stepper-step :complete="e1 > 1" step="1">Name of step 1</v-stepper-step>
+            <v-divider></v-divider>
+            <v-stepper-step :complete="e1 > 2" step="2">Name of step 2</v-stepper-step>
+            <v-divider></v-divider>
+            <v-stepper-step step="3">Name of step 3</v-stepper-step>
+          </v-stepper-header>
 
-              <v-text-field
-                id="name"
-                class="fieldTextInput"
-                placeholder="Your Name here"
-                name="contactname"
-                type="text"
-              ></v-text-field>
+          <v-stepper-items>
+            <v-stepper-content class="stepperContent" step="1">
+              <contactPage></contactPage>
+              <v-btn color="primary" @click="e1 = 2">Continue</v-btn>
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
 
-              <label class="fieldTitle">What the name of compagny / organization?</label>
-              <v-text-field
-                id="company"
-                class="fieldTextInput"
-                placeholder="Widgets Inc"
-                name="compagny"
-                type="text"
-              ></v-text-field>
-              <!--  -->
-              <label class="fieldTitle">How shall we contact you?</label>
+            <v-stepper-content class="stepperContent" step="2">
+              <technology></technology>
+              <v-btn color="primary" @click="e1 = 3">Continue</v-btn>
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
 
-              <v-row justify="center">
-                <v-col cols="6">
-                  <v-text-field
-                    id="email"
-                    class="fieldTextInput"
-                    placeholder="Email address"
-                    name="contactemail"
-                    type="email"
-                  ></v-text-field>
-                </v-col>
-                <v-col cols="6">
-                  <v-text-field
-                    id="name"
-                    class="fieldTextInput"
-                    placeholder="Phone number"
-                    name="contactphone"
-                    type="phone"
-                  ></v-text-field>
-                  <!--  -->
-                </v-col>
-              </v-row>
-              <v-card-actions>
-                <v-col class="text-left nextbtn">
-                  <v-btn color="warning">Next -></v-btn>
-                </v-col>
-              </v-card-actions>
-            </v-form>
-          </v-card-text>
-        </v-col>
-
-        <!-- there etape 2-->
-
-        <v-col cols="9">
-          <v-card-text>
-            <v-form>
-              <v-text class="text-left">
-                <h2>What can we help you with ?</h2>
-              </v-text>
-              <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
-              <v-card flat class="py-12">
-                <v-item-group>
-                  <v-container>
-                    <v-row no-gutters>
-                      <v-col v-for="item in items" :key="item.index" cols="12" md="2">
-                        <v-item v-slot:default="{ active, toggle }">
-                          <v-card
-                            :color="active ? 'orange' : 'white'"
-                            text-color="red"
-                            class="d-flex align-center"
-                            dark
-                            tile
-                            outlined
-                            height="250"
-                            width="200"
-                            @click="toggle"
-                          >
-                            <v-scroll-y-transition>
-                              <v-row no-gutters>
-                                <v-col
-                                  align="center"
-                                  justify="center"
-                                  class="businessCategory"
-                                  no-gutters
-                                  v-if="active"
-                                >
-                                  <v-img width="80" height="80" contain :src="`/${item.srcActive}`"></v-img>
-                                  <p class="title" style="color:white" v-text="item.text"></p>
-                                  <v-img width="25" src="/Checkbox.png"></v-img>
-                                </v-col>
-
-                                <v-col
-                                  align="center"
-                                  justify="center"
-                                  class="businessCategory"
-                                  v-else
-                                >
-                                  <v-img
-                                    width="80"
-                                    height="80"
-                                    contain
-                                    :src="`/${item.srcNotActive}`"
-                                  ></v-img>
-                                  <p class="title" style="color:black" v-text="item.text"></p>
-                                  <v-img width="25" src="/Checkbox.png"></v-img>
-                                </v-col>
-                              </v-row>
-                            </v-scroll-y-transition>
-                          </v-card>
-                        </v-item>
-                      </v-col>
-                    </v-row>
-                  </v-container>
-                </v-item-group>
-              </v-card>
-
-              <v-card-actions>
-                <v-col class="text-left nextbtn">
-                  <v-btn color="warning">Next -></v-btn>
-                </v-col>
-              </v-card-actions>
-            </v-form>
-          </v-card-text>
-        </v-col>
+            <v-stepper-content class="stepperContent" step="3">
+              <v-card class="mb-12" color="red lighten-1" height="200px"></v-card>
+              <v-btn color="primary" @click="e1 = 1">Continue</v-btn>
+              <v-btn text>Cancel</v-btn>
+            </v-stepper-content>
+          </v-stepper-items>
+        </v-stepper>
       </v-row>
     </v-container>
   </v-layout>
 </template>
+
 
 
 <script>
@@ -412,39 +315,22 @@ export default {
 
 
 <script>
+import ContactPage from "~/layouts/contactForm/contact.vue";
+import Technology from "~/layouts/contactForm/technology.vue";
+
 export default {
-  data: () => ({
-    items: [
-      {
-        srcActive: "webWhite.png",
-        srcNotActive: "webOrange.png",
-        text: "Web",
-      },
-      {
-        srcActive: "appWhite.png",
-        srcNotActive: "appOrange.png",
-        text: "App",
-      },
-      {
-        srcActive: "ecommerceWhite.png",
-        srcNotActive: "ecommerceOrange.png",
-        text: "eCommerce",
-      },
-      {
-        srcActive: "uiuxWhite.png",
-        srcNotActive: "uiuxOrange.png",
-        text: "UI / UX",
-      },
-      {
-        srcActive: "otherWhite.png",
-        srcNotActive: "otherOrange.png",
-        text: "Other",
-      },
-    ],
-    selected: [],
-  }),
+  data() {
+    return {
+      e1: 1,
+    };
+  },
+  components: {
+    contactPage: ContactPage,
+    technology: Technology,
+  },
 };
 </script>
+
 
 <style>
 .col.custCol {
@@ -475,20 +361,6 @@ export default {
 }
 /* text left has pddining by default */
 
-.businessCategory {
-  width: 110px;
-}
-
-.businessCategoryImage {
-  height: 80px;
-  width: 80px;
-}
-
-.title {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
 .fieldTitle {
   padding: 5px 10px 5px 10px;
   margin: 0px 10px 0px 10px;
@@ -504,5 +376,9 @@ export default {
 
 .nextbtn {
   padding: 0px;
+}
+
+.stepperContent {
+  width: 800px;
 }
 </style>
