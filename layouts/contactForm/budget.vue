@@ -16,7 +16,7 @@
             <div
               :class="disabled ? 'grey--text':'black--text'"
               style="font-size:20px; font-weight:500"
-            >${{range[0]/1000}}K - ${{range[1]/1000}}K</div>
+            >${{range[0]/1000}}K — ${{range[1]/1000}}K</div>
           </v-container>
         </template>
 
@@ -62,6 +62,7 @@ export default {
       disabled: false,
     };
   },
+  methods: {},
 };
 </script>
 

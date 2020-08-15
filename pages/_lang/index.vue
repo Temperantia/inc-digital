@@ -262,44 +262,7 @@
       </v-row>
       <h1>Get in touch</h1>
 
-      <budget></budget>
-
-      <v-row align="center" justify="center">
-        <v-stepper v-model="e1">
-          <v-stepper-header>
-            <v-stepper-step :complete="e1 > 1" step="1" color="orange">Contact</v-stepper-step>
-            <v-stepper-step :complete="e1 > 2" step="2" color="orange">Technology</v-stepper-step>
-            <v-stepper-step step="3" color="orange">Budget</v-stepper-step>
-          </v-stepper-header>
-
-          <v-stepper-items style="height:550px">
-            <v-stepper-content class="stepperContent" step="1">
-              <v-container style="height:450px">
-                <contactPage></contactPage>
-              </v-container>
-              <v-btn class="white--text" color="orange" @click="e1 += 1">Continue</v-btn>
-            </v-stepper-content>
-
-            <v-stepper-content class="stepperContent" step="2">
-              <v-container style="height:450px">
-                <technology></technology>
-              </v-container>
-
-              <v-btn class="white--text" color="orange" @click="e1 += 1">Continue</v-btn>
-              <v-btn text @click="e1 -= 1">Cancel</v-btn>
-            </v-stepper-content>
-
-            <v-stepper-content class="stepperContent" step="3">
-              <v-container style="height:450px">
-                <budget></budget>
-              </v-container>
-
-              <v-btn color="orange" class="white--text">Submit</v-btn>
-              <v-btn text @click="e1 -= 1">Cancel</v-btn>
-            </v-stepper-content>
-          </v-stepper-items>
-        </v-stepper>
-      </v-row>
+      <multiStepForm></multiStepForm>
     </v-container>
   </v-layout>
 </template>
@@ -307,43 +270,19 @@
 
 
 <script>
+import MultiStepForm from "~/layouts/contactForm/multiStepForm.vue";
 export default {
   data() {
     return {
       toggle_exclusive: undefined,
     };
   },
+  components: {
+    multiStepForm: MultiStepForm,
+  },
 
   middleware(ctx) {
     ctx.$gtm.push({ event: "ssr" });
-  },
-};
-</script>
-
-
-<script>
-import ContactPage from "~/layouts/contactForm/contact.vue";
-import Technology from "~/layouts/contactForm/technology.vue";
-import Budget from "~/layouts/contactForm/budget.vue";
-
-export default {
-  data() {
-    return {
-      e1: 1,
-    };
-  },
-  methods: {
-    nextPage: function () {
-      const maxPage = 3;
-      if (e1 < maxPage) {
-        e1 += 1;
-      }
-    },
-  },
-  components: {
-    contactPage: ContactPage,
-    technology: Technology,
-    budget: Budget,
   },
 };
 </script>
