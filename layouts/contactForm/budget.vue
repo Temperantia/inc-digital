@@ -17,9 +17,11 @@
           </v-container>
 
           <v-range-slider
+            id="budgetSlider"
             v-model="range"
             :max="max"
             :min="min"
+            :disabled="disabled"
             step="1000"
             hide-details
             track-color="grey"
@@ -34,6 +36,13 @@
           </v-range-slider>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col align="start" class="ma-6">
+          <v-btn-toggle v-model="toggle_exclusive">
+            <v-btn @click="disabled = !disabled">I don't know my budget</v-btn>
+          </v-btn-toggle>
+        </v-col>
+      </v-row>
     </v-card-text>
   </v-card>
 </template>
@@ -45,6 +54,7 @@ export default {
       min: 5000,
       max: 45000,
       range: [15000, 30000],
+      disabled: false,
     };
   },
 };

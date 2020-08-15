@@ -262,6 +262,8 @@
       </v-row>
       <h1>Get in touch</h1>
 
+      <budget></budget>
+
       <v-row align="center" justify="center">
         <v-stepper v-model="e1">
           <v-stepper-header>
