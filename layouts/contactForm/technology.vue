@@ -2,9 +2,9 @@
   <v-col cols="12">
     <v-card-text>
       <v-form>
-        <v-text class="text-left">
+        <v-container class="text-left">
           <h2>What can we help you with ?</h2>
-        </v-text>
+        </v-container>
         <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
         <v-card flat class="py-12">
           <v-item-group>

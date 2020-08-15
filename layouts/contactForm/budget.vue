@@ -11,11 +11,16 @@
     </v-row>
     <v-card-text>
       <v-row>
-        <v-col class="px-4">
+        <template>
           <v-container class="pa-4">
-            <div style="font-size:24px; color:black;">${{range[0]/1000}}K - ${{range[1]/1000}}K</div>
+            <div
+              :class="disabled ? 'grey--text':'black--text'"
+              style="font-size:20px; font-weight:500"
+            >${{range[0]/1000}}K - ${{range[1]/1000}}K</div>
           </v-container>
+        </template>
 
+        <v-col class="px-4">
           <v-range-slider
             id="budgetSlider"
             v-model="range"
@@ -38,7 +43,7 @@
       </v-row>
       <v-row>
         <v-col align="start" class="ma-6">
-          <v-btn-toggle v-model="toggle_exclusive">
+          <v-btn-toggle>
             <v-btn @click="disabled = !disabled">I don't know my budget</v-btn>
           </v-btn-toggle>
         </v-col>
