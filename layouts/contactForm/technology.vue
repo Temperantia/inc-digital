@@ -110,6 +110,11 @@ export default {
       }
       return false;
     },
+    form() {
+      return {
+        technology: this.cardSelected,
+      };
+    },
   },
 };
 </script>

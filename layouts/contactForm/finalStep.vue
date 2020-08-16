@@ -52,6 +52,13 @@ export default {
     validate: function () {
       return this.$refs.form.validate();
     },
+
+    form() {
+      return {
+        dateForContact: this.dateForContact,
+        hearAboutUs: this.hearAboutUs,
+      };
+    },
   },
 };
 </script>

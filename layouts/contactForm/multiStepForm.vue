@@ -27,7 +27,7 @@
 
         <v-stepper-content class="stepperContent" step="3">
           <v-container style="height:450px">
-            <budget></budget>
+            <budget ref="budget"></budget>
           </v-container>
 
           <v-btn color="orange" class="white--text" @click="nextPage()">Continue</v-btn>
@@ -101,12 +101,6 @@ export default {
           this.e1++;
           break;
 
-        case 3:
-          if (this.$refs.finalStep.validate()) {
-            this.e1++;
-          }
-          break;
-
         default:
           break;
       }
@@ -124,17 +118,42 @@ export default {
       this.sending = false;
       this.overlay = false;
     },
+
+    getFormInfo: async function () {
+      let data = [];
+      data.push(await this.$refs.contact.form());
+      data.push(await this.$refs.technology.form());
+      data.push(await this.$refs.budget.form());
+      data.push(await this.$refs.finalStep.form());
+      return data;
+    },
+
+    createHTMLforMail: async function () {
+      const objArray = await this.getFormInfo();
+      let output = "<h2>Un nouveau prospect a renseigné ses informations</h2>";
+      for (let objIndex in objArray) {
+        let obj = objArray[objIndex];
+        for (let property in obj) {
+          output += `<p><strong>${property}</strong> : ${obj[property]} </p>`;
+        }
+      }
+      console.log(output);
+      return output;
+    },
+
     sendDataWithMail: async function () {
       const mailList = [
         "florent.bouisset@gmail.com",
-        "ban-twitter-api@mailinator.com",
+        //"ban-twitter-api@mailinator.com",
       ];
+
+      const mailContent = await this.createHTMLforMail();
       const resp = await Email.send({
         SecureToken: "29d4ae46-7ef2-49d5-a16d-85e805ad6037",
         To: mailList,
         From: "florentbouisset@gmail.com",
         Subject: "Test email",
-        Body: " test multiple mail",
+        Body: mailContent,
       });
       console.log(resp);
     },

@@ -62,7 +62,19 @@ export default {
       disabled: false,
     };
   },
-  methods: {},
+  methods: {
+    form() {
+      if (this.disabled) {
+        return {
+          budget: "budget unknown",
+        };
+      } else
+        return {
+          budgetmin: this.range[0],
+          budgetmax: this.range[1],
+        };
+    },
+  },
 };
 </script>
 

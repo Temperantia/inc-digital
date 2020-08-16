@@ -6,9 +6,9 @@
 
         <v-text-field
           id="name"
+          v-model="contactName"
           class="fieldTextInput"
           placeholder="Your Name here"
-          v-model="contactName"
           name="contactName"
           type="text"
           :rules="[rules.required,]"
@@ -17,6 +17,7 @@
         <label class="fieldTitle">What the name of compagny / organization?</label>
         <v-text-field
           id="company"
+          v-model="company"
           class="fieldTextInput"
           placeholder="Widgets Inc"
           name="compagny"
@@ -30,6 +31,7 @@
           <v-col cols="6">
             <v-text-field
               id="email"
+              v-model="email"
               class="fieldTextInput"
               placeholder="Email address"
               name="contactemail"
@@ -40,6 +42,7 @@
           <v-col cols="6">
             <v-text-field
               id="name"
+              v-model="phone"
               class="fieldTextInput"
               placeholder="Phone number"
               name="contactphone"
@@ -59,7 +62,7 @@ export default {
   data() {
     return {
       contactName: null,
-      compagny: null,
+      company: null,
       email: null,
       phone: null,
       formHasErrors: false,
@@ -70,7 +73,10 @@ export default {
       },
     };
   },
-  computed: {
+  methods: {
+    validate() {
+      return this.$refs.form.validate();
+    },
     form() {
       return {
         contactName: this.contactName,
@@ -78,11 +84,6 @@ export default {
         email: this.email,
         phone: this.phone,
       };
-    },
-  },
-  methods: {
-    validate() {
-      return this.$refs.form.validate();
     },
   },
 };
