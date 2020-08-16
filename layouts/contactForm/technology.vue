@@ -7,7 +7,7 @@
         </v-container>
         <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
         <v-card flat class="py-12">
-          <v-item-group>
+          <v-item-group v-model="selected">
             <v-container>
               <v-row no-gutters justify="center">
                 <v-col v-for="item in items" :key="item.index" cols="2.4">
@@ -70,6 +70,7 @@
 <script>
 export default {
   data: () => ({
+    cardSelected: true,
     items: [
       {
         srcActive: "webWhite.png",
@@ -99,6 +100,16 @@ export default {
     ],
     selected: [],
   }),
+  methods: {
+    validate: function () {
+      for (let i = 0; i < 5; i++) {
+        if (this.selected === i) {
+          return true;
+        }
+      }
+      return false;
+    },
+  },
 };
 </script>
 

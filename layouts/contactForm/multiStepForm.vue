@@ -17,10 +17,10 @@
 
         <v-stepper-content class="stepperContent" step="2">
           <v-container style="height:450px">
-            <technology></technology>
+            <technology ref="technology"></technology>
           </v-container>
 
-          <v-btn class="white--text" color="orange" @click="e1 += 1">Continue</v-btn>
+          <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
           <v-btn text @click="e1 -= 1">Cancel</v-btn>
         </v-stepper-content>
 
@@ -59,7 +59,7 @@ export default {
           break;
 
         case 2:
-          if (this.$refs.contact2.validate()) {
+          if (this.$refs.technology.validate()) {
             this.e1++;
           }
           break;
