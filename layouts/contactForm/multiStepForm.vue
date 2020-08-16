@@ -70,6 +70,7 @@ import ContactPage from "~/layouts/contactForm/contact.vue";
 import Technology from "~/layouts/contactForm/technology.vue";
 import Budget from "~/layouts/contactForm/budget.vue";
 import FinalStep from "~/layouts/contactForm/finalStep.vue";
+import Email from "~/plugins/mailService.js";
 
 export default {
   data() {
@@ -115,13 +116,27 @@ export default {
         this.sending = true;
         this.overlay = true;
         //function that take time
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await this.sendDataWithMail();
         this.sending = false;
       }
     },
     back: function () {
       this.sending = false;
       this.overlay = false;
+    },
+    sendDataWithMail: async function () {
+      const mailList = [
+        "florent.bouisset@gmail.com",
+        "ban-twitter-api@mailinator.com",
+      ];
+      const resp = await Email.send({
+        SecureToken: "29d4ae46-7ef2-49d5-a16d-85e805ad6037",
+        To: mailList,
+        From: "florentbouisset@gmail.com",
+        Subject: "Test email",
+        Body: " test multiple mail",
+      });
+      console.log(resp);
     },
   },
   components: {
