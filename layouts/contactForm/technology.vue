@@ -70,7 +70,6 @@
 <script>
 export default {
   data: () => ({
-    cardSelected: true,
     items: [
       {
         srcActive: "webWhite.png",
@@ -99,11 +98,13 @@ export default {
       },
     ],
     selected: [],
+    cardSelected: null,
   }),
   methods: {
     validate: function () {
       for (let i = 0; i < 5; i++) {
         if (this.selected === i) {
+          this.cardSelected = this.items[i].text;
           return true;
         }
       }
