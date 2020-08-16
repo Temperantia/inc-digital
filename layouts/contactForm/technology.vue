@@ -5,7 +5,9 @@
         <v-container class="text-left">
           <h2>What can we help you with ?</h2>
         </v-container>
-        <div class="container text-left">Nice to meet you, $NAME. Select all that apply.</div>
+        <div
+          class="container text-left"
+        >Nice to meet you, {{parentData.contactName}}. Select all that apply.</div>
         <v-card flat class="py-12">
           <v-item-group v-model="selected">
             <v-container>
@@ -100,6 +102,9 @@ export default {
     selected: [],
     cardSelected: null,
   }),
+  props: {
+    parentData: null,
+  },
   methods: {
     validate: function () {
       for (let i = 0; i < 5; i++) {
