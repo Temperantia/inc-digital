@@ -24,7 +24,6 @@
           type="text"
           :rules="[rules.required,]"
         ></v-text-field>
-        <!--  -->
         <label class="fieldTitle">How shall we contact you?</label>
 
         <v-row justify="center">
@@ -49,7 +48,6 @@
               type="phone"
               :rules="[rules.required,]"
             ></v-text-field>
-            <!--  -->
           </v-col>
         </v-row>
       </v-form>

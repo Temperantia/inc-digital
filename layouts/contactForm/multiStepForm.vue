@@ -58,8 +58,6 @@
             <p>Sent</p>
           </v-container>
         </v-col>
-
-        <v-btn color="success" @click="back()">Hide Overlay</v-btn>
       </v-overlay>
     </v-stepper>
   </v-row>
@@ -109,7 +107,6 @@ export default {
       if (this.$refs.finalStep.validate()) {
         this.sending = true;
         this.overlay = true;
-        //function that take time
         await this.sendDataWithMail();
         this.sending = false;
       }
@@ -137,25 +134,19 @@ export default {
           output += `<p><strong>${property}</strong> : ${obj[property]} </p>`;
         }
       }
-      console.log(output);
       return output;
     },
 
     sendDataWithMail: async function () {
-      const mailList = [
-        "florent.bouisset@gmail.com",
-        //"ban-twitter-api@mailinator.com",
-      ];
-
+      const mailList = ["inclusive.corporation@gmail.com"];
       const mailContent = await this.createHTMLforMail();
       const resp = await Email.send({
-        SecureToken: "29d4ae46-7ef2-49d5-a16d-85e805ad6037",
+        SecureToken: "e82ccc8d-7bfd-4d7b-b25f-7be55b7bf343",
         To: mailList,
-        From: "florentbouisset@gmail.com",
+        From: "inclusive.corporation@gmail.com",
         Subject: "Test email",
         Body: mailContent,
       });
-      console.log(resp);
     },
   },
   components: {
