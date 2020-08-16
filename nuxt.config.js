@@ -44,7 +44,7 @@ export default {
   ],
 
   generate: {
-    routes: ['/', '/about', '/fr', '/fr/about']
+    routes: ['/', '/fr']
   },
 
   /*
