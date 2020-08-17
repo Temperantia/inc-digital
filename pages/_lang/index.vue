@@ -281,9 +281,8 @@ export default {
   components: {
     multiStepForm: MultiStepForm,
   },
-
   middleware(ctx) {
-    ctx.$gtm.push({ event: "ssr" });
+    ctx.$gtm.push({ event: "nuxtRoute" });
   },
 };
 </script>

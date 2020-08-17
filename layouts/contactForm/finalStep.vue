@@ -50,6 +50,7 @@ export default {
 
   methods: {
     validate: function () {
+
       return this.$refs.form.validate();
     },
 
