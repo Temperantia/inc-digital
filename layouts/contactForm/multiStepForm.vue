@@ -18,7 +18,7 @@
 
         <v-stepper-content class="stepperContent" step="2">
           <v-container style="height:450px">
-            <technology ref="technology"></technology>
+            <technology ref="technology" :parentData="contactData"></technology>
           </v-container>
 
           <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
@@ -52,10 +52,17 @@
           </v-container>
         </v-col>
 
-        <v-col align="center" justify="center" v-else>
+        <v-col align="center" justify="center" v-if="!sending && sendingsucceed">
           <v-icon dark right size="64">mdi-checkbox-marked-circle</v-icon>
           <v-container>
             <p>Sent</p>
+          </v-container>
+        </v-col>
+
+        <v-col align="center" justify="center" v-if="!sending && !sendingsucceed">
+          <v-icon dark right size="64">mdi-alert-circle</v-icon>
+          <v-container>
+            <p>Sending Failed</p>
           </v-container>
         </v-col>
       </v-overlay>
@@ -76,6 +83,8 @@ export default {
       absolute: true,
       overlay: false,
       sending: false,
+      sendingsucceed: Boolean,
+      contactData: Object,
       e1: 1,
     };
   },
@@ -85,6 +94,7 @@ export default {
       switch (this.e1) {
         case 1:
           if (this.$refs.contact.validate()) {
+            this.getContactInfo();
             this.e1++;
           }
           break;
@@ -115,6 +125,9 @@ export default {
       this.sending = false;
       this.overlay = false;
     },
+    getContactInfo: async function () {
+      this.contactData = await this.$refs.contact.form();
+    },
 
     getFormInfo: async function () {
       let data = [];
@@ -144,9 +157,14 @@ export default {
         SecureToken: "e82ccc8d-7bfd-4d7b-b25f-7be55b7bf343",
         To: mailList,
         From: "inclusive.corporation@gmail.com",
-        Subject: "Test email",
+        Subject: "Nouveau prospect Inc Digital",
         Body: mailContent,
       });
+      if (resp === "OK") {
+        this.sendingsucceed = true;
+      } else {
+        this.sendingsucceed = false;
+      }
     },
   },
   components: {
