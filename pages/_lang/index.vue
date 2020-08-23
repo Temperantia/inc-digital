@@ -103,15 +103,15 @@
       </v-row>
 
       <v-row justify="center" class="text-left">
-        <v-col cols="12" md="7">
+        <v-col cols="12" md="6">
           <v-img src="/section-software.png"></v-img>
         </v-col>
-        <v-col cols="12" md="5">
+        <v-col cols="12" md="6">
           <h3 class="py-3">{{$t('index.expertise.software.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50px" contain src="/small-icon-mobile.png"></v-img>
@@ -121,7 +121,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50" src="/small-icon-app.png"></v-img>
@@ -131,7 +131,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50" src="/small-icon-script.png"></v-img>
@@ -141,7 +141,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50" src="/small-icon-stack.png"></v-img>
@@ -151,7 +151,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50" src="/small-icon-QA.png"></v-img>
@@ -161,7 +161,7 @@
                   </v-col>
                 </v-row>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
                     <v-img class="mr-5" width="50" src="/small-icon-web.png"></v-img>
@@ -182,7 +182,7 @@
         </v-col>
       </v-row>
       <v-row class="text-left">
-        <v-col cols="12" md="5" order="2" order-md="1">
+        <v-col cols="12" md="6" order="2" order-md="1">
           <h3 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
@@ -249,7 +249,7 @@
             </v-row>
           </v-container>
         </v-col>
-        <v-col cols="12" md="7" order="1" order-md="2">
+        <v-col cols="12" md="6" order="1" order-md="2">
           <v-img src="/section-marketingdesign.png"></v-img>
         </v-col>
       </v-row>
@@ -270,9 +270,14 @@
           <v-img src="/section-tech.png"></v-img>
         </v-col>
       </v-row>
-      <h1>Get in touch</h1>
 
-      <multiStepForm></multiStepForm>
+      <v-row justify="center">
+        <v-col cols="12" md="10" xl="6">
+          <h2 class="py-4">Get in touch</h2>
+
+          <multiStepForm></multiStepForm>
+        </v-col>
+      </v-row>
     </v-container>
   </v-layout>
 </template>
@@ -342,9 +347,5 @@ export default {
 
 .nextbtn {
   padding: 0px;
-}
-
-.stepperContent {
-  width: 800px;
 }
 </style>

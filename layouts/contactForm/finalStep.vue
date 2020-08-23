@@ -1,14 +1,14 @@
 <template>
-  <v-card>
+  <v-card class="ma-0 pa-0">
     <v-form ref="form" align="start" justify="start">
       <v-row>
-        <v-col cols="12">
+        <v-col cols="12" class="ma-0 pa-0">
           <v-container class="pa-5 ma-0">
             <h2>Lastly...</h2>
             <div>Let's wrap this up.</div>
           </v-container>
 
-          <label class="fieldTitle">What's your ideal timeframe?</label>
+          <div class="fieldTitle">What's your ideal timeframe?</div>
           <v-text-field
             id="dateForContact"
             class="fieldTextInput"
@@ -19,7 +19,7 @@
             :rules="[rules.required,]"
           ></v-text-field>
 
-          <label class="fieldTitle">How did you hear about us?</label>
+          <div class="fieldTitle">How did you hear about us?</div>
           <v-text-field
             id="hearAboutUs"
             class="fieldTextInput"

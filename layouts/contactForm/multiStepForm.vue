@@ -1,74 +1,75 @@
 <template>
-  <v-row align="center" justify="center">
-    <v-stepper v-model="e1">
-      <v-stepper-header>
-        <v-stepper-step :complete="e1 > 1" step="1" color="orange">Contact</v-stepper-step>
-        <v-stepper-step :complete="e1 > 2" step="2" color="orange">Technology</v-stepper-step>
-        <v-stepper-step :complete="e1 > 3" step="3" color="orange">Budget</v-stepper-step>
-        <v-stepper-step step="4" color="orange">Lastly</v-stepper-step>
-      </v-stepper-header>
+  <v-stepper v-model="e1" width="100">
+    <v-stepper-header>
+      <v-stepper-step :complete="e1 > 1" step="1" color="orange">Contact</v-stepper-step>
+      <v-stepper-step :complete="e1 > 2" step="2" color="orange">Technology</v-stepper-step>
+      <v-stepper-step :complete="e1 > 3" step="3" color="orange">Budget</v-stepper-step>
+      <v-stepper-step step="4" color="orange">Lastly</v-stepper-step>
+    </v-stepper-header>
 
-      <v-stepper-items style="height:550px">
-        <v-stepper-content class="stepperContent" step="1">
-          <v-container style="height:450px">
-            <contactPage ref="contact"></contactPage>
-          </v-container>
-          <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
-        </v-stepper-content>
+    <v-stepper-items style="min-height:550px">
+      <v-stepper-content step="1">
+        <v-container style="min-height:450px" class="ma-0 pa-0">
+          <contactPage ref="contact"></contactPage>
+        </v-container>
+        <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
+      </v-stepper-content>
 
-        <v-stepper-content class="stepperContent" step="2">
-          <v-container style="height:450px">
-            <technology ref="technology" :parentData="contactData"></technology>
-          </v-container>
+      <v-stepper-content step="2">
+        <v-container style="min-height:450px" class="ma-0 pa-0">
+          <technology ref="technology" :parentData="contactData"></technology>
+        </v-container>
 
-          <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
-          <v-btn text @click="e1 -= 1">Cancel</v-btn>
-        </v-stepper-content>
+        <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
+        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+      </v-stepper-content>
 
-        <v-stepper-content class="stepperContent" step="3">
-          <v-container style="height:450px">
-            <budget ref="budget"></budget>
-          </v-container>
+      <v-stepper-content step="3">
+        <v-container style="min-height:450px" class="ma-0 pa-0">
+          <budget ref="budget"></budget>
+        </v-container>
 
-          <v-btn color="orange" class="white--text" @click="nextPage()">Continue</v-btn>
-          <v-btn text @click="e1 -= 1">Cancel</v-btn>
-        </v-stepper-content>
+        <v-btn color="orange" class="white--text" @click="nextPage()">Continue</v-btn>
+        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+      </v-stepper-content>
 
-        <v-stepper-content class="stepperContent" step="4">
-          <v-container style="height:450px">
-            <finalStep ref="finalStep"></finalStep>
-          </v-container>
+      <v-stepper-content step="4">
+        <v-container style="min-height:450px" class="ma-0 pa-0">
+          <finalStep ref="finalStep"></finalStep>
+        </v-container>
 
-          <v-btn color="orange" class="white--text" @click="submit()">Submit</v-btn>
-          <v-btn text @click="e1 -= 1">Cancel</v-btn>
-        </v-stepper-content>
-      </v-stepper-items>
+        <v-btn color="orange" class="white--text" @click="submit()">Submit</v-btn>
+        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+      </v-stepper-content>
+    </v-stepper-items>
 
-      <v-overlay :absolute="absolute" :value="overlay">
-        <v-col align="center" justify="center" v-if="sending">
-          <v-progress-circular indeterminate size="64"></v-progress-circular>
-          <v-container>
-            <p>Sending</p>
-          </v-container>
-        </v-col>
+    <v-overlay :absolute="absolute" :value="overlay">
+      <v-col align="center" justify="center" v-if="sending">
+        <v-progress-circular indeterminate size="64"></v-progress-circular>
+        <v-container>
+          <p>Sending</p>
+        </v-container>
+      </v-col>
 
-        <v-col align="center" justify="center" v-if="!sending && sendingsucceed">
-          <v-icon dark right size="64">mdi-checkbox-marked-circle</v-icon>
-          <v-container>
-            <p>Sent</p>
-          </v-container>
-        </v-col>
+      <v-col align="center" justify="center" v-if="!sending && sendingsucceed">
+        <v-icon dark right size="64">mdi-checkbox-marked-circle</v-icon>
+        <v-container>
+          <p>Sent</p>
+        </v-container>
+      </v-col>
 
-        <v-col align="center" justify="center" v-if="!sending && !sendingsucceed">
-          <v-icon dark right size="64">mdi-alert-circle</v-icon>
-          <v-container>
-            <p>Sending Failed</p>
-          </v-container>
-        </v-col>
-      </v-overlay>
-    </v-stepper>
-  </v-row>
+      <v-col align="center" justify="center" v-if="!sending && !sendingsucceed">
+        <v-icon dark right size="64">mdi-alert-circle</v-icon>
+        <v-container>
+          <p>Sending Failed</p>
+        </v-container>
+      </v-col>
+    </v-overlay>
+  </v-stepper>
 </template>
+
+<style scoped>
+</style>
 
 <script>
 import ContactPage from "~/layouts/contactForm/contact.vue";

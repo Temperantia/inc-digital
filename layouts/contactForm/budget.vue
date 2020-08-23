@@ -1,5 +1,5 @@
 <template>
-  <v-card flat color="transparent">
+  <v-card flat color="transparent" class="ma-0 pa-0">
     <v-row>
       <v-col align="start" justify="start">
         <div class="stepTitle">What's your budget?</div>
