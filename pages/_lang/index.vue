@@ -12,23 +12,18 @@
       </v-col>
     </v-img>
     <v-container id="home" width="50" class="text-center">
-      <v-row>
-        <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">{{$t('index.home.hello')}}</h2>
-          <v-divider width="20%" color="black"></v-divider>
-        </v-col>
-      </v-row>
-      <v-container class="text-center">
-        <h3 class="pa=2">{{$t('index.home.whoWeAre')}}</h3>
-      </v-container>
+      <v-row align="center">
+        <v-col cols="12" align="center">
+          <div class="d-inline-block">
+            <h2 class="pa-3 d-inline-block">{{$t('index.home.hello')}}</h2>
+            <v-divider class="mb-2" width="60%" color="black"></v-divider>
+          </div>
 
-      <br />
-      <br />
-
-      <v-row>
-        <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">{{$t('index.home.weFocusOn')}}</h2>
-          <v-divider width="20%" color="black"></v-divider>
+          <h3 class="pa-2 pb-8">{{$t('index.home.whoWeAre')}}</h3>
+          <div class="d-inline-block">
+            <h2 class="pa-3 d-inline-block">{{$t('index.home.weFocusOn')}}</h2>
+            <v-divider width="60%" color="black"></v-divider>
+          </div>
         </v-col>
       </v-row>
       <v-row>
@@ -46,125 +41,138 @@
         </v-col>
       </v-row>
 
-      <br />
-      <br />
-
       <v-row>
-        <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">{{$t('index.workflow.title')}}</h2>
-          <v-divider width="20%" color="black"></v-divider>
+        <v-col cols="12" align="center">
+          <div class="d-inline-block">
+            <h2 class="pa-3 d-inline-block">{{$t('index.workflow.title')}}</h2>
+            <v-divider class="mb-6" width="60%" color="black"></v-divider>
+          </div>
+
+          <p class="pa-2">{{$t('index.workflow.ourStrategy')}}</p>
         </v-col>
       </v-row>
-      <br />
-      <v-row>
-        <v-col>{{$t('index.workflow.ourStrategy')}}</v-col>
-      </v-row>
 
-      <br />
-
-      <v-row>
-        <v-col align="center">
+      <v-row justify="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-communicate.png"></v-img>
-          <h4>01. {{$t('index.workflow.communicate.title')}}</h4>
-          <br />
-          <p>{{$t('index.workflow.communicate.description')}}</p>
+          <h4 class="mb-3">01. {{$t('index.workflow.communicate.title')}}</h4>
+          <p class="pa-2">{{$t('index.workflow.communicate.description')}}</p>
         </v-col>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-evaluate.png"></v-img>
-          <h4>02. {{$t('index.workflow.evaluate.title')}}</h4>
-          <br />
-          <p>{{$t('index.workflow.evaluate.description')}}</p>
+          <h4 class="mb-3">02. {{$t('index.workflow.evaluate.title')}}</h4>
+          <p class="pa-2">{{$t('index.workflow.evaluate.description')}}</p>
         </v-col>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-design.png"></v-img>
-          <h4>03. {{$t('index.workflow.design.title')}}</h4>
-          <br />
-          <p>{{$t('index.workflow.design.description')}}</p>
+          <h4 class="mb-3">03. {{$t('index.workflow.design.title')}}</h4>
+          <p class="pa-2">{{$t('index.workflow.design.description')}}</p>
         </v-col>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-develop.png"></v-img>
-          <h4>04. {{$t('index.workflow.develop.title')}}</h4>
-          <br />
-          <p>{{$t('index.workflow.develop.description')}}</p>
+          <h4 class="mb-3">04. {{$t('index.workflow.develop.title')}}</h4>
+          <p class="pa-2">{{$t('index.workflow.develop.description')}}</p>
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-test.png"></v-img>
           <h4>05. {{$t('index.workflow.test.title')}}</h4>
           <br />
-          <p>{{$t('index.workflow.test.description')}}</p>
+          <p class="pa-2">{{$t('index.workflow.test.description')}}</p>
         </v-col>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-release.png"></v-img>
           <h4>06. {{$t('index.workflow.release.title')}}</h4>
-          <p>{{$t('index.workflow.release.description')}}</p>
+          <p class="pa-2">{{$t('index.workflow.release.description')}}</p>
         </v-col>
-        <v-col align="center">
+        <v-col cols="6" sm="4" md="3" align="center">
           <v-img width="100" src="/icon-support.png"></v-img>
           <h4>07. {{$t('index.workflow.support.title')}}</h4>
-          <p>{{$t('index.workflow.support.description')}}</p>
+          <p class="pa-2">{{$t('index.workflow.support.description')}}</p>
         </v-col>
       </v-row>
-      <v-row id="expertise">
-        <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">{{$t('index.expertise.title')}}</h2>
-          <v-divider width="20%" color="black"></v-divider>
+
+      <v-row id="expertise" justify="center">
+        <v-col cols="12" align="center">
+          <div class="d-inline-block">
+            <h2 class="pa-3 d-inline-block">{{$t('index.expertise.title')}}</h2>
+            <v-divider class="mb-4" width="60%" color="black"></v-divider>
+          </div>
+
+          <p>{{$t('index.expertise.description')}}</p>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col>{{$t('index.expertise.description')}}</v-col>
-      </v-row>
-      <v-row class="text-left">
-        <v-col col="7">
+
+      <v-row justify="center" class="text-left">
+        <v-col cols="12" md="6">
           <v-img src="/section-software.png"></v-img>
         </v-col>
-        <v-col col="5">
+        <v-col cols="12" md="6">
           <h3 class="py-3">{{$t('index.expertise.software.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-mobile.png"></v-img>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50px" contain src="/small-icon-mobile.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.mobileDevelopment')}}</h4>
+                  </v-col>
+                </v-row>
               </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.mobileDevelopment')}}</h4>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50" src="/small-icon-app.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.desktopApplications')}}</h4>
+                  </v-col>
+                </v-row>
               </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-app.png"></v-img>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50" src="/small-icon-script.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.scriptAutomation')}}</h4>
+                  </v-col>
+                </v-row>
               </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.desktopApplications')}}</h4>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50" src="/small-icon-stack.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.fullStack')}}</h4>
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50" src="/small-icon-QA.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.QATesting')}}</h4>
+                  </v-col>
+                </v-row>
+              </v-col>
+              <v-col cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50" src="/small-icon-web.png"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t('index.expertise.software.websiteDevelopment')}}</h4>
+                  </v-col>
+                </v-row>
               </v-col>
             </v-row>
-            <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-script.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.scriptAutomation')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-stack.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.fullStack')}}</h4>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-QA.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.QATesting')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-web.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.software.websiteDevelopment')}}</h4>
-              </v-col>
-            </v-row>
+
             <v-row>
               <v-col cols="12">
                 <p>{{$t('index.expertise.software.ourPhilosophy')}}</p>
@@ -174,7 +182,7 @@
         </v-col>
       </v-row>
       <v-row class="text-left">
-        <v-col col="5">
+        <v-col cols="12" md="6" order="2" order-md="1">
           <h3 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h3>
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
@@ -241,15 +249,17 @@
             </v-row>
           </v-container>
         </v-col>
-        <v-col col="7">
+        <v-col cols="12" md="6" order="1" order-md="2">
           <v-img src="/section-marketingdesign.png"></v-img>
         </v-col>
       </v-row>
 
       <v-row>
-        <v-col cols="4" offset="4" align="center">
-          <h2 class="pa-3">{{$t('index.technology.title')}}</h2>
-          <v-divider width="20%" color="black"></v-divider>
+        <v-col cols="12" align="center">
+          <div class="d-inline-block">
+            <h2 class="pa-3 d-inline-block">{{$t('index.technology.title')}}</h2>
+            <v-divider width="60%" color="black"></v-divider>
+          </div>
         </v-col>
       </v-row>
       <v-row>
@@ -260,9 +270,14 @@
           <v-img src="/section-tech.png"></v-img>
         </v-col>
       </v-row>
-      <h1>Get in touch</h1>
 
-      <multiStepForm></multiStepForm>
+      <v-row justify="center">
+        <v-col cols="12" md="10" xl="6">
+          <h2 class="py-4">Get in touch</h2>
+
+          <multiStepForm></multiStepForm>
+        </v-col>
+      </v-row>
     </v-container>
   </v-layout>
 </template>
@@ -332,9 +347,5 @@ export default {
 
 .nextbtn {
   padding: 0px;
-}
-
-.stepperContent {
-  width: 800px;
 }
 </style>

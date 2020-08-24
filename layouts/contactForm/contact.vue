@@ -1,8 +1,8 @@
 <template>
-  <v-col cols="12">
-    <v-card-text>
+  <v-col cols="12" class="ma-0 pa-0">
+    <v-card-text class="ma-0 pa-0">
       <v-form ref="form" align="start" justify="start">
-        <label class="fieldTitle">What should we call you?</label>
+        <div class="fieldTitle">What should we call you?</div>
 
         <v-text-field
           id="name"
@@ -14,7 +14,7 @@
           :rules="[rules.required,]"
         ></v-text-field>
 
-        <label class="fieldTitle">What the name of compagny / organization?</label>
+        <div class="fieldTitle">What the name of compagny / organization?</div>
         <v-text-field
           id="company"
           v-model="company"
@@ -24,10 +24,10 @@
           type="text"
           :rules="[rules.required,]"
         ></v-text-field>
-        <label class="fieldTitle">How shall we contact you?</label>
+        <div class="fieldTitle">How shall we contact you?</div>
 
         <v-row justify="center">
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field
               id="email"
               v-model="email"
@@ -38,7 +38,7 @@
               :rules="[rules.required,rules.matchEmail]"
             ></v-text-field>
           </v-col>
-          <v-col cols="6">
+          <v-col cols="12" md="6">
             <v-text-field
               id="name"
               v-model="phone"
