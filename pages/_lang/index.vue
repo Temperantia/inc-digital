@@ -313,24 +313,6 @@ export default {
   background-size: cover;
   border: none;
 }
-.v-text-field {
-  font-weight: bold;
-  padding: 10px;
-  margin: 10px;
-}
-
-.v-text-field input {
-  padding: 25px 0px 25px;
-}
-
-.v-text-field--placeholder {
-  padding-top: 10px;
-}
-
-.v-text-field label {
-  font-size: 25px;
-}
-/* text left has pddining by default */
 
 .fieldTitle {
   padding: 5px 10px 5px 10px;

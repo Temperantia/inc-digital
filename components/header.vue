@@ -29,21 +29,22 @@
       to="/"
     >{{$t('navbar.contact')}}</Nuxt-link>
 
-    <NuxtLink
-      v-if="$i18n.locale === 'en'"
-      :to="`/fr` + $route.fullPath"
-      style="margin-right: 150px; color: #adecf4; text-decoration: none;"
-      active-class="none"
-      exact
-    >{{ $t('links.french') }}</NuxtLink>
-
-    <NuxtLink
-      v-else
-      :to="$route.fullPath.replace(/^\/[^\/]+/, '')"
-      style="margin-right: 150px; color: #adecf4; text-decoration: none;"
-      active-class="none"
-      exact
-    >{{ $t('links.english') }}</NuxtLink>
+    <v-col cols="auto">
+      <v-select
+        class="custom mx-6 info--text"
+        item-color="accent"
+        v-model="langSelected"
+        :items="langs"
+        hide-details
+        single-line
+        style="width:130px;"
+        @change="changeLang(langSelected)"
+      >
+        <template v-slot:prepend-inner>
+          <v-icon color="info">mdi-web</v-icon>
+        </template>
+      </v-select>
+    </v-col>
   </v-toolbar>
 </template>
 
@@ -68,6 +69,36 @@ export default {
         text: "navbar.team",
       },
     ],
+    langs: ["English", "Français"],
+    langSelected: "English",
   }),
+  methods: {
+    changeLang: function (lang) {
+      switch (lang) {
+        case "English":
+          this.$router.push("/");
+          console.log("done");
+          break;
+
+        case "Français":
+          this.$router.push("/fr");
+          console.log("done");
+        default:
+          break;
+      }
+    },
+  },
 };
 </script>
+
+<style>
+.custom.v-text-field > .v-input__control > .v-input__slot:before {
+  border-style: none;
+}
+.custom.v-text-field > .v-input__control > .v-input__slot:after {
+  border-style: none;
+}
+.theme--light.v-select .v-select__selection--comma {
+  color: inherit;
+}
+</style>

@@ -102,7 +102,7 @@ export default {
           accent: "#18a8ad", //cyan
           secondary: "#c24e98", //violet
           lightText: "#FFFFFF", //white
-          info: colors.teal.lighten1,
+          info: "#d0d0d0", //grey
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
