@@ -1,10 +1,10 @@
 <template>
   <v-stepper class="elevation-0" v-model="e1" width="100">
-    <v-row class="d-flex mx-5 my-6" height="2px">
+    <v-row class="d-flex mx-0 my-4" height="2px">
       <v-card
         v-for="n in 4"
         :key="n"
-        :color="e1 +1 > n ? 'accent' : 'grey'"
+        :color="e1 +1 > n ? 'accent' : 'grey lighten-1'"
         class="d-flex align-left elevation-0 ma-0 mr-1"
         width="70px"
         height="2px"

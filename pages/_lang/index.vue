@@ -111,73 +111,19 @@
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
-              <v-col cols="6" class="py-0">
+              <v-col v-for="(item,i) in softwareItems" :key="i" cols="6" class="py-0">
                 <v-row>
                   <v-col cols="4">
-                    <v-img class="mr-5" width="50px" contain src="/small-icon-mobile.png"></v-img>
+                    <v-img class="mr-5" width="50px" contain :src="item.imagePath"></v-img>
                   </v-col>
                   <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.mobileDevelopment')}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" width="50" src="/small-icon-app.png"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.desktopApplications')}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" width="50" src="/small-icon-script.png"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.scriptAutomation')}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" width="50" src="/small-icon-stack.png"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.fullStack')}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" width="50" src="/small-icon-QA.png"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.QATesting')}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-              <v-col cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" width="50" src="/small-icon-web.png"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t('index.expertise.software.websiteDevelopment')}}</h4>
+                    <h4>{{$t(item.text)}}</h4>
                   </v-col>
                 </v-row>
               </v-col>
             </v-row>
 
-            <v-row>
-              <v-col cols="12">
-                <p>{{$t('index.expertise.software.ourPhilosophy')}}</p>
-              </v-col>
-            </v-row>
+            <p>{{$t('index.expertise.software.ourPhilosophy')}}</p>
           </v-container>
         </v-col>
       </v-row>
@@ -187,61 +133,18 @@
           <v-divider width="10%" color="black"></v-divider>
           <v-container fluid>
             <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-UI.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.uiUxDesign')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-illus.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.illustration')}}</h4>
+              <v-col v-for="(item,i) in marketingItems" :key="i" cols="6" class="py-0">
+                <v-row>
+                  <v-col cols="4">
+                    <v-img class="mr-5" width="50px" contain :src="item.imagePath"></v-img>
+                  </v-col>
+                  <v-col cols="8" align-self="center">
+                    <h4>{{$t(item.text)}}</h4>
+                  </v-col>
+                </v-row>
               </v-col>
             </v-row>
-            <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-consult.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.designConsulting')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-brand.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.branding')}}</h4>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-analysis.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.dataAnalysis')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-SEO.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.seoSocialCampaigns')}}</h4>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-strategy.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.businessPlanning')}}</h4>
-              </v-col>
-              <v-col cols="2" align-self="center">
-                <v-img width="50" src="/small-icon-advert.png"></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center">
-                <h4>{{$t('index.expertise.marketingAndDesign.advertisementAndContent')}}</h4>
-              </v-col>
-            </v-row>
+
             <v-row>
               <v-col cols="12">
                 <p>{{$t('index.expertise.marketingAndDesign.ourPhilosophy')}}</p>
@@ -253,18 +156,9 @@
           <v-img src="/section-marketingdesign.png"></v-img>
         </v-col>
       </v-row>
-
-      <v-row>
-        <v-col cols="12" align="center">
-          <div class="d-inline-block">
-            <h2 class="pa-3 d-inline-block">{{$t('index.technology.title')}}</h2>
-            <v-divider width="60%" color="black"></v-divider>
-          </div>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>{{$t('index.technology.description')}}</v-col>
-      </v-row>
+      <h1>{{$t('index.technology.title')}}</h1>
+      <h3>{{$t('index.technology.description')}}</h3>
+      <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
       <v-row>
         <v-col>
           <v-img src="/section-tech.png"></v-img>
@@ -273,7 +167,7 @@
 
       <v-row justify="center">
         <v-col cols="12" md="10" xl="6">
-          <h2 class="py-4">Get in touch</h2>
+          <h1 class="py-4">Get in touch</h1>
 
           <multiStepForm></multiStepForm>
         </v-col>
@@ -291,6 +185,66 @@ export default {
   data() {
     return {
       toggle_exclusive: undefined,
+      softwareItems: [
+        {
+          text: "index.expertise.software.mobileDevelopment",
+          imagePath: "/small-icon-mobile.png",
+        },
+        {
+          text: "index.expertise.software.desktopApplications",
+          imagePath: "/small-icon-app.png",
+        },
+        {
+          text: "index.expertise.software.scriptAutomation",
+          imagePath: "/small-icon-script.png",
+        },
+        {
+          text: "index.expertise.software.fullStack",
+          imagePath: "/small-icon-stack.png",
+        },
+        {
+          text: "index.expertise.software.QATesting",
+          imagePath: "/small-icon-QA.png",
+        },
+        {
+          text: "index.expertise.software.websiteDevelopment",
+          imagePath: "/small-icon-web.png",
+        },
+      ],
+      marketingItems: [
+        {
+          text: "index.expertise.marketingAndDesign.uiUxDesign",
+          imagePath: "/small-icon-UI.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.illustration",
+          imagePath: "/small-icon-illus.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.designConsulting",
+          imagePath: "/small-icon-consult.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.branding",
+          imagePath: "/small-icon-brand.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.dataAnalysis",
+          imagePath: "/small-icon-analysis.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.seoSocialCampaigns",
+          imagePath: "/small-icon-SEO.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.businessPlanning",
+          imagePath: "/small-icon-strategy.png",
+        },
+        {
+          text: "index.expertise.marketingAndDesign.advertisementAndContent",
+          imagePath: "/small-icon-advert.png",
+        },
+      ],
     };
   },
   components: {
@@ -304,6 +258,19 @@ export default {
 
 
 <style>
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: left;
+  padding: 6px 0 6px 0;
+}
+
+h3 {
+  text-align: left;
+  padding: 4px 0 4px 0;
+}
+
 .col.custCol {
   padding: 0;
   flex-grow: 0;
@@ -315,8 +282,8 @@ export default {
 }
 
 .fieldTitle {
-  padding: 5px 10px 5px 10px;
-  margin: 0px 10px 0px 10px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px 0px 0px 0px;
   font-size: 18px;
   font-weight: 500;
 

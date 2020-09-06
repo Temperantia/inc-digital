@@ -1,58 +1,56 @@
 <template>
-  <v-col cols="12" class="ma-0 pa-0">
-    <v-card-text class="ma-0 pa-0">
-      <v-form ref="form" align="start" justify="start">
-        <div class="fieldTitle">What should we call you?</div>
+  <v-card class="ma-0 pa-0" flat>
+    <v-form ref="form" align="start" justify="start">
+      <div class="fieldTitle">What should we call you?</div>
 
-        <v-text-field
-          id="name"
-          v-model="contactName"
-          class="fieldTextInput"
-          placeholder="Your Name here"
-          name="contactName"
-          type="text"
-          :rules="[rules.required,]"
-        ></v-text-field>
+      <v-text-field
+        id="name"
+        v-model="contactName"
+        class="fieldTextInput"
+        placeholder="Your Name here"
+        name="contactName"
+        type="text"
+        :rules="[rules.required,]"
+      ></v-text-field>
 
-        <div class="fieldTitle">What the name of compagny / organization?</div>
-        <v-text-field
-          id="company"
-          v-model="company"
-          class="fieldTextInput"
-          placeholder="Widgets Inc"
-          name="compagny"
-          type="text"
-          :rules="[rules.required,]"
-        ></v-text-field>
-        <div class="fieldTitle">How shall we contact you?</div>
+      <div class="fieldTitle">What the name of compagny / organization?</div>
+      <v-text-field
+        id="company"
+        v-model="company"
+        class="fieldTextInput"
+        placeholder="Widgets Inc"
+        name="compagny"
+        type="text"
+        :rules="[rules.required,]"
+      ></v-text-field>
+      <div class="fieldTitle">How shall we contact you?</div>
 
-        <v-row justify="center">
-          <v-col cols="12" md="6">
-            <v-text-field
-              id="email"
-              v-model="email"
-              class="fieldTextInput"
-              placeholder="Email address"
-              name="contactemail"
-              type="email"
-              :rules="[rules.required,rules.matchEmail]"
-            ></v-text-field>
-          </v-col>
-          <v-col cols="12" md="6">
-            <v-text-field
-              id="name"
-              v-model="phone"
-              class="fieldTextInput"
-              placeholder="Phone number"
-              name="contactphone"
-              type="phone"
-              :rules="[rules.required,]"
-            ></v-text-field>
-          </v-col>
-        </v-row>
-      </v-form>
-    </v-card-text>
-  </v-col>
+      <v-row justify="center">
+        <v-col cols="12" md="6">
+          <v-text-field
+            id="email"
+            v-model="email"
+            class="fieldTextInput"
+            placeholder="Email address"
+            name="contactemail"
+            type="email"
+            :rules="[rules.required,rules.matchEmail]"
+          ></v-text-field>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-text-field
+            id="name"
+            v-model="phone"
+            class="fieldTextInput"
+            placeholder="Phone number"
+            name="contactphone"
+            type="phone"
+            :rules="[rules.required,]"
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </v-form>
+  </v-card>
 </template>
 
 <script>

@@ -31,7 +31,7 @@
 
     <v-col cols="auto">
       <v-select
-        class="custom mx-6 info--text"
+        class="custom mx-6 lightText--text"
         item-color="accent"
         v-model="langSelected"
         :items="langs"
@@ -41,7 +41,7 @@
         @change="changeLang(langSelected)"
       >
         <template v-slot:prepend-inner>
-          <v-icon color="info">mdi-web</v-icon>
+          <v-icon color="lightText">mdi-web</v-icon>
         </template>
       </v-select>
     </v-col>
