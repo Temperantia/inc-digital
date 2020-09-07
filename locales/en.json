@@ -13,7 +13,9 @@
   "footer": {
     "copyright": "INC-Digital All Rights reserved.",
     "descriptionPrefix": "INC-DIGITAL IS AN",
-    "descriptionSuffix": "COMPANY"
+    "descriptionSuffix": "COMPANY",
+    "useOfThisSite": "Use of this site is subject to the following",
+    "termsOfUse": "terms of use"
   },
   "index": {
     "home": {

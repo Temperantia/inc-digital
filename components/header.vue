@@ -8,7 +8,7 @@
     style="position: absolute; z-index: 1;"
   >
     <v-toolbar-title>
-      <v-img src="/logo.png"></v-img>
+      <v-img src="/logo_black_text.png"></v-img>
     </v-toolbar-title>
 
     <v-spacer></v-spacer>

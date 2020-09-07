@@ -1,16 +1,140 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-img width="100%" src="/header.png">
-      <v-col cols="4" offset="8" style="height: 100%;">
-        <div
-          style="position: absolute; left: 62%; bottom: 10%; font-size: 3vw; color: white; white-space:nowrap;"
-        >
-          <div class="pl-16">{{$t('index.home.bannerLine1')}}</div>
-          <div class="pl-8">{{$t('index.home.bannerLine2')}}</div>
-          <div>{{$t('index.home.bannerLine3')}}</div>
+    <v-img
+      class="align-self-end"
+      style="position:absolute; top:0px; right:0px;"
+      width="65%"
+      src="/Background1.png"
+      position="right"
+    ></v-img>
+    <v-row style="width:100%">
+      <div
+        style="
+        width: 35%;
+        padding-bottom: 48%;
+        box-sizing: border-box;
+        position: relative;"
+      >
+        <div class="px-8" style="position:absolute; padding-top:10vw">
+          <h4>We are inc digital</h4>
+          <h1>
+            <span class="accent--text">WE'RE A NEW KIND</span> OF DIGITAL AGENCY
+          </h1>
+          <blockquote
+            class="grey--text px-4 my-6"
+            style="border-left: 5px solid LightGrey; font-size:1.4vw"
+          >
+            INC Digital is an experience design and product development agency. We bring your ideas inot reality with
+            beautiful execution to drive your business solutions.
+          </blockquote>
         </div>
-      </v-col>
-    </v-img>
+      </div>
+
+      <div
+        style="
+        width: 65%;
+        padding-bottom: 48%;
+        box-sizing: border-box;
+        position: relative;"
+      >
+        <div style="position:absolute; width:100%; height:100%; padding:25% 0 25% 0">
+          <v-row style="width:100%" align="center">
+            <v-col cols="12">
+              <h1 class="white--text" style="text-align:center;">Research</h1>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+    </v-row>
+
+    <v-row style="width:100%">
+      <div
+        style="
+        width: 56%;
+        padding-bottom: 61%;
+        box-sizing: border-box;
+        position: relative;"
+      >
+        <div class="pt-16" style="position:absolute; width:100%; height:100%">
+          <v-row align="center">
+            <v-col cols="8">
+              <v-tabs
+                v-model="workflowTab"
+                fixed-tabs
+                background-color="transparent"
+                color="secondary"
+              >
+                <v-tab class="mx-4 pa-0">Research</v-tab>
+                <v-tab class="mx-4 pa-0">Planning</v-tab>
+                <v-tab class="mx-4 pa-0">delivery</v-tab>
+              </v-tabs>
+
+              <v-tabs-items v-model="workflowTab">
+                <v-tab-item>
+                  <v-card color="basil" flat>
+                    <v-card-text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab-item>
+                  <v-card color="basil" flat>
+                    <v-card-text>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</v-card-text>
+                  </v-card>
+                </v-tab-item>
+                <v-tab-item>
+                  <v-card color="basil" flat>
+                    <v-card-text>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</v-card-text>
+                  </v-card>
+                </v-tab-item>
+              </v-tabs-items>
+            </v-col>
+            <v-col cols="2"></v-col>
+
+            <v-col cols="2" align-self="start">
+              <v-btn icon @click="()=>{if(workflowTab!==2){workflowTab++}}">
+                <v-img class="ma-3" src="/carrouselArrowRight.png" width="32px"></v-img>
+              </v-btn>
+              <br />
+              <v-btn icon @click="workflowTab--">
+                <v-img class="ma-3" src="/carrouselArrowLeft.png" width="32px"></v-img>
+              </v-btn>
+            </v-col>
+          </v-row>
+        </div>
+      </div>
+
+      <div
+        style="
+        width: 44%;
+        padding-bottom: 61%;
+        box-sizing: border-box;
+        position: relative;"
+      >
+        <div class="pt-16" style="position:absolute">
+          <h1 class="white--text">Research</h1>
+        </div>
+      </div>
+    </v-row>
+    <div>
+      <br />
+      <br />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
     <v-container id="home" width="50" class="text-center">
       <v-row align="center">
         <v-col cols="12" align="center">
@@ -91,16 +215,9 @@
         </v-col>
       </v-row>
 
-      <v-row id="expertise" justify="center">
-        <v-col cols="12" align="center">
-          <div class="d-inline-block">
-            <h2 class="pa-3 d-inline-block">{{$t('index.expertise.title')}}</h2>
-            <v-divider class="mb-4" width="60%" color="black"></v-divider>
-          </div>
-
-          <p>{{$t('index.expertise.description')}}</p>
-        </v-col>
-      </v-row>
+      <h1 id="expertise">{{$t('index.expertise.title')}}</h1>
+      <h3>{{$t('index.expertise.description')}}</h3>
+      <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
 
       <v-row justify="center" class="text-left">
         <v-col cols="12" md="6">
@@ -185,6 +302,7 @@ export default {
   data() {
     return {
       toggle_exclusive: undefined,
+      workflowTab: null,
       softwareItems: [
         {
           text: "index.expertise.software.mobileDevelopment",
@@ -259,11 +377,18 @@ export default {
 
 <style>
 h1 {
-  font-size: 60px;
+  font-size: 3.5vw;
   text-transform: uppercase;
   font-weight: 500;
   text-align: left;
   padding: 6px 0 6px 0;
+}
+
+todefine {
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  text-align: left;
+  padding: 6px;
 }
 
 h3 {
@@ -296,5 +421,9 @@ h3 {
 
 .nextbtn {
   padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
