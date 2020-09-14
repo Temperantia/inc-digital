@@ -17,12 +17,13 @@
       :key="i"
       :to="item.route"
       class="text-no-wrap my-2 mx-6 white--text"
-      style="text-decoration: none;"
+      style="text-decoration: none; font-size:22px;"
     >{{$t(item.text)}}</NuxtLink>
 
     <Nuxt-link
       class="text-no-wrap py-1 px-6 accent--text"
       style="text-decoration: none;
+            font-size:22px;
             border-width: 1px;
             border-style: solid;
             "
@@ -37,7 +38,7 @@
         :items="langs"
         hide-details
         single-line
-        style="width:130px;"
+        style="width:130px; "
         @change="changeLang(langSelected)"
       >
         <template v-slot:prepend-inner>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 70" width="78" height="70">
+	<defs>
+		<image width="78" height="70" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABGBAMAAACQ179DAAAAAXNSR0IB2cksfwAAAC1QTFRFYGBgY2NjgICAgICAYmJiYmJiYmJiY2NjY2NjampqampqYGBgY2NjYmJiY2Nj+qladAAAAA90Uk5TAAAABKtwAP/DDAAYi9efesxVyAAAARdJREFUeJzt07ENwjAQhWH3qWADiERBGdgAJDbICJ4AdGwAbACUdHiHVAzBCKzB3dkOEvh8aeicIqT49ANJnjFmPPXHsrV4noySh+ldvdkNckuAdoCrNwC7AQ5zsG9URzk44UWa9Y5zVzEXnc85MYeuevQ57yB1GNNtm5hz/LVpVz1hFXM51wFsFyHn+Oel3QtP65DLuXO4oJybyO5+4E/OOenu4X1x508u6zjIOWtzjoOUm1krPg5yGKTcjZwYRIdBvnfk5OeL4n6knHfi+0J/80I578T3z/njFp30Pgc31ZwxIafv1+f0/c59Tt+vK/v9cWW/giv7Tbqy35wr+/12f9xv3vX71VzYr+rCfnXH+x3geL+KewMB7pnrNij/nQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="homepage">
+		<use id="planning icon" href="#img1" x="0" y="0" />
+	</g>
+</svg>
