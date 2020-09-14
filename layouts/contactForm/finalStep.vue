@@ -1,8 +1,8 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
-      <h2>Lastly...</h2>
-      <div>Let's wrap this up.</div>
+      <div class="titleForm">Lastly...</div>
+      <div class="subtitleForm">Let's wrap this up</div>
 
       <div class="fieldTitle">What's your ideal timeframe?</div>
       <v-text-field

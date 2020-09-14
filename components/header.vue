@@ -12,23 +12,23 @@
     </v-toolbar-title>
 
     <v-spacer></v-spacer>
-    <NuxtLink
+    <a
       v-for="(item, i) in items"
       :key="i"
-      :to="item.route"
       class="text-no-wrap my-2 mx-6 white--text"
       style="text-decoration: none; font-size:22px;"
-    >{{$t(item.text)}}</NuxtLink>
+      @click="scrollToElement(item.route)"
+    >{{$t(item.text)}}</a>
 
-    <Nuxt-link
+    <a
       class="text-no-wrap py-1 px-6 accent--text"
       style="text-decoration: none;
             font-size:22px;
             border-width: 1px;
             border-style: solid;
             "
-      to="/"
-    >{{$t('navbar.contact')}}</Nuxt-link>
+      @click="scrollToElement('contact')"
+    >{{$t('navbar.contact')}}</a>
 
     <v-col cols="auto">
       <v-select
@@ -54,19 +54,19 @@ export default {
   data: () => ({
     items: [
       {
-        route: "#home",
+        route: "home",
         text: "navbar.home",
       },
       {
-        route: "#expertise",
+        route: "expertise",
         text: "navbar.expertise",
       },
       {
-        route: "#home", //TO DO : update route
+        route: "home", //TO DO : update route
         text: "navbar.work",
       },
       {
-        route: "#home", //TO DO : update route
+        route: "home", //TO DO : update route
         text: "navbar.team",
       },
     ],
@@ -87,6 +87,10 @@ export default {
         default:
           break;
       }
+    },
+    scrollToElement(id) {
+      var el = document.getElementById(id);
+      el.scrollIntoView();
     },
   },
 };

@@ -187,82 +187,18 @@
     <br />
     <br />
 
-    <expertise style="width:80%"></expertise>
+    <expertise id="expertise"></expertise>
+    <software></software>
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <v-container id="home" width="50" class="text-center">
-      <h1 id="expertise">{{$t('index.expertise.title')}}</h1>
-      <h3>{{$t('index.expertise.description')}}</h3>
-      <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
-
-      <v-row justify="center" class="text-left">
-        <v-col cols="12" md="6">
-          <v-img src="/section-software.png"></v-img>
-        </v-col>
-        <v-col cols="12" md="6">
-          <h3 class="py-3">{{$t('index.expertise.software.title')}}</h3>
-          <v-divider width="10%" color="black"></v-divider>
-          <v-container fluid>
-            <v-row>
-              <v-col v-for="(item,i) in softwareItems" :key="i" cols="6" class="py-0">
-                <v-row>
-                  <v-col cols="4">
-                    <v-img class="mr-5" height="50px" contain :src="item.imagePath"></v-img>
-                  </v-col>
-                  <v-col cols="8" align-self="center">
-                    <h4>{{$t(item.text)}}</h4>
-                  </v-col>
-                </v-row>
-              </v-col>
-            </v-row>
-
-            <p>{{$t('index.expertise.software.ourPhilosophy')}}</p>
-          </v-container>
-        </v-col>
-      </v-row>
-      <v-row class="text-left">
-        <v-col cols="12" md="6" order="2" order-md="1">
-          <v-divider width="10%" color="black"></v-divider>
-          <v-container fluid>
-            <v-row>
-              <v-col cols="12">
-                <p>{{$t('index.expertise.marketingAndDesign.ourPhilosophy')}}</p>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-col>
-        <v-col cols="12" md="6" order="1" order-md="2">
-          <v-img src="/section-marketingdesign.png"></v-img>
-        </v-col>
-      </v-row>
+    <v-container id="home" class="text-center mt-10" style="width:70%">
       <h1>{{$t('index.technology.title')}}</h1>
       <h3>{{$t('index.technology.description')}}</h3>
       <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
-      <v-row>
-        <v-col>
-          <v-img src="/section-tech.png"></v-img>
-        </v-col>
-      </v-row>
+      <v-img src="/section-tech2.png"></v-img>
 
-      <v-row justify="center">
-        <v-col cols="12" md="10" xl="6">
-          <h1 class="py-4">Get in touch</h1>
-
-          <multiStepForm></multiStepForm>
-        </v-col>
-      </v-row>
+      <h2 id="contact" style="margin-top:150px">contact</h2>
+      <h1 class="py-4">Get in touch</h1>
+      <multiStepForm></multiStepForm>
     </v-container>
   </v-layout>
 </template>
@@ -273,6 +209,7 @@
 import MultiStepForm from "~/layouts/contactForm/multiStepForm.vue";
 import WorkflowGroupItem from "~/components/workflowGroupItem.vue";
 import Expertise from "~/components/expertise.vue";
+import Software from "~/components/software.vue";
 
 export default {
   data() {
@@ -297,33 +234,6 @@ export default {
           title: "delivery",
           imagePath: "/delivery-icon.png",
           description: "description delivery",
-        },
-      ],
-
-      softwareItems: [
-        {
-          text: "index.expertise.software.mobileDevelopment",
-          imagePath: "/small-icon-mobile.png",
-        },
-        {
-          text: "index.expertise.software.desktopApplications",
-          imagePath: "/small-icon-app.png",
-        },
-        {
-          text: "index.expertise.software.scriptAutomation",
-          imagePath: "/small-icon-script.png",
-        },
-        {
-          text: "index.expertise.software.fullStack",
-          imagePath: "/small-icon-stack.png",
-        },
-        {
-          text: "index.expertise.software.QATesting",
-          imagePath: "/small-icon-QA.png",
-        },
-        {
-          text: "index.expertise.software.websiteDevelopment",
-          imagePath: "/small-icon-web.png",
         },
       ],
     };

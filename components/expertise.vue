@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
+  <v-container fluid style="width:70%">
     <v-row align="center">
       <v-col cols="6">
         <h2>expertise</h2>
-        <h1 id="expertise">{{$t('index.expertise.title')}}</h1>
+        <h1>{{$t('index.expertise.title')}}</h1>
         <h3>{{$t('index.expertise.description')}}</h3>
         <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
         <h4 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h4>
@@ -26,12 +26,6 @@
       <v-col cols="6" class="pl-10">
         <v-img max-height="900px" contain src="/section-marketingdesign.png"></v-img>
       </v-col>
-
-      <v-container fluid>
-        <v-row>
-          <v-col cols="12"></v-col>
-        </v-row>
-      </v-container>
     </v-row>
   </v-container>
 </template>

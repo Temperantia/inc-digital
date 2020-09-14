@@ -1,6 +1,10 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
+      <p class="titleForm">Start a project</p>
+      <p
+        class="subtitleForm"
+      >Thanks for your interest in working with us. Please complete the details below and we'll get back to you in one business day.</p>
       <div class="fieldTitle">What should we call you?</div>
 
       <v-text-field

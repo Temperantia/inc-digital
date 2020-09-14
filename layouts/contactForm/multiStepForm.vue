@@ -81,9 +81,6 @@
   </v-stepper>
 </template>
 
-<style scoped>
-</style>
-
 <script>
 import ContactPage from "~/layouts/contactForm/contact.vue";
 import Technology from "~/layouts/contactForm/technology.vue";
@@ -189,3 +186,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.titleForm {
+  font-size: 30px;
+  font-weight: 500;
+}
+.subtitleForm {
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+</style>

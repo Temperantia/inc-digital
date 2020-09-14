@@ -3,11 +3,12 @@
     <v-card-text class="ma-0 pa-0">
       <v-form>
         <v-container class="text-left">
-          <h2>What can we help you with ?</h2>
+          <p class="titleForm">What can we help you with ?</p>
+          <p
+            class="subtitleForm"
+          >Nice to meet you, {{parentData.contactName}}. Select all that apply.</p>
         </v-container>
-        <div
-          class="container text-left"
-        >Nice to meet you, {{parentData.contactName}}. Select all that apply.</div>
+
         <v-card flat class="py-12">
           <v-item-group v-model="selected">
             <v-row justify="center" no-gutters>
