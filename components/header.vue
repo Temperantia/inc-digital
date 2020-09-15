@@ -61,14 +61,16 @@ export default {
         route: "expertise",
         text: "navbar.expertise",
       },
-      {
-        route: "home", //TO DO : update route
+      // TO DO : update this when this tab exist
+      /*{
+        route: "home", 
         text: "navbar.work",
       },
       {
-        route: "home", //TO DO : update route
+        route: "home", 
         text: "navbar.team",
       },
+      */
     ],
     langs: ["English", "Français"],
     langSelected: "English",

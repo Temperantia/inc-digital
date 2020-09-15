@@ -43,7 +43,7 @@
         </v-col>
         <v-col cols="12" md="6">
           <v-text-field
-            id="name"
+            id="phoneNumber"
             v-model="phone"
             class="fieldTextInput"
             placeholder="Phone number"

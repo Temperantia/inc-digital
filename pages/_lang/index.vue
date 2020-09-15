@@ -170,24 +170,8 @@
         </v-row>
       </div>
     </v-row>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <expertise id="expertise"></expertise>
+    <expertise id="expertise" style="margin-top:450px"></expertise>
     <software></software>
 
     <v-container id="home" class="text-center mt-10" style="width:70%">
@@ -227,7 +211,7 @@ export default {
         },
         {
           title: "planning",
-          imagePath: "/planning-icon.svg",
+          imagePath: "/planning-icon.png",
           description: "description planning",
         },
         {
