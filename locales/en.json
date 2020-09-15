@@ -12,6 +12,8 @@
   },
   "footer": {
     "copyright": "INC-Digital All Rights reserved.",
+    "clientSupport": "Client Support",
+    "termsAndPrivacy": "Terms & Privacy",
     "descriptionPrefix": "INC-DIGITAL IS AN",
     "descriptionSuffix": "COMPANY",
     "useOfThisSite": "Use of this site is subject to the following",
@@ -19,15 +21,15 @@
   },
   "index": {
     "home": {
-      "bannerLine1": "We help you build",
-      "bannerLine2": "a new version",
-      "bannerLine3": "of your business",
-      "hello": "Bonjour !",
-      "whoWeAre": "We are a software development agency located in Paris, France.",
+      "bannerLine1": "WE'RE A NEW KIND",
+      "bannerLine2": "OF DIGITAL AGENCY",
+      "whoWeAre": "We're inc digital",
+      "incDigitalStory": "INC Digital is an experience design and product development agency. We bring your ideas into reality with beautiful execution to drive your business solutions.",
       "weFocusOn": "We focus on",
       "research": "Research",
       "planning": "Planning",
-      "delivery": "Delivery"
+      "delivery": "Delivery",
+      "scrollToDiscover": "SCROLL TO DISCOVER"
     },
     "workflow": {
       "title": "Workflow",
@@ -62,6 +64,7 @@
       }
     },
     "expertise": {
+      "sectionTitle": "expertise",
       "title": "A powerful and robust skillset",
       "description": "Extensive and innovative to get the most out of your bottom line.",
       "software": {
@@ -90,6 +93,31 @@
     "technology": {
       "title": "Technology is who we are",
       "description": "We utilize many platforms and frameworks to accomplish your vision."
+    },
+    "contactForm": {
+      "title": "contact",
+      "subtitle": "Get in touch",
+      "titleStepContact": "Start a project",
+      "descriptionStepContact": "Thanks for your interest in working with us. Please complete the details below and we'll get back to you in one business day.",
+      "fieldName": "What should we call you ?",
+      "fieldCompanyName": "What the name of compagny / organization?",
+      "fieldEmail": "How shall we contact you ?",
+      "titleStepTechnology": "What can we help you with ?",
+      "descriptionStepTechnology1": "Nice to meet you",
+      "descriptionStepTechnology2": "Select all that apply",
+      "titleStepBudget": "What's your budget ?",
+      "descriptionStepBudget": "A transparent budget will help us ensure expectations are met. Not sure? Ballparks are fine.",
+      "unknownBudget": "I don't know my budget",
+      "titleFinalStep": "Lastly...",
+      "descriptionFinalStep": "Let's wrap this up",
+      "fieldTimeFrame": "What's your ideal timeframe ?",
+      "fieldHearAboutUs": "How did you heard about us ?",
+      "buttonNext": "Next",
+      "buttonCancel": "Cancel",
+      "buttonSubmit": "Submit",
+      "sending": "Sending",
+      "sent": "Sent",
+      "sendingFailed": "Sending Failed"
     }
   }
 }

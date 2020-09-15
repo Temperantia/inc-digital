@@ -1,11 +1,8 @@
 <template>
   <v-card flat color="transparent" class="ma-0 pa-0">
     <v-container class="text-left">
-      <div class="titleForm">What's your budget?</div>
-      <div class="subtitleForm">
-        A transparent budget will help us ensure expectations are met.
-        Not sure? Ballparks are fine.
-      </div>
+      <div class="titleForm">{{$t('index.contactForm.titleStepBudget')}}</div>
+      <div class="subtitleForm">{{$t('index.contactForm.descriptionStepBudget')}}</div>
     </v-container>
     <v-card-text>
       <v-row>
@@ -43,7 +40,7 @@
       <v-row>
         <v-col align="start" class="ma-6">
           <v-btn-toggle>
-            <v-btn @click="disabled = !disabled">I don't know my budget</v-btn>
+            <v-btn @click="disabled = !disabled">{{$t('index.contactForm.unknownBudget')}}</v-btn>
           </v-btn-toggle>
         </v-col>
       </v-row>

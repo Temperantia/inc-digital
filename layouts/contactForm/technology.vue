@@ -3,10 +3,10 @@
     <v-card-text class="ma-0 pa-0">
       <v-form>
         <v-container class="text-left">
-          <p class="titleForm">What can we help you with ?</p>
+          <p class="titleForm">{{$t('index.contactForm.titleStepTechnology')}}</p>
           <p
             class="subtitleForm"
-          >Nice to meet you, {{parentData.contactName}}. Select all that apply.</p>
+          >{{$t('index.contactForm.descriptionStepTechnology1')}}, {{parentData.contactName}}. {{$t('index.contactForm.descriptionStepTechnology2')}}</p>
         </v-container>
 
         <v-card flat class="py-12">

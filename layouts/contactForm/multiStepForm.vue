@@ -17,7 +17,7 @@
           <contactPage ref="contact"></contactPage>
         </v-container>
         <v-btn class="white--text" color="accent" @click="nextPage()">
-          Next
+          {{$t('index.contactForm.buttonNext')}}
           <v-icon right>mdi-arrow-right</v-icon>
         </v-btn>
       </v-stepper-content>
@@ -28,10 +28,10 @@
         </v-container>
 
         <v-btn class="white--text" color="accent" @click="nextPage()">
-          Next
+          {{$t('index.contactForm.buttonNext')}}
           <v-icon right>mdi-arrow-right</v-icon>
         </v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
 
       <v-stepper-content step="3" class="ma-0 pa-0">
@@ -40,10 +40,10 @@
         </v-container>
 
         <v-btn color="accent" class="white--text" @click="nextPage()">
-          Next
+          {{$t('index.contactForm.buttonNext')}}
           <v-icon right>mdi-arrow-right</v-icon>
         </v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
 
       <v-stepper-content step="4" class="ma-0 pa-0">
@@ -51,8 +51,12 @@
           <finalStep ref="finalStep"></finalStep>
         </v-container>
 
-        <v-btn color="accent" class="white--text" @click="submit()">Submit</v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn
+          color="accent"
+          class="white--text"
+          @click="submit()"
+        >{{$t('index.contactForm.buttonSubmit')}}</v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
     </v-stepper-items>
 
@@ -60,21 +64,21 @@
       <v-col align="center" justify="center" v-if="sending">
         <v-progress-circular indeterminate size="64"></v-progress-circular>
         <v-container>
-          <p>Sending</p>
+          <p>{{$t('index.contactForm.sending')}}</p>
         </v-container>
       </v-col>
 
       <v-col align="center" justify="center" v-if="!sending && sendingsucceed">
         <v-icon dark right size="64">mdi-checkbox-marked-circle</v-icon>
         <v-container>
-          <p>Sent</p>
+          <p>{{$t('index.contactForm.sent')}}</p>
         </v-container>
       </v-col>
 
       <v-col align="center" justify="center" v-if="!sending && !sendingsucceed">
         <v-icon dark right size="64">mdi-alert-circle</v-icon>
         <v-container>
-          <p>Sending Failed</p>
+          <p>{{$t('index.contactForm.sendingFailed')}}</p>
         </v-container>
       </v-col>
     </v-overlay>

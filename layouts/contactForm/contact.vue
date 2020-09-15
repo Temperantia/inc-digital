@@ -1,12 +1,10 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
-      <p class="titleForm">Start a project</p>
-      <p
-        class="subtitleForm"
-      >Thanks for your interest in working with us. Please complete the details below and we'll get back to you in one business day.</p>
-      <div class="fieldTitle">What should we call you?</div>
+      <p class="titleForm">{{$t('index.contactForm.titleStepContact')}}</p>
+      <p class="subtitleForm">{{$t('index.contactForm.descriptionStepContact')}}</p>
 
+      <div class="fieldTitle">{{$t('index.contactForm.fieldName')}}</div>
       <v-text-field
         id="name"
         v-model="contactName"
@@ -17,7 +15,7 @@
         :rules="[rules.required,]"
       ></v-text-field>
 
-      <div class="fieldTitle">What the name of compagny / organization?</div>
+      <div class="fieldTitle">{{$t('index.contactForm.fieldCompanyName')}}</div>
       <v-text-field
         id="company"
         v-model="company"
@@ -27,7 +25,7 @@
         type="text"
         :rules="[rules.required,]"
       ></v-text-field>
-      <div class="fieldTitle">How shall we contact you?</div>
+      <div class="fieldTitle">{{$t('index.contactForm.fieldEmail')}}</div>
 
       <v-row justify="center">
         <v-col cols="12" md="6">

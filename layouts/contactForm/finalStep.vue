@@ -1,10 +1,10 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
-      <div class="titleForm">Lastly...</div>
-      <div class="subtitleForm">Let's wrap this up</div>
+      <div class="titleForm">{{$t('index.contactForm.titleFinalStep')}}</div>
+      <div class="subtitleForm">{{$t('index.contactForm.descriptionFinalStep')}}</div>
 
-      <div class="fieldTitle">What's your ideal timeframe?</div>
+      <div class="fieldTitle">{{$t('index.contactForm.fieldTimeFrame')}}</div>
       <v-text-field
         id="dateForContact"
         class="fieldTextInput"
@@ -15,7 +15,7 @@
         :rules="[rules.required,]"
       ></v-text-field>
 
-      <div class="fieldTitle">How did you hear about us?</div>
+      <div class="fieldTitle">{{$t('index.contactForm.fieldHearAboutUs')}}</div>
       <v-text-field
         id="hearAboutUs"
         class="fieldTextInput"

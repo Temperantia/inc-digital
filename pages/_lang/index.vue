@@ -16,20 +16,17 @@
         position: relative;"
       >
         <div class="px-8" style="position:absolute; padding-top:10vw">
-          <h2>We're inc digital</h2>
+          <h2>{{$t('index.home.whoWeAre')}}</h2>
           <h1>
-            <span class="accent--text">WE'RE A NEW KIND</span> OF DIGITAL AGENCY
+            <span class="accent--text">{{$t('index.home.bannerLine1')}}</span>
+            {{$t('index.home.bannerLine2')}}
           </h1>
           <blockquote
             class="grey--text px-4 my-6"
             style="border-left: 5px solid LightGrey; font-size:1.4vw"
-          >
-            INC Digital is an experience design and product development agency. We bring your ideas inot reality with
-            beautiful execution to drive your business solutions.
-          </blockquote>
+          >{{$t('index.home.incDigitalStory')}}</blockquote>
         </div>
       </div>
-
       <div
         style="
         width: 65%;
@@ -108,13 +105,13 @@
                   <v-card tile class="pa-0 elevation-4">
                     <v-row class="pa-0 ma-0" align="stretch">
                       <v-col
-                        cols="4"
+                        cols="2"
                         class="d-flex justify-center align-center"
                         style="background-color: #5fc3c7;"
                       >
                         <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
                       </v-col>
-                      <v-col cols="8">{{item.description}}</v-col>
+                      <v-col cols="10">{{item.description}}</v-col>
                     </v-row>
                   </v-card>
                 </v-tab-item>
@@ -154,24 +151,24 @@
             <span
               class="white--text"
               style="font-size:22px; font-weight:550; border-bottom: 2px solid white"
-            >SCROLL TO DISCOVER</span>
+            >{{$t('index.home.scrollToDiscover')}}</span>
           </v-col>
         </v-row>
 
-        <v-row style="padding:25vh 40px; 10px; 40px" align="center">
-          <v-col cols="8" align="center">
-            <h1 class="white--text">WORKFLOW</h1>
+        <v-row style="padding:5vw 40px; 10px; 40px" align="center">
+          <v-col cols="12" lg="8" align="center">
+            <h1 class="white--text">{{$t('index.workflow.title')}}</h1>
             <v-divider color="white"></v-divider>
             <p
               class="white--text pa-2 pt-5"
               style="font-size:20px; text-align: start; letter-spacing:1px"
-            >"Sed ut perspiciatis unde omnis isemo enst, qui dolorem ipsum quia dolor sitnsequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+            >{{$t('index.workflow.ourStrategy')}}</p>
           </v-col>
         </v-row>
       </div>
     </v-row>
 
-    <expertise id="expertise" style="margin-top:450px"></expertise>
+    <expertise id="expertise" style="margin-top:600px"></expertise>
     <software></software>
 
     <v-container id="home" class="text-center mt-10" style="width:70%">
@@ -180,8 +177,8 @@
       <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
       <v-img src="/section-tech2.png"></v-img>
 
-      <h2 id="contact" style="margin-top:150px">contact</h2>
-      <h1 class="py-4">Get in touch</h1>
+      <h2 id="contact" style="margin-top:150px">{{$t('index.contactForm.title')}}</h2>
+      <h1 class="py-4">{{$t('index.contactForm.subtitle')}}</h1>
       <multiStepForm></multiStepForm>
     </v-container>
   </v-layout>

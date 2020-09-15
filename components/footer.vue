@@ -2,8 +2,8 @@
   <v-footer>
     <v-container fluid style="width:70%">
       <v-row>
-        <div class="grey--text ma-4" style="font-size:18px">Client Support</div>
-        <div class="grey--text ma-4" style="font-size:18px">Terms & Privacy</div>
+        <div class="grey--text ma-4" style="font-size:18px">{{$t('footer.clientSupport')}}</div>
+        <div class="grey--text ma-4" style="font-size:18px">{{$t('footer.termsAndPrivacy')}}</div>
         <v-spacer></v-spacer>
         <v-icon
           class="ma-2"
