@@ -1,21 +1,10 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-img
-      class="align-self-end"
-      style="position:absolute; top:0px; right:0px;"
-      width="65%"
-      src="/Background1.png"
-      position="right"
-    ></v-img>
-    <v-row style="width:100%">
-      <div
-        style="
-        width: 35%;
-        padding-bottom: 48%;
-        box-sizing: border-box;
-        position: relative;"
-      >
-        <div class="px-8" style="position:absolute; padding-top:10vw">
+    <div id="mainContainer">
+      <v-img id="img1" src="/Background1.png"></v-img>
+      <div id="home">
+        f
+        <div class="px-8">
           <h2>{{$t('index.home.whoWeAre')}}</h2>
           <h1>
             <span class="accent--text">{{$t('index.home.bannerLine1')}}</span>
@@ -27,14 +16,8 @@
           >{{$t('index.home.incDigitalStory')}}</blockquote>
         </div>
       </div>
-      <div
-        style="
-        width: 65%;
-        padding-bottom: 48%;
-        box-sizing: border-box;
-        position: relative;"
-      >
-        <div style="position:absolute; width:100%; height:100%; padding:25% 0 25% 0">
+      <div id="title2">
+        <div>
           <v-sheet class="ma-0" color="transparent" elevation="0">
             <v-slide-group v-model="modelCarrousel" class="pa-0" center-active prev-icon next-icon>
               <v-slide-item>
@@ -76,14 +59,9 @@
           </v-row>
         </div>
       </div>
-    </v-row>
 
-    <v-row style="width:100%">
-      <div style="
-        width: 56%;
-        box-sizing: border-box;
-        position: relative;">
-        <div class="pt-8" style="position:absolute; width:100%; height:100%">
+      <div id="tabs">
+        <div>
           <v-row align="center">
             <v-col cols="9" class="ma-4">
               <v-tabs
@@ -142,10 +120,7 @@
         </div>
       </div>
 
-      <div style="
-        width: 44%;
-        box-sizing: border-box;
-        position: relative;">
+      <div id="scroll">
         <v-row align="center" class="pt-6">
           <v-col align="center">
             <span
@@ -154,7 +129,9 @@
             >{{$t('index.home.scrollToDiscover')}}</span>
           </v-col>
         </v-row>
+      </div>
 
+      <div id="workflow">
         <v-row style="padding:5vw 40px; 10px; 40px" align="center">
           <v-col cols="12" lg="8" align="center">
             <h1 class="white--text">{{$t('index.workflow.title')}}</h1>
@@ -166,12 +143,11 @@
           </v-col>
         </v-row>
       </div>
-    </v-row>
-
-    <expertise id="expertise" style="margin-top:600px"></expertise>
+    </div>
+    <expertise id="expertise" class="pt-8"></expertise>
     <software></software>
 
-    <v-container id="home" class="text-center mt-10" style="width:70%">
+    <v-container class="text-center mt-10" style="width:70%">
       <h1>{{$t('index.technology.title')}}</h1>
       <h3>{{$t('index.technology.description')}}</h3>
       <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
@@ -317,5 +293,46 @@ html {
 
 .v-slide-group__next {
   display: none !important;
+}
+
+#mainContainer {
+  display: grid;
+  grid-template-columns: 35vw 15vw 50vw;
+  grid-template-rows: repeat(26, 100px);
+}
+
+#home {
+  grid-column: 1;
+  grid-row: 3 / span 3;
+}
+
+#tabs {
+  grid-column: 1 / span 2;
+  grid-row: 11 / span 14;
+  z-index: 10;
+}
+
+#img1 {
+  grid-column: 2 / 4;
+  grid-row: 1 / span 22;
+}
+
+#title2 {
+  grid-column: 2 / 4;
+  grid-row: 4 / span 2;
+  z-index: 3;
+}
+
+#scroll {
+  grid-column: 3/4;
+  grid-row: 9 / span 2;
+  z-index: 3;
+}
+
+#workflow {
+  margin-left: 5vw;
+  grid-column: 3/4;
+  grid-row: 15 / span 6;
+  z-index: 3;
 }
 </style>
