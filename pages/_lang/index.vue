@@ -2,8 +2,7 @@
   <v-layout column justify-center align-center>
     <div id="mainContainer">
       <v-img id="img1" src="/Background1.png"></v-img>
-      <div id="home">
-        f
+      <v-container id="home" style="width:90%">
         <div class="px-8">
           <h2>{{$t('index.home.whoWeAre')}}</h2>
           <h1>
@@ -15,7 +14,7 @@
             style="border-left: 5px solid LightGrey; font-size:1.4vw"
           >{{$t('index.home.incDigitalStory')}}</blockquote>
         </div>
-      </div>
+      </v-container>
       <div id="title2">
         <div>
           <v-sheet class="ma-0" color="transparent" elevation="0">
@@ -61,9 +60,9 @@
       </div>
 
       <div id="tabs">
-        <div>
+        <div class="ml-12">
           <v-row align="center">
-            <v-col cols="9" class="ma-4">
+            <v-col cols="10">
               <v-tabs
                 v-model="workflowTab"
                 fixed-tabs
@@ -77,25 +76,7 @@
                   style="font-size:16px; font-weight:600;"
                 >{{item.title.toUpperCase()}}</v-tab>
               </v-tabs>
-
-              <v-tabs-items v-model="workflowTab" class="ma-4">
-                <v-tab-item v-for="(item, index) in categoryItems" :key="index">
-                  <v-card tile class="pa-0 elevation-4">
-                    <v-row class="pa-0 ma-0" align="stretch">
-                      <v-col
-                        cols="2"
-                        class="d-flex justify-center align-center"
-                        style="background-color: #5fc3c7;"
-                      >
-                        <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
-                      </v-col>
-                      <v-col cols="10">{{item.description}}</v-col>
-                    </v-row>
-                  </v-card>
-                </v-tab-item>
-              </v-tabs-items>
             </v-col>
-
             <v-col cols="2" align-self="start" align="center">
               <v-col cols="12" class="pa-0">
                 <v-btn
@@ -115,6 +96,25 @@
               </v-col>
             </v-col>
           </v-row>
+
+          <v-container>
+            <v-tabs-items v-model="workflowTab" class="ma-4">
+              <v-tab-item v-for="(item, index) in categoryItems" :key="index">
+                <v-card tile class="pa-0 elevation-4">
+                  <v-row class="pa-0 ma-0" align="stretch">
+                    <v-col
+                      cols="2"
+                      class="d-flex justify-center align-center"
+                      style="background-color: #5fc3c7;"
+                    >
+                      <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
+                    </v-col>
+                    <v-col cols="10">{{item.description}}</v-col>
+                  </v-row>
+                </v-card>
+              </v-tab-item>
+            </v-tabs-items>
+          </v-container>
 
           <workflowGroupItem></workflowGroupItem>
         </div>
@@ -150,7 +150,7 @@
     <v-container class="text-center mt-10" style="width:70%">
       <h1>{{$t('index.technology.title')}}</h1>
       <h3>{{$t('index.technology.description')}}</h3>
-      <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
+      <v-divider class="my-8 primary" width="150px" style="border-width:1px"></v-divider>
       <v-img src="/section-tech2.png"></v-img>
 
       <h2 id="contact" style="margin-top:150px">{{$t('index.contactForm.title')}}</h2>
@@ -298,7 +298,7 @@ html {
 #mainContainer {
   display: grid;
   grid-template-columns: 35vw 15vw 50vw;
-  grid-template-rows: repeat(26, 100px);
+  grid-template-rows: repeat(23, 100px);
 }
 
 #home {
