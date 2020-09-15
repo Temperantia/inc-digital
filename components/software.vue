@@ -11,7 +11,13 @@
 
         <div v-for="(item,i) in softwareItems" :key="i" cols="12" class="py-0">
           <div class="d-inline-flex align-center my-4">
-            <v-img class="mr-6" height="40px" width="40px" contain :src="item.imagePath"></v-img>
+            <v-img
+              class="mr-6"
+              height="40px"
+              width="40px"
+              contain
+              :src="`/softwareItems/${item.imagePath}`"
+            ></v-img>
             <h5 width="80%">{{$t(item.text)}}</h5>
           </div>
         </div>

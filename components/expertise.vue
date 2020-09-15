@@ -12,7 +12,7 @@
           <v-col v-for="(item,i) in marketingItems" :key="i" cols="6" class="py-0">
             <v-row>
               <v-col cols="4">
-                <v-img class="mr-5" width="40px" contain :src="item.imagePath"></v-img>
+                <v-img class="mr-5" width="40px" contain :src="`/marketingItems${item.imagePath}`"></v-img>
               </v-col>
               <v-col cols="8" align-self="center">
                 <h5>{{$t(item.text)}}</h5>

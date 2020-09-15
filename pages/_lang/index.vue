@@ -112,7 +112,7 @@
                         class="d-flex justify-center align-center"
                         style="background-color: #5fc3c7;"
                       >
-                        <v-img style="margin: 0 20% 0 20%" color="red" :src="item.imagePath"></v-img>
+                        <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
                       </v-col>
                       <v-col cols="8">{{item.description}}</v-col>
                     </v-row>
