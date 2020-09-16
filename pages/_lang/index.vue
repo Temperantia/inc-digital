@@ -1,9 +1,9 @@
 <template>
   <v-layout column justify-center align-center>
-    <div id="mainContainer">
+    <v-container fluid id="mainContainer" class="pa-0">
       <v-img id="img1" src="/Background1.png"></v-img>
-      <v-container id="home" style="width:90%">
-        <div class="px-8">
+      <v-container id="home">
+        <div>
           <h2>{{$t('index.home.whoWeAre')}}</h2>
           <h1>
             <span class="accent--text">{{$t('index.home.bannerLine1')}}</span>
@@ -11,7 +11,7 @@
           </h1>
           <blockquote
             class="grey--text px-4 my-6"
-            style="border-left: 5px solid LightGrey; font-size:1.4vw"
+            style="border-left: 5px solid LightGrey; font-size:24px"
           >{{$t('index.home.incDigitalStory')}}</blockquote>
         </div>
       </v-container>
@@ -59,65 +59,63 @@
         </div>
       </div>
 
-      <div id="tabs">
-        <div class="ml-12">
-          <v-row align="center">
-            <v-col cols="10">
-              <v-tabs
-                v-model="workflowTab"
-                fixed-tabs
-                background-color="transparent"
-                color="secondary"
+      <div id="tabs" class="pa-4" style="background-color:white;">
+        <v-row align="center" class="ma-0">
+          <v-col cols="10">
+            <v-tabs
+              v-model="workflowTab"
+              fixed-tabs
+              background-color="transparent"
+              color="secondary"
+            >
+              <v-tab
+                v-for="(item, index) in categoryItems"
+                :key="index"
+                class="mx-4 pa-0"
+                style="font-size:16px; font-weight:600;"
+              >{{item.title.toUpperCase()}}</v-tab>
+            </v-tabs>
+          </v-col>
+          <v-col cols="2" align-self="start" align="center">
+            <v-col cols="12" class="pa-0">
+              <v-btn
+                class="my-2"
+                icon
+                width="48px"
+                height="48px"
+                @click="()=>{if(workflowTab!==2){workflowTab++}}"
               >
-                <v-tab
-                  v-for="(item, index) in categoryItems"
-                  :key="index"
-                  class="mx-4 pa-0"
-                  style="font-size:16px; font-weight:600;"
-                >{{item.title.toUpperCase()}}</v-tab>
-              </v-tabs>
+                <v-img src="/carrouselArrowRight.png"></v-img>
+              </v-btn>
             </v-col>
-            <v-col cols="2" align-self="start" align="center">
-              <v-col cols="12" class="pa-0">
-                <v-btn
-                  class="my-2"
-                  icon
-                  width="48px"
-                  height="48px"
-                  @click="()=>{if(workflowTab!==2){workflowTab++}}"
-                >
-                  <v-img src="/carrouselArrowRight.png"></v-img>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" class="pa-0">
-                <v-btn class="my-2" icon width="48px" height="48px" @click="workflowTab--">
-                  <v-img src="/carrouselArrowLeft.png"></v-img>
-                </v-btn>
-              </v-col>
+            <v-col cols="12" class="pa-0">
+              <v-btn class="my-2" icon width="48px" height="48px" @click="workflowTab--">
+                <v-img src="/carrouselArrowLeft.png"></v-img>
+              </v-btn>
             </v-col>
-          </v-row>
+          </v-col>
+        </v-row>
 
-          <v-container>
-            <v-tabs-items v-model="workflowTab" class="ma-4">
-              <v-tab-item v-for="(item, index) in categoryItems" :key="index">
-                <v-card tile class="pa-0 elevation-4">
-                  <v-row class="pa-0 ma-0" align="stretch">
-                    <v-col
-                      cols="2"
-                      class="d-flex justify-center align-center"
-                      style="background-color: #5fc3c7;"
-                    >
-                      <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
-                    </v-col>
-                    <v-col cols="10">{{item.description}}</v-col>
-                  </v-row>
-                </v-card>
-              </v-tab-item>
-            </v-tabs-items>
-          </v-container>
+        <v-container>
+          <v-tabs-items v-model="workflowTab" class="ma-4">
+            <v-tab-item v-for="(item, index) in categoryItems" :key="index">
+              <v-card tile class="pa-0" style="box-shadow: 10px 10px 50px -20px grey;">
+                <v-row class="pa-0 ma-0" align="stretch">
+                  <v-col
+                    cols="2"
+                    class="d-flex justify-center align-center"
+                    style="background-color: #5fc3c7;"
+                  >
+                    <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
+                  </v-col>
+                  <v-col cols="10">{{item.description}}</v-col>
+                </v-row>
+              </v-card>
+            </v-tab-item>
+          </v-tabs-items>
+        </v-container>
 
-          <workflowGroupItem></workflowGroupItem>
-        </div>
+        <workflowGroupItem></workflowGroupItem>
       </div>
 
       <div id="scroll">
@@ -131,8 +129,8 @@
         </v-row>
       </div>
 
-      <div id="workflow">
-        <v-row style="padding:5vw 40px; 10px; 40px" align="center">
+      <div id="workflow" style="padding:5vw 0px 10px 100px">
+        <v-row align="center">
           <v-col cols="12" lg="8" align="center">
             <h1 class="white--text">{{$t('index.workflow.title')}}</h1>
             <v-divider color="white"></v-divider>
@@ -143,11 +141,14 @@
           </v-col>
         </v-row>
       </div>
-    </div>
-    <expertise id="expertise" class="pt-8"></expertise>
-    <software></software>
 
-    <v-container class="text-center mt-10" style="width:70%">
+      <expertise id="expertise" class="pt-8"></expertise>
+      <v-img id="img2" class="ma-4" max-height="900px" contain src="/section-marketingdesign.png"></v-img>
+      <v-img id="img3" contain src="/section-software.png"></v-img>
+      <software id="software"></software>
+    </v-container>
+
+    <v-container class="text-center mt-10" style="width:76%">
       <h1>{{$t('index.technology.title')}}</h1>
       <h3>{{$t('index.technology.description')}}</h3>
       <v-divider class="my-8 primary" width="150px" style="border-width:1px"></v-divider>
@@ -180,17 +181,19 @@ export default {
           title: "research",
           imagePath: "/research-icon.svg",
           description:
-            "Lorem Ipsum is simply dummy text of the printing and trinter tood not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         },
         {
           title: "planning",
           imagePath: "/planning-icon.png",
-          description: "description planning",
+          description:
+            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         },
         {
           title: "delivery",
           imagePath: "/delivery-icon.png",
-          description: "description delivery",
+          description:
+            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
         },
       ],
     };
@@ -231,7 +234,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  font-size: 1.1vw;
+  font-size: 21px;
   text-align: left;
   padding: 6px;
   color: rgb(125, 125, 125);
@@ -297,42 +300,68 @@ html {
 
 #mainContainer {
   display: grid;
-  grid-template-columns: 35vw 15vw 50vw;
-  grid-template-rows: repeat(23, 100px);
+  grid-template-columns: 12vw 28vw 15vw 33vw 12vw;
+  grid-template-rows: repeat(14, 100px) auto;
 }
 
 #home {
-  grid-column: 1;
-  grid-row: 3 / span 3;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 3;
+  z-index: 3;
+  padding-top: 40px;
 }
 
 #tabs {
-  grid-column: 1 / span 2;
-  grid-row: 11 / span 14;
+  grid-column: 2 / span 2;
+  grid-row: 10 / span 13;
   z-index: 10;
 }
 
 #img1 {
-  grid-column: 2 / 4;
+  grid-column: 3 / span 3;
   grid-row: 1 / span 22;
+  z-index: 0;
 }
 
 #title2 {
-  grid-column: 2 / 4;
-  grid-row: 4 / span 2;
+  grid-column: 3 / span 3;
+  grid-row: 4 / span 1;
   z-index: 3;
 }
 
 #scroll {
-  grid-column: 3/4;
+  grid-column: 4 / span 1;
   grid-row: 9 / span 2;
   z-index: 3;
 }
 
 #workflow {
-  margin-left: 5vw;
-  grid-column: 3/4;
-  grid-row: 15 / span 6;
+  grid-column: 4 / span 1;
+  grid-row: 14 / span 6;
   z-index: 3;
+}
+
+#expertise {
+  grid-column: 2 / span 2;
+  grid-row: 24 / span 6;
+  z-index: 5;
+}
+
+#img2 {
+  grid-column: 4 / span 1;
+  grid-row: 24 / span 6;
+  z-index: 5;
+}
+
+#img3 {
+  grid-column: 1 / span 3;
+  grid-row: 30 / span 6;
+  z-index: 5;
+}
+
+#software {
+  grid-column: 4 / span 1;
+  grid-row: 30 / span 6;
+  z-index: 5;
 }
 </style>

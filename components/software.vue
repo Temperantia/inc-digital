@@ -1,10 +1,6 @@
 <template>
   <v-container id="home" class="text-center pa-0" fluid>
-    <v-row justify="center" class="text-left" align="center">
-      <v-col cols="12" md="6">
-        <v-img src="/section-software.png"></v-img>
-      </v-col>
-
+    <v-row justify="center" class="text-left ma-0" align="center">
       <v-col class="pl-8">
         <h4 class="py-3">{{$t('index.expertise.software.title')}}</h4>
         <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>

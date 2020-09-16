@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid style="width:70%">
+  <v-container fluid>
     <v-row align="center">
-      <v-col cols="6">
+      <v-col cols="12">
         <h2>{{$t('index.expertise.sectionTitle')}}</h2>
         <h1>{{$t('index.expertise.title')}}</h1>
         <h3>{{$t('index.expertise.description')}}</h3>
@@ -21,10 +21,6 @@
           </v-col>
         </v-row>
         <p class="pt-5">{{$t('index.expertise.marketingAndDesign.ourPhilosophy')}}</p>
-      </v-col>
-
-      <v-col cols="6" class="pl-10">
-        <v-img max-height="900px" contain src="/section-marketingdesign.png"></v-img>
       </v-col>
     </v-row>
   </v-container>
