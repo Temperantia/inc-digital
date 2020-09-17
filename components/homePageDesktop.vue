@@ -145,7 +145,7 @@
       <expertise id="expertise" class="pt-8"></expertise>
       <v-img id="img2" class="ma-4" max-height="900px" contain src="/section-marketingdesign.png"></v-img>
       <v-img id="img3" contain src="/section-software.png"></v-img>
-      <software id="software"></software>
+      <software id="software" class="pl-8"></software>
     </v-container>
 
     <v-container class="text-center mt-10" style="width:76%">

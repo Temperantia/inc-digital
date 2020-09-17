@@ -1,11 +1,11 @@
 <template>
   <v-container id="home" class="text-center pa-0" fluid>
     <v-row justify="center" class="text-left ma-0" align="center">
-      <v-col class="pl-8">
+      <v-col>
         <h4 class="py-3">{{$t('index.expertise.software.title')}}</h4>
         <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
         <v-row>
-          <v-col v-for="(item,i) in softwareItems" :key="i" cols="6" md="12" class="py-0">
+          <v-col v-for="(item,i) in softwareItems" :key="i" cols="12" class="py-0">
             <div class="d-inline-flex align-center my-4">
               <v-img
                 class="mr-6"

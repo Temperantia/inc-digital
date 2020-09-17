@@ -1,53 +1,53 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-    style="background: url('/Background-mobile.png'); background-repeat: no-repeat;   background-size: 960px 800px;"
-  >
-    <v-container class="width:90%">
-      <h2 class="white--text" style="margin-top:100px">{{$t('index.home.whoWeAre')}}</h2>
-      <h1 class="white--text">
-        <span class="secondary--text">{{$t('index.home.bannerLine1')}}</span>
-        {{$t('index.home.bannerLine2')}}
-      </h1>
-      <blockquote
-        class="white--text px-4 my-6"
-        style="border-left: 5px solid LightGrey; font-size:24px"
-      >{{$t('index.home.incDigitalStory')}}</blockquote>
+  <v-layout column justify-center align-center>
+    <div
+      style="background: url('/Background-mobile.png'); background-repeat: no-repeat; width:100%; background-size: cover; padding-bottom:150px"
+    >
+      <v-container class="px-4">
+        <h2 class="white--text" style="margin-top:100px">{{$t('index.home.whoWeAre')}}</h2>
+        <h1 class="white--text">
+          <span class="secondary--text">{{$t('index.home.bannerLine1')}}</span>
+          {{$t('index.home.bannerLine2')}}
+        </h1>
+        <blockquote
+          class="white--text px-4 my-6"
+          style="border-left: 5px solid LightGrey; font-size:24px"
+        >{{$t('index.home.incDigitalStory')}}</blockquote>
 
-      <v-row align="center" class="ma-0">
-        <v-col>
-          <v-tabs v-model="workflowTab" fixed-tabs background-color="transparent" color="white">
-            <v-tab
-              v-for="(item, index) in categoryItems"
-              :key="index"
-              class="mx-4 pa-0 white--text"
-              style="font-size:16px; font-weight:600;"
-            >{{item.title.toUpperCase()}}</v-tab>
-          </v-tabs>
-        </v-col>
-      </v-row>
-
-      <v-container>
-        <v-tabs-items v-model="workflowTab" class="ma-4">
-          <v-tab-item v-for="(item, index) in categoryItems" :key="index">
-            <v-card tile class="pa-0" style="box-shadow: 10px 10px 50px -20px grey;">
-              <v-row class="pa-0 ma-0" align="stretch">
-                <v-col
-                  cols="2"
-                  class="d-flex justify-center align-center"
-                  style="background-color: #5fc3c7;"
-                >
-                  <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
-                </v-col>
-                <v-col cols="10">{{item.description}}</v-col>
-              </v-row>
-            </v-card>
-          </v-tab-item>
-        </v-tabs-items>
+        <v-row align="center" class="ma-0">
+          <v-col>
+            <v-tabs v-model="workflowTab" fixed-tabs background-color="transparent" color="white">
+              <v-tab
+                v-for="(item, index) in categoryItems"
+                :key="index"
+                class="mx-4 pa-0 white--text"
+                style="font-size:16px; font-weight:600;"
+              >{{item.title.toUpperCase()}}</v-tab>
+            </v-tabs>
+          </v-col>
+        </v-row>
       </v-container>
+    </div>
 
+    <v-container style="margin-top:-120px;">
+      <v-tabs-items v-model="workflowTab" class="ma-4">
+        <v-tab-item v-for="(item, index) in categoryItems" :key="index">
+          <v-card tile class="pa-0" style="box-shadow: 10px 10px 50px -20px grey;">
+            <v-row class="pa-0 ma-0" align="stretch">
+              <v-col
+                cols="2"
+                class="d-flex justify-center align-center"
+                style="background-color: #5fc3c7;"
+              >
+                <v-img style="margin: 0 20% 0 20%" color="red" :src="`${item.imagePath}`"></v-img>
+              </v-col>
+              <v-col cols="10">{{item.description}}</v-col>
+            </v-row>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-container>
+    <v-container class="px-4">
       <workflowGroupItem></workflowGroupItem>
       <h1>{{$t('index.workflow.title')}}</h1>
       <v-divider color="primary" style="border-width:1px; width:30%"></v-divider>

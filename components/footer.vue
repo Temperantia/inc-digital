@@ -1,6 +1,6 @@
   <template>
-  <v-footer>
-    <v-container fluid style="width:70%">
+  <v-footer class="justify-center">
+    <v-col cols="12" sm="8">
       <v-row>
         <v-col cols="6" md="3">
           <div class="grey--text ma-4" style="font-size:18px">{{$t('footer.clientSupport')}}</div>
@@ -8,7 +8,7 @@
         <v-col cols="6" md="3">
           <div class="grey--text ma-4" style="font-size:18px">{{$t('footer.termsAndPrivacy')}}</div>
         </v-col>
-        <v-col cols="0" md="3"></v-col>
+        <v-col cols="3" class="hidden-sm-and-down"></v-col>
         <v-col cols="12" md="3" class="d-flex">
           <v-icon
             class="ma-2"
@@ -38,7 +38,7 @@
           <span class="grey--text">{{$t('footer.descriptionSuffix')}}</span>
         </v-col>
       </v-row>
-    </v-container>
+    </v-col>
   </v-footer>
 </template>
 

@@ -1,23 +1,19 @@
 <template>
   <v-container fluid>
     <v-row align="center">
-      <v-col cols="12">
+      <v-col cols="12" class="px-0">
         <h2>{{$t('index.expertise.sectionTitle')}}</h2>
         <h1>{{$t('index.expertise.title')}}</h1>
         <h3>{{$t('index.expertise.description')}}</h3>
         <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
         <h4 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h4>
 
-        <v-row>
-          <v-col v-for="(item,i) in marketingItems" :key="i" cols="6" class="py-0">
-            <v-row>
-              <v-col cols="4">
-                <v-img class="mr-5" width="40px" contain :src="`/marketingItems${item.imagePath}`"></v-img>
-              </v-col>
-              <v-col cols="8" align-self="center">
-                <h5>{{$t(item.text)}}</h5>
-              </v-col>
-            </v-row>
+        <v-row class="ma-0">
+          <v-col v-for="(item,i) in marketingItems" :key="i" cols="12" sm="6" class="pa-3">
+            <div class="d-flex ma-0">
+              <v-img max-width="40px" contain :src="`/marketingItems${item.imagePath}`"></v-img>
+              <h5 class="pl-4 align-self-center">{{$t(item.text)}}</h5>
+            </div>
           </v-col>
         </v-row>
         <p class="pt-5">{{$t('index.expertise.marketingAndDesign.ourPhilosophy')}}</p>
