@@ -56,8 +56,8 @@
         style="font-size:20px; text-align: start; letter-spacing:1px"
       >{{$t('index.workflow.ourStrategy')}}</p>
 
-      <expertise id="expertise" class="pt-8"></expertise>
       <software></software>
+      <expertise id="expertise" class="pt-8"></expertise>
 
       <v-container class="text-center">
         <h1>{{$t('index.technology.title')}}</h1>

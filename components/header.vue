@@ -2,11 +2,11 @@
   <v-app-bar flat :color="backgroundColor" fixed v-scroll="onScroll" :style="navbarStyle">
     <v-img
       src="/logo_black_text.png"
-      max-width="300px"
+      max-height="40px"
       contain
       class="ma-2 pa-2 ml-8 hidden-sm-and-down"
     ></v-img>
-    <v-img src="/incDigitalLogoSmall.png" max-width="50px" contain class="ml-8 hidden-md-and-up"></v-img>
+    <v-img src="/incDigitalLogoSmall.png" max-height="40px" contain class="ml-8 hidden-md-and-up"></v-img>
     <v-spacer></v-spacer>
 
     <v-app-bar-nav-icon color="white" class="hidden-md-and-up" @click="changeDrawerStatus()"></v-app-bar-nav-icon>

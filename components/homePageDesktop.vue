@@ -181,19 +181,19 @@ export default {
           title: "research",
           imagePath: "/research-icon.svg",
           description:
-            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "The systematic investigation into and study of materials and sources in order to establish facts and reach new conclusions.",
         },
         {
           title: "planning",
           imagePath: "/planning-icon.png",
           description:
-            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "The process of deciding how land in a particular area will be used and designing plans for it.",
         },
         {
           title: "delivery",
           imagePath: "/delivery-icon.png",
           description:
-            "Lorem Ipsum is simply dummy text of the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "Delivery or a delivery is the bringing of letters, parcels, or other goods to someone's house or to another place where they want them.",
         },
       ],
     };
@@ -343,25 +343,25 @@ html {
 
 #expertise {
   grid-column: 2 / span 2;
-  grid-row: 24 / span 6;
+  grid-row: 30 / span 6;
   z-index: 5;
 }
 
 #img2 {
   grid-column: 4 / span 1;
-  grid-row: 24 / span 6;
+  grid-row: 30 / span 6;
   z-index: 5;
 }
 
 #img3 {
   grid-column: 1 / span 3;
-  grid-row: 30 / span 6;
+  grid-row: 24 / span 6;
   z-index: 5;
 }
 
 #software {
   grid-column: 4 / span 1;
-  grid-row: 30 / span 6;
+  grid-row: 24 / span 6;
   z-index: 5;
 }
 </style>

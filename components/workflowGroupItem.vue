@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-col v-for="(item,i) in workflowItems" :key="i" cols="6" lg="4" align="center">
+    <v-col v-for="(item,i) in workflowItems" :key="i" cols="12" lg="4" align="center">
       <v-img height="100px" width="100px" contain :src="`/workflowItems${item.imagePath}`"></v-img>
       <h5 class="my-2">0{{i+1}}. {{$t(item.title)}}</h5>
       <p class="pa-2 text-justify">{{$t(item.description)}}</p>
