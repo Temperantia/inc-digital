@@ -3,18 +3,19 @@
     <v-card-text class="ma-0 pa-0">
       <v-form>
         <v-container class="text-left">
-          <h2>What can we help you with ?</h2>
+          <p class="titleForm">{{$t('index.contactForm.titleStepTechnology')}}</p>
+          <p
+            class="subtitleForm"
+          >{{$t('index.contactForm.descriptionStepTechnology1')}}, {{parentData.contactName}}. {{$t('index.contactForm.descriptionStepTechnology2')}}</p>
         </v-container>
-        <div
-          class="container text-left"
-        >Nice to meet you, {{parentData.contactName}}. Select all that apply.</div>
+
         <v-card flat class="py-12">
           <v-item-group v-model="selected">
             <v-row justify="center" no-gutters>
               <v-col v-for="item in items" :key="item.index" cols="4" md="2">
                 <v-item v-slot:default="{ active, toggle }">
                   <v-card
-                    :color="active ? 'orange' : 'white'"
+                    :color="active ? 'accent' : 'white'"
                     text-color="red"
                     class="align-center ma-0"
                     dark
@@ -26,7 +27,12 @@
                       <v-row>
                         <v-col align="center" justify="center" v-if="active">
                           <v-container>
-                            <v-img width="80" height="80" contain :src="`/${item.srcActive}`"></v-img>
+                            <v-img
+                              width="80"
+                              height="80"
+                              contain
+                              :src="`/contactForm/${item.srcActive}`"
+                            ></v-img>
                           </v-container>
 
                           <p
@@ -35,13 +41,18 @@
                             v-text="item.text"
                           ></p>
                           <v-container>
-                            <v-img width="25" src="/Checkbox.png"></v-img>
+                            <v-img width="25" src="/contactForm/Checkbox.png"></v-img>
                           </v-container>
                         </v-col>
 
                         <v-col align="center" justify="center" v-else>
                           <v-container>
-                            <v-img width="80" height="80" contain :src="`/${item.srcNotActive}`"></v-img>
+                            <v-img
+                              width="80"
+                              height="80"
+                              contain
+                              :src="`/contactForm/${item.srcNotActive}`"
+                            ></v-img>
                           </v-container>
 
                           <p
@@ -73,27 +84,27 @@ export default {
     items: [
       {
         srcActive: "webWhite.png",
-        srcNotActive: "webOrange.png",
+        srcNotActive: "webColored.png",
         text: "Web",
       },
       {
         srcActive: "appWhite.png",
-        srcNotActive: "appOrange.png",
+        srcNotActive: "appColored.png",
         text: "App",
       },
       {
         srcActive: "ecommerceWhite.png",
-        srcNotActive: "ecommerceOrange.png",
+        srcNotActive: "ecommerceColored.png",
         text: "eCommerce",
       },
       {
         srcActive: "uiuxWhite.png",
-        srcNotActive: "uiuxOrange.png",
+        srcNotActive: "uiuxColored.png",
         text: "UI / UX",
       },
       {
         srcActive: "otherWhite.png",
-        srcNotActive: "otherOrange.png",
+        srcNotActive: "otherColored.png",
         text: "Other",
       },
     ],

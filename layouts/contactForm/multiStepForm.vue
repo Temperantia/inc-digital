@@ -1,45 +1,62 @@
 <template>
-  <v-stepper v-model="e1" width="100">
-    <v-stepper-header>
-      <v-stepper-step :complete="e1 > 1" step="1" color="orange">Contact</v-stepper-step>
-      <v-stepper-step :complete="e1 > 2" step="2" color="orange">Technology</v-stepper-step>
-      <v-stepper-step :complete="e1 > 3" step="3" color="orange">Budget</v-stepper-step>
-      <v-stepper-step step="4" color="orange">Lastly</v-stepper-step>
-    </v-stepper-header>
+  <v-stepper class="elevation-0" v-model="e1" width="100">
+    <v-row class="d-flex mx-0 my-4" height="2px">
+      <v-card
+        v-for="n in 4"
+        :key="n"
+        :color="e1 +1 > n ? 'accent' : 'grey lighten-1'"
+        class="d-flex align-left elevation-0 ma-0 mr-1"
+        width="70px"
+        height="2px"
+      ></v-card>
+    </v-row>
 
     <v-stepper-items style="min-height:550px">
-      <v-stepper-content step="1">
+      <v-stepper-content step="1" class="ma-0 pa-0">
         <v-container style="min-height:450px" class="ma-0 pa-0">
           <contactPage ref="contact"></contactPage>
         </v-container>
-        <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
+        <v-btn class="white--text" color="accent" @click="nextPage()">
+          {{$t('index.contactForm.buttonNext')}}
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="2">
+      <v-stepper-content step="2" class="ma-0 pa-0">
         <v-container style="min-height:450px" class="ma-0 pa-0">
           <technology ref="technology" :parentData="contactData"></technology>
         </v-container>
 
-        <v-btn class="white--text" color="orange" @click="nextPage()">Continue</v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn class="white--text" color="accent" @click="nextPage()">
+          {{$t('index.contactForm.buttonNext')}}
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="3">
+      <v-stepper-content step="3" class="ma-0 pa-0">
         <v-container style="min-height:450px" class="ma-0 pa-0">
           <budget ref="budget"></budget>
         </v-container>
 
-        <v-btn color="orange" class="white--text" @click="nextPage()">Continue</v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn color="accent" class="white--text" @click="nextPage()">
+          {{$t('index.contactForm.buttonNext')}}
+          <v-icon right>mdi-arrow-right</v-icon>
+        </v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
 
-      <v-stepper-content step="4">
+      <v-stepper-content step="4" class="ma-0 pa-0">
         <v-container style="min-height:450px" class="ma-0 pa-0">
           <finalStep ref="finalStep"></finalStep>
         </v-container>
 
-        <v-btn color="orange" class="white--text" @click="submit()">Submit</v-btn>
-        <v-btn text @click="e1 -= 1">Cancel</v-btn>
+        <v-btn
+          color="accent"
+          class="white--text"
+          @click="submit()"
+        >{{$t('index.contactForm.buttonSubmit')}}</v-btn>
+        <v-btn text @click="e1 -= 1">{{$t('index.contactForm.buttonCancel')}}</v-btn>
       </v-stepper-content>
     </v-stepper-items>
 
@@ -47,29 +64,26 @@
       <v-col align="center" justify="center" v-if="sending">
         <v-progress-circular indeterminate size="64"></v-progress-circular>
         <v-container>
-          <p>Sending</p>
+          <p>{{$t('index.contactForm.sending')}}</p>
         </v-container>
       </v-col>
 
       <v-col align="center" justify="center" v-if="!sending && sendingsucceed">
         <v-icon dark right size="64">mdi-checkbox-marked-circle</v-icon>
         <v-container>
-          <p>Sent</p>
+          <p>{{$t('index.contactForm.sent')}}</p>
         </v-container>
       </v-col>
 
       <v-col align="center" justify="center" v-if="!sending && !sendingsucceed">
         <v-icon dark right size="64">mdi-alert-circle</v-icon>
         <v-container>
-          <p>Sending Failed</p>
+          <p>{{$t('index.contactForm.sendingFailed')}}</p>
         </v-container>
       </v-col>
     </v-overlay>
   </v-stepper>
 </template>
-
-<style scoped>
-</style>
 
 <script>
 import ContactPage from "~/layouts/contactForm/contact.vue";
@@ -176,3 +190,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.titleForm {
+  font-size: 30px;
+  font-weight: 500;
+}
+.subtitleForm {
+  font-size: 20px;
+  padding-bottom: 16px;
+}
+</style>

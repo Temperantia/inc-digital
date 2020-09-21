@@ -1,14 +1,9 @@
 <template>
   <v-card flat color="transparent" class="ma-0 pa-0">
-    <v-row>
-      <v-col align="start" justify="start">
-        <div class="stepTitle">What's your budget?</div>
-        <div class="stepDescription">
-          A transparent budget will help us ensure expectations are met.
-          Not sure? Ballparks are fine.
-        </div>
-      </v-col>
-    </v-row>
+    <v-container class="text-left">
+      <div class="titleForm">{{$t('index.contactForm.titleStepBudget')}}</div>
+      <div class="subtitleForm">{{$t('index.contactForm.descriptionStepBudget')}}</div>
+    </v-container>
     <v-card-text>
       <v-row>
         <template>
@@ -29,6 +24,7 @@
             :disabled="disabled"
             step="1000"
             hide-details
+            color="accent"
             track-color="grey"
             class="align-center"
           >
@@ -44,7 +40,7 @@
       <v-row>
         <v-col align="start" class="ma-6">
           <v-btn-toggle>
-            <v-btn @click="disabled = !disabled">I don't know my budget</v-btn>
+            <v-btn @click="disabled = !disabled">{{$t('index.contactForm.unknownBudget')}}</v-btn>
           </v-btn-toggle>
         </v-col>
       </v-row>
@@ -77,15 +73,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.stepTitle {
-  font-size: 1.8em;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.stepDescription {
-  font-size: 1.1em;
-}
-</style>

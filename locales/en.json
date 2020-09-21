@@ -1,90 +1,123 @@
 {
-    "links": {
-        "english": "EN",
-        "french": "FR"
+  "links": {
+    "english": "EN",
+    "french": "FR"
+  },
+  "navbar": {
+    "home": "Home",
+    "expertise": "Expertise",
+    "work": "Work",
+    "team": "Our Team",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "copyright": "INC-Digital All Rights reserved.",
+    "clientSupport": "Client Support",
+    "termsAndPrivacy": "Terms & Privacy",
+    "descriptionPrefix": "INC-DIGITAL IS AN",
+    "descriptionSuffix": "COMPANY",
+    "useOfThisSite": "Use of this site is subject to the following",
+    "termsOfUse": "terms of use"
+  },
+  "index": {
+    "home": {
+      "bannerLine1": "WE'RE A NEW KIND",
+      "bannerLine2": "OF DIGITAL AGENCY",
+      "whoWeAre": "We're inc digital",
+      "incDigitalStory": "INC Digital is an experience design and product development agency. We bring your ideas into reality with beautiful execution to drive your business solutions.",
+      "weFocusOn": "We focus on",
+      "research": "Research",
+      "planning": "Planning",
+      "delivery": "Delivery",
+      "scrollToDiscover": "SCROLL TO DISCOVER"
     },
-    "navbar": {
-        "home": "Home",
-        "expertise": "Expertise"
+    "workflow": {
+      "title": "Workflow",
+      "ourStrategy": "Our strategy is to help you improve the efficiency, overall revenue, and day-to-day operations of your business. The workflow allows us anticipates the need for flexibility and applies a level of pragmatism to the delivery of the finished product.",
+      "communicate": {
+        "title": "Communicate",
+        "description": "We begin every client project with strategic curiosity. We ask questions designed to understand what our clients want and need."
+      },
+      "evaluate": {
+        "title": "Evaluate",
+        "description": "The primary purpose of evaluation, in addition to gaining insight into prior or existing initiatives, is to enable reflection and assist in the identification of future change."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We actualize your vision from concept to integration to bring beautiful, user-optimized design to your project."
+      },
+      "develop": {
+        "title": "Develop",
+        "description": "Development phase is about transforming the design of a system into a computer language format. We translate design specifications into the source code."
+      },
+      "test": {
+        "title": "Test",
+        "description": "Testing allows developers to deliver software that meets expectations, prevents unexpected results, and improves the long term maintenance of the application."
+      },
+      "release": {
+        "title": "Release",
+        "description": "A release is the distribution of the final version of an application. We ensure that the project is delivered in time and that we are in phase with our customers."
+      },
+      "support": {
+        "title": "Support",
+        "description": "We make sure to meet the needs of maintenance to support the new features that the users want or to change different types of functionalities of the system according to the customer demands."
+      }
     },
-    "footer": {
-        "copyright": "INC-Digital All Rights reserved.",
-        "descriptionPrefix": "INC-DIGITAL IS AN",
-        "descriptionSuffix": "COMPANY"
+    "expertise": {
+      "sectionTitle": "expertise",
+      "title": "A powerful and robust skillset",
+      "description": "Extensive and innovative to get the most out of your bottom line.",
+      "software": {
+        "title": "Software",
+        "mobileDevelopment": "Mobile Development",
+        "desktopApplications": "Desktop Applications",
+        "scriptAutomation": "Script Automation",
+        "fullStack": "Full Stack",
+        "QATesting": "QA & Testing",
+        "websiteDevelopment": "Website Development",
+        "ourPhilosophy": "While making software, we take into account the final user point of view. We ensure to perform above and beyond expectations. We care about User Experience, User Interface but also Portability, Reliability, Flexibility, Maintainability & Cost Effectiveness. They do what they are designed to, not more or less."
+      },
+      "marketingAndDesign": {
+        "title": "Marketing & Design",
+        "uiUxDesign": "UI/UX Design",
+        "illustration": "Illustration",
+        "designConsulting": "Design Consulting",
+        "branding": "Branding",
+        "dataAnalysis": "Data Analysis",
+        "seoSocialCampaigns": "SEO & Social Campaigns",
+        "businessPlanning": "Business Planning",
+        "advertisementAndContent": "Advertisements & Content",
+        "ourPhilosophy": "Our marketing philosophy is really all about honest empathy with your customers. Our goal is to be able to make business communicating with people as efficiently as possible. As for our design thinking, We create Art from client expectations. Our goal is to integrate with your team to help you identify and achieve your objectives and grow your business."
+      }
     },
-    "index": {
-        "home": {
-            "bannerLine1": "We help you build",
-            "bannerLine2": "a new version",
-            "bannerLine3": "of your business",
-            "hello": "Bonjour !",
-            "whoWeAre": "We are a software development agency located in Paris, France.",
-            "weFocusOn": "We focus on",
-            "research": "Research",
-            "planning": "Planning",
-            "delivery": "Delivery"
-        },
-        "workflow": {
-            "title": "Workflow",
-            "ourStrategy": "Our strategy is to help you improve the efficiency, overall revenue, and day-to-day operations of your business. The workflow allows us anticipates the need for flexibility and applies a level of pragmatism to the delivery of the finished product.",
-            "communicate": {
-                "title": "Communicate",
-                "description": "We begin every client project with strategic curiosity. We ask questions designed to understand what our clients want and need."
-            },
-            "evaluate": {
-                "title": "Evaluate",
-                "description": "The primary purpose of evaluation, in addition to gaining insight into prior or existing initiatives, is to enable reflection and assist in the identification of future change."
-            },
-            "design": {
-                "title": "Design",
-                "description": "We actualize your vision from concept to integration to bring beautiful, user-optimized design to your project."
-            },
-            "develop": {
-                "title": "Develop",
-                "description": "Development phase is about transforming the design of a system into a computer language format. We translate design specifications into the source code."
-            },
-            "test": {
-                "title": "Test",
-                "description": "Testing allows developers to deliver software that meets expectations, prevents unexpected results, and improves the long term maintenance of the application."
-            },
-            "release": {
-                "title": "Release",
-                "description": "A release is the distribution of the final version of an application. We ensure that the project is delivered in time and that we are in phase with our customers."
-            },
-            "support": {
-                "title": "Support",
-                "description": "We make sure to meet the needs of maintenance to support the new features that the users want or to change different types of functionalities of the system according to the customer demands."
-            }
-        },
-        "expertise": {
-            "title": "A powerful and robust skillset",
-            "description": "Extensive and innovative to get the most out of your bottom line.",
-            "software": {
-                "title": "Software",
-                "mobileDevelopment": "Mobile Development",
-                "desktopApplications": "Desktop Applications",
-                "scriptAutomation": "Script Automation",
-                "fullStack": "Full Stack",
-                "QATesting": "QA & Testing",
-                "websiteDevelopment": "Website Development",
-                "ourPhilosophy": "While making software, we take into account the final user point of view. We ensure to perform above and beyond expectations. We care about User Experience, User Interface but also Portability, Reliability, Flexibility, Maintainability & Cost Effectiveness. They do what they are designed to, not more or less."
-            },
-            "marketingAndDesign": {
-                "title": "Marketing & Design",
-                "uiUxDesign": "UI/UX Design",
-                "illustration": "Illustration",
-                "designConsulting": "Design Consulting",
-                "branding": "Branding",
-                "dataAnalysis": "Data Analysis",
-                "seoSocialCampaigns": "SEO & Social Campaigns",
-                "businessPlanning": "Business Planning",
-                "advertisementAndContent": "Advertisements & Content",
-                "ourPhilosophy": "Our marketing philosophy is really all about honest empathy with your customers. Our goal is to be able to make business communicating with people as efficiently as possible. As for our design thinking, We create Art from client expectations. Our goal is to integrate with your team to help you identify and achieve your objectives and grow your business."
-            }
-        },
-        "technology": {
-            "title": "Technology is who we are",
-            "description": "We utilize many platforms and frameworks to accomplish your vision."
-        }
+    "technology": {
+      "title": "Technology is who we are",
+      "description": "We utilize many platforms and frameworks to accomplish your vision."
+    },
+    "contactForm": {
+      "title": "contact",
+      "subtitle": "Get in touch",
+      "titleStepContact": "Start a project",
+      "descriptionStepContact": "Thanks for your interest in working with us. Please complete the details below and we'll get back to you in one business day.",
+      "fieldName": "What should we call you ?",
+      "fieldCompanyName": "What the name of compagny / organization?",
+      "fieldEmail": "How shall we contact you ?",
+      "titleStepTechnology": "What can we help you with ?",
+      "descriptionStepTechnology1": "Nice to meet you",
+      "descriptionStepTechnology2": "Select all that apply",
+      "titleStepBudget": "What's your budget ?",
+      "descriptionStepBudget": "A transparent budget will help us ensure expectations are met. Not sure? Ballparks are fine.",
+      "unknownBudget": "I don't know my budget",
+      "titleFinalStep": "Lastly...",
+      "descriptionFinalStep": "Let's wrap this up",
+      "fieldTimeFrame": "What's your ideal timeframe ?",
+      "fieldHearAboutUs": "How did you heard about us ?",
+      "buttonNext": "Next",
+      "buttonCancel": "Cancel",
+      "buttonSubmit": "Submit",
+      "sending": "Sending",
+      "sent": "Sent",
+      "sendingFailed": "Sending Failed"
     }
+  }
 }
