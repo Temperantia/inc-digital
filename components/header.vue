@@ -29,25 +29,14 @@
     >{{$t('navbar.contact')}}</a>
 
     <div>
-      <v-select
-        class="custom mx-6 lightText--text hidden-sm-and-down"
-        item-color="accent"
-        v-model="langSelected"
-        :items="langs"
-        hide-details
-        single-line
-        style="width:130px; "
-        @change="changeLang(langSelected)"
-      >
-        <template v-slot:prepend-inner>
-          <v-icon color="lightText">mdi-web</v-icon>
-        </template>
-      </v-select>
+      <LanguagePicker class="hidden-sm-and-down" mainColor="lightText"></LanguagePicker>
     </div>
   </v-app-bar>
 </template>
 
 <script>
+import languagePicker from "@/components/languagePicker";
+
 export default {
   props: {
     drawer: Boolean,
@@ -74,8 +63,6 @@ export default {
       },
       */
     ],
-    langs: ["English", "Français"],
-    langSelected: "English",
   }),
   computed: {
     backgroundColor() {
@@ -93,20 +80,6 @@ export default {
       const top = window.pageYOffset;
       this.offsetTop = top;
     },
-    changeLang: function (lang) {
-      switch (lang) {
-        case "English":
-          this.$router.push("/");
-          console.log("done");
-          break;
-
-        case "Français":
-          this.$router.push("/fr");
-          console.log("done");
-        default:
-          break;
-      }
-    },
     scrollToElement(id) {
       var el = document.getElementById(id);
       el.scrollIntoView();
@@ -114,6 +87,9 @@ export default {
     changeDrawerStatus() {
       this.$emit("fromChild");
     },
+  },
+  components: {
+    LanguagePicker: languagePicker,
   },
 };
 </script>

@@ -3,7 +3,7 @@
     <div
       style="background: url('/Background-mobile.png'); background-repeat: no-repeat; width:100%; background-size: cover; padding-bottom:150px"
     >
-      <v-container id="homeMobile" class="px-4">
+      <v-container id="home" class="px-4">
         <h2 class="white--text" style="margin-top:100px">{{$t('index.home.whoWeAre')}}</h2>
         <h1 class="white--text">
           <span class="secondary--text">{{$t('index.home.bannerLine1')}}</span>
@@ -56,7 +56,7 @@
         style="font-size:20px; text-align: start; letter-spacing:1px"
       >{{$t('index.workflow.ourStrategy')}}</p>
 
-      <expertise id="expertiseMobile" class="pt-8"></expertise>
+      <expertise id="expertise" class="pt-8"></expertise>
       <software></software>
 
       <v-container class="text-center">
@@ -65,7 +65,7 @@
         <v-divider class="my-8 primary" width="150px" style="border-width:1px"></v-divider>
         <v-img src="/section-tech2.png"></v-img>
 
-        <h2 class="mt-8">{{$t('index.contactForm.title')}}</h2>
+        <h2 id="contact" class="mt-8">{{$t('index.contactForm.title')}}</h2>
         <h1 class="py-4">{{$t('index.contactForm.subtitle')}}</h1>
         <multiStepForm></multiStepForm>
       </v-container>

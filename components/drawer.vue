@@ -10,11 +10,16 @@
       <v-list-item v-for="(item, index) in items" :key="index">
         <v-list-item-title @click="scrollToElement(item.route)">{{$t(item.text)}}</v-list-item-title>
       </v-list-item>
+      <v-lis-item>
+        <LanguagePicker mainColor="darken-4"></LanguagePicker>
+      </v-lis-item>
     </v-list-item-group>
   </v-navigation-drawer>
 </template>
 
 <script>
+import languagePicker from "@/components/languagePicker";
+
 export default {
   data() {
     return {
@@ -37,6 +42,7 @@ export default {
         text: "navbar.team",
       },
       */
+        { route: "contact", text: "navbar.contact" },
       ],
     };
   },
@@ -49,9 +55,12 @@ export default {
   methods: {
     scrollToElement(id) {
       this.$emit("input");
-      var el = document.getElementById(id + "Mobile");
+      var el = document.getElementById(id);
       el.scrollIntoView();
     },
+  },
+  components: {
+    LanguagePicker: languagePicker,
   },
 };
 </script>
