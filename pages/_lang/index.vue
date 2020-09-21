@@ -1,7 +1,7 @@
 <template>
   <v-container class="pa-0">
-    <home-page-desktop class="hidden-sm-and-down"></home-page-desktop>
-    <home-page-mobile class="hidden-md-and-up"></home-page-mobile>
+    <home-page-desktop v-if="this.$vuetify.breakpoint.mdAndUp"></home-page-desktop>
+    <home-page-mobile v-else></home-page-mobile>
   </v-container>
 </template>
 

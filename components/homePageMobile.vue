@@ -3,7 +3,7 @@
     <div
       style="background: url('/Background-mobile.png'); background-repeat: no-repeat; width:100%; background-size: cover; padding-bottom:150px"
     >
-      <v-container class="px-4">
+      <v-container id="homeMobile" class="px-4">
         <h2 class="white--text" style="margin-top:100px">{{$t('index.home.whoWeAre')}}</h2>
         <h1 class="white--text">
           <span class="secondary--text">{{$t('index.home.bannerLine1')}}</span>
@@ -56,7 +56,7 @@
         style="font-size:20px; text-align: start; letter-spacing:1px"
       >{{$t('index.workflow.ourStrategy')}}</p>
 
-      <expertise class="pt-8"></expertise>
+      <expertise id="expertiseMobile" class="pt-8"></expertise>
       <software></software>
 
       <v-container class="text-center">

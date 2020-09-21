@@ -1,27 +1,25 @@
 <template>
-  <v-toolbar
-    flat
-    dense
-    color="transparent"
-    width="100%"
-    height="100px"
-    style="position: absolute; z-index: 1;"
-  >
-    <v-toolbar-title>
-      <v-img src="/logo_black_text.png" contain class="ml-8"></v-img>
-    </v-toolbar-title>
-
+  <v-app-bar flat :color="backgroundColor" fixed v-scroll="onScroll" :style="navbarStyle">
+    <v-img
+      src="/logo_black_text.png"
+      max-width="300px"
+      contain
+      class="ma-2 pa-2 ml-8 hidden-sm-and-down"
+    ></v-img>
+    <v-img src="/incDigitalLogoSmall.png" max-width="50px" contain class="ml-8 hidden-md-and-up"></v-img>
     <v-spacer></v-spacer>
+
+    <v-app-bar-nav-icon color="white" class="hidden-md-and-up" @click="changeDrawerStatus()"></v-app-bar-nav-icon>
     <a
       v-for="(item, i) in items"
       :key="i"
-      class="text-no-wrap my-2 mx-6 white--text"
+      class="text-no-wrap my-2 mx-6 white--text hidden-sm-and-down"
       style="text-decoration: none; font-size:22px;"
       @click="scrollToElement(item.route)"
     >{{$t(item.text)}}</a>
 
     <a
-      class="text-no-wrap py-1 px-6 accent--text"
+      class="text-no-wrap py-1 px-6 accent--text hidden-sm-and-down"
       style="text-decoration: none;
             font-size:22px;
             border-width: 1px;
@@ -30,9 +28,9 @@
       @click="scrollToElement('contact')"
     >{{$t('navbar.contact')}}</a>
 
-    <v-col cols="auto">
+    <div>
       <v-select
-        class="custom mx-6 lightText--text"
+        class="custom mx-6 lightText--text hidden-sm-and-down"
         item-color="accent"
         v-model="langSelected"
         :items="langs"
@@ -45,13 +43,17 @@
           <v-icon color="lightText">mdi-web</v-icon>
         </template>
       </v-select>
-    </v-col>
-  </v-toolbar>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>
 export default {
+  props: {
+    drawer: Boolean,
+  },
   data: () => ({
+    offsetTop: 0,
     items: [
       {
         route: "home",
@@ -75,7 +77,22 @@ export default {
     langs: ["English", "Français"],
     langSelected: "English",
   }),
+  computed: {
+    backgroundColor() {
+      const opacity = Math.min(this.offsetTop / 200, 0.6);
+      return `rgba(105, 105, 105, ${opacity})`;
+    },
+    navbarStyle() {
+      const blur = Math.min(this.offsetTop / 50, 4);
+      return `z-index:20; backdrop-filter: blur(${blur}px);`;
+    },
+  },
   methods: {
+    onScroll(e) {
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset;
+      this.offsetTop = top;
+    },
     changeLang: function (lang) {
       switch (lang) {
         case "English":
@@ -93,6 +110,9 @@ export default {
     scrollToElement(id) {
       var el = document.getElementById(id);
       el.scrollIntoView();
+    },
+    changeDrawerStatus() {
+      this.$emit("fromChild");
     },
   },
 };
