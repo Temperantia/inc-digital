@@ -2,10 +2,6 @@
   <v-container fluid>
     <v-row align="center">
       <v-col cols="12" class="px-0">
-        <h2>{{$t('index.expertise.sectionTitle')}}</h2>
-        <h1>{{$t('index.expertise.title')}}</h1>
-        <h3>{{$t('index.expertise.description')}}</h3>
-        <v-divider class="my-5 primary" width="150px" style="border-width:1px"></v-divider>
         <h4 class="py-3">{{$t('index.expertise.marketingAndDesign.title')}}</h4>
 
         <v-row class="ma-0">
