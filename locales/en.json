@@ -31,6 +31,11 @@
       "delivery": "Delivery",
       "scrollToDiscover": "SCROLL TO DISCOVER"
     },
+    "threeSteps":{
+      "researchDescription": "Research is key to us, we pay close attention to all the elements of the puzzle before initiating the dance.",
+      "planningDescription": "It is even more important to make sure we value your time. Expect accurate planning from us.",
+      "deliveryDescription": "And results will be there, your expectations delivered thanks to our method."
+    },
     "workflow": {
       "title": "Workflow",
       "ourStrategy": "Our strategy is to help you improve the efficiency, overall revenue, and day-to-day operations of your business. The workflow allows us anticipates the need for flexibility and applies a level of pragmatism to the delivery of the finished product.",

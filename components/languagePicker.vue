@@ -6,7 +6,7 @@
     :items="langs"
     hide-details
     single-line
-    style="width:130px; "
+    style="width: 130px"
     @change="changeLang(langSelected)"
   >
     <template v-slot:prepend-inner>
@@ -31,7 +31,6 @@ export default {
   },
   computed: {
     classSelect() {
-      console.log(this.mainColor);
       return `custom mx-4 ${this.mainColor}--text`;
     },
   },
@@ -40,7 +39,6 @@ export default {
       switch (lang) {
         case "English":
           this.$router.push("/");
-          console.log(this.mainColor);
           break;
 
         case "Français":

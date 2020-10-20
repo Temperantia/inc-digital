@@ -6,6 +6,7 @@
       <nuxt />
     </v-main>
     <Footer></Footer>
+    <CookieConsent></CookieConsent>
   </v-app>
 </template>
 
@@ -13,6 +14,7 @@
 import headerComp from "@/components/header";
 import footerComp from "@/components/footer";
 import drawer from "@/components/drawer.vue";
+import cookieConsent from "@/components/cookieConsent.vue";
 
 export default {
   inherit: true,
@@ -30,6 +32,7 @@ export default {
     Header: headerComp,
     Footer: footerComp,
     Drawer: drawer,
+    CookieConsent: cookieConsent,
   },
 };
 </script>

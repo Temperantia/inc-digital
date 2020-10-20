@@ -4,15 +4,17 @@
     v-on:input="$emit('input', $event)"
     temporary
     app
-    style="z-index:25"
+    style="z-index: 25"
   >
     <v-list-item-group color="accent">
       <v-list-item v-for="(item, index) in items" :key="index">
-        <v-list-item-title @click="scrollToElement(item.route)">{{$t(item.text)}}</v-list-item-title>
+        <v-list-item-title @click="scrollToElement(item.route)">{{
+          $t(item.text)
+        }}</v-list-item-title>
       </v-list-item>
-      <v-lis-item>
+      <v-list-item>
         <LanguagePicker mainColor="darken-4"></LanguagePicker>
-      </v-lis-item>
+      </v-list-item>
     </v-list-item-group>
   </v-navigation-drawer>
 </template>
@@ -34,11 +36,11 @@ export default {
         },
         // TO DO : update this when this tab exist
         /*{
-        route: "home", 
+        route: "home",
         text: "navbar.work",
       },
       {
-        route: "home", 
+        route: "home",
         text: "navbar.team",
       },
       */

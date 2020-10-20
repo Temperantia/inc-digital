@@ -50,7 +50,12 @@ export default {
   },
 
   plugins: ['~/plugins/i18n.js',
-    '~/plugins/gtm'
+           '~/plugins/gtm',
+           //cookie-law not working with server side rendering
+           {
+              src: '~/plugins/cookie-law.js',
+              mode:'client'
+            }
   ],
 
   generate: {
