@@ -6,8 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt export",
-    "serve": "nuxt serve"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/gtm": "^2.3.2",
