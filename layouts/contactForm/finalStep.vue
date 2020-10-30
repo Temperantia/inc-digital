@@ -1,29 +1,33 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
-      <div class="titleForm">{{$t('index.contactForm.titleFinalStep')}}</div>
-      <div class="subtitleForm">{{$t('index.contactForm.descriptionFinalStep')}}</div>
+      <div class="titleForm">{{ $t('index.contactForm.titleFinalStep') }}</div>
+      <div class="subtitleForm">
+        {{ $t('index.contactForm.descriptionFinalStep') }}
+      </div>
 
-      <div class="fieldTitle">{{$t('index.contactForm.fieldTimeFrame')}}</div>
+      <div class="fieldTitle">{{ $t('index.contactForm.fieldTimeFrame') }}</div>
       <v-text-field
         id="dateForContact"
         class="fieldTextInput"
-        placeholder="Have a date in mind?"
+        :placeholder="$t('index.contactForm.placeholderTimeFrame')"
         v-model="dateForContact"
         name="dateForContact"
         type="text"
-        :rules="[rules.required,]"
+        :rules="[rules.required]"
       ></v-text-field>
 
-      <div class="fieldTitle">{{$t('index.contactForm.fieldHearAboutUs')}}</div>
+      <div class="fieldTitle">
+        {{ $t('index.contactForm.fieldHearAboutUs') }}
+      </div>
       <v-text-field
         id="hearAboutUs"
         class="fieldTextInput"
-        placeholder="Word of mouth?"
+        :placeholder="$t('index.contactForm.placeholderHearAboutUs')"
         v-model="hearAboutUs"
         name="hearAboutUs"
         type="text"
-        :rules="[rules.required,]"
+        :rules="[rules.required]"
       ></v-text-field>
     </v-form>
   </v-card>
@@ -37,7 +41,7 @@ export default {
       hearAboutUs: null,
       formHasErrors: false,
       rules: {
-        required: (value) => !!value || "Required.",
+        required: (value) => !!value || 'Required.',
       },
     };
   },

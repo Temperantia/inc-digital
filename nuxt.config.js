@@ -1,41 +1,44 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from "vuetify/es5/util/colors";
 
 export default {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: 'universal',
+  mode: "universal",
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  target: "static",
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
     //titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: 'Inc•Digital',
-    meta: [{
-        charset: 'utf-8'
+    title: "Inc•Digital • Agence • Paris • Solutions Logiciel sur mesure",
+    meta: [
+      {
+        charset: "utf-8"
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
       },
       {
-        hid: 'description',
-        name: 'description',
-        content: 'Your Vision, Our Mission'
+        hid: "description",
+        name: "description",
+        content: "Your Vision, Our Mission"
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      }
+    ]
   },
   /*
    ** Global CSS
@@ -46,20 +49,21 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   router: {
-    middleware: 'i18n'
+    middleware: "i18n"
   },
 
-  plugins: ['~/plugins/i18n.js',
-           '~/plugins/gtm',
-           //cookie-law not working with server side rendering
-           {
-              src: '~/plugins/cookie-law.js',
-              mode:'client'
-            }
+  plugins: [
+    "~/plugins/i18n.js",
+    "~/plugins/gtm",
+    //cookie-law not working with server side rendering
+    {
+      src: "~/plugins/cookie-law.js",
+      mode: "client"
+    }
   ],
 
   generate: {
-    routes: ['/', '/fr']
+    routes: ["/", "/fr"]
   },
 
   /*
@@ -70,28 +74,24 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/vuetify',
-  ],
+  buildModules: ["@nuxtjs/vuetify"],
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/gtm'
-  ],
+  modules: ["@nuxtjs/gtm"],
   gtm: {
-    id: 'GTM-MCW5B4X',
+    id: "GTM-MCW5B4X",
     enabled: true,
     scriptDefer: true,
     pageTracking: true,
     // layer: 'test',
     variables: {
-      test: '1'
+      test: "1"
     }
   },
   publicRuntimeConfig: {
     gtm: {
-      id: 'GTM-MCW5B4X&runtime'
+      id: "GTM-MCW5B4X&runtime"
     }
   },
   /*
@@ -99,7 +99,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ["~/assets/variables.scss"],
     theme: {
       themes: {
         light: {
@@ -120,4 +120,4 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {}
-}
+};

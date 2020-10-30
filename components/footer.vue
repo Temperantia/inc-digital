@@ -47,11 +47,11 @@ export default {
   data() {
     return {
       socialMediaItems: [
-        { iconID: "mdi-facebook", url: "https://www.facebook.com/" },
-        { iconID: "mdi-twitter", url: "https://twitter.com/" },
-        { iconID: "mdi-linkedin", url: "https://www.linkedin.com/" },
-        { iconID: "mdi-instagram", url: "https://www.instagram.com/" },
-        { iconID: "mdi-github", url: "https://www.github.com/" },
+        { iconID: "mdi-facebook", url: "https://www.facebook.com/IncDigital-109739857556851" },
+        { iconID: "mdi-twitter", url: "https://twitter.com/IncDigital2" },
+        { iconID: "mdi-linkedin", url: "https://www.linkedin.com/company/inc-digital-inclusive/" },
+        { iconID: "mdi-instagram", url: "https://www.instagram.com/inclusive_digital/" },
+        { iconID: "mdi-github", url: "https://github.com/Inc-Digital" },
       ],
     };
   },

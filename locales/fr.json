@@ -1,90 +1,138 @@
 {
-    "links": {
-        "english": "EN",
-        "french": "FR"
+  "links": {
+    "english": "EN",
+    "french": "FR"
+  },
+  "navbar": {
+    "home": "Accueil",
+    "expertise": "Expertise",
+    "work": "Oeuvre",
+    "team": "Notre Equipe",
+    "contact": "Nous contacter"
+  },
+  "footer": {
+    "copyright": "Inc•Digital Tous Droits réservés.",
+    "clientSupport": "Support Client",
+    "termsAndPrivacy": "Politique de confidentialité",
+    "descriptionPrefix": "Inc•Digital EST UNE ENTREPRISE",
+    "descriptionSuffix": "",
+    "useOfThisSite": "L'utilisation du site est soumise à ce qui suit",
+    "termsOfUse": "Conditions d'utilisation"
+  },
+  "index": {
+    "home": {
+      "bannerLine1": "    Nous imaginons ",
+      "bannerLine2": "votre business 2.0  ",
+      "hello": "Bonjour !",
+      "incDigitalStory": "Nous sommes une agence digitale localisée à Paris, France.",
+      "whoWeAre": "Inc•Digital vous accompagne dans votre nouvelle phase.",
+      "weFocusOn": "Nous portons notre attention sur",
+      "research": "Recherche",
+      "planning": "Planification",
+      "delivery": "Livraison",
+      "scrollToDiscover": "Scrollez pour découvrir"
     },
-    "navbar": {
-        "home": "Accueil",
-        "expertise": "Expertise"
+    "threeSteps": {
+      "researchDescription": "La recherche est essentielle pour nous, nous faisons attention à toutes les pièces du puzzle avant de commencer la danse.",
+      "planningDescription": "C'est d'autant plus important de nous assurer que nous mettons votre temps à profit. Nos ateliers Meta vous le garantiront.",
+      "deliveryDescription": "Et les résultats sont là, vos attentes, grâce à notre méthode. Retour sur investissement garanti."
     },
-    "footer": {
-        "copyright": "INC-Digital Tous Droits réservés.",
-        "descriptionPrefix": "INC-DIGITAL EST UNE ENTREPRISE",
-        "descriptionSuffix": ""
+    "workflow": {
+      "title": "Solutions sur mesure",
+      "ourStrategy": "Faites converger vos attentes avec notre savoir-faire grâce à des échanges bienveillants avec nos experts digitaux autour de nos ateliers Meta.",
+      "ourStrategy2": "Transcendez vos attentes ou idées en un projet mûr et paré à toute éventualité.",
+      "communicate": {
+        "title": "Communiquer",
+        "description": "Nous commençons chacun de nos project client avec une curiosité stratégique. Nous posons les questions qui nous permette de comprendre ce que nos client veulent, et ce dont ils ont besoin."
+      },
+      "evaluate": {
+        "title": "Évaluer",
+        "description": "Le principal objectif de l'évaluation, en plus de mieux comprendre les initiatives antérieures ou existantes, est de permettre la réflexion et d'aider à l'identification des changements futurs."
+      },
+      "design": {
+        "title": "Concevoir",
+        "description": "Nous adaptons votre vision du concept à l'intégration pour apporter à votre projet une conception élégante et optimisée pour l'utilisateur."
+      },
+      "develop": {
+        "title": "Développer",
+        "description": "La phase de développement est l'implémentation du programme dans un language machine. Nous traduisons les spécifications de conception dans le code source."
+      },
+      "test": {
+        "title": "Tester",
+        "description": "Les tests permettent aux développeurs de fournir des logiciels qui répondent aux attentes, empêchent les résultats inattendus et améliorent la maintenance à long terme de l'application."
+      },
+      "release": {
+        "title": "Déployer",
+        "description": "Un déploiement est la distribution de la version finale d'une application. Nous nous assurons que le projet est livré à temps et que nous sommes en accord avec nos clients."
+      },
+      "support": {
+        "title": "Assister",
+        "description": "Nous nous assurons de répondre aux besoins de maintenance pour prendre en charge les nouvelles fonctionnalités souhaitées par les utilisateurs ou pour modifier différents types de fonctionnalités du système en fonction des demandes des clients."
+      }
     },
-    "index": {
-        "home": {
-            "bannerLine1": "    Nous construisons ",
-            "bannerLine2": "  avec vous ",
-            "bannerLine3": "votre business 2.0",
-            "hello": "Bonjour !",
-            "whoWeAre": "Nous sommes une agence localisée à Paris, France.",
-            "weFocusOn": "Nous portons notre attention sur",
-            "research": "Recherche",
-            "planning": "Planification",
-            "delivery": "Livraison"
-        },
-        "workflow": {
-            "title": "Workflow",
-            "ourStrategy": "Notre stratégie est de vous aider à améliorer l'efficacité, le chiffre d'affaire global, et les opérations quotidiennes de votre entreprise. Notre méthode de travail nous permet d'anticiper les besoins, et d'apporter de la flexibilité et du pragmatisme pour la livraison des produits finis.",
-            "communicate": {
-                "title": "Communiquer",
-                "description": "Nous commençons chacun de nos project client avec une curiosité stratégique. Nous posons les questions qui nous permette de comprendre ce que nos client veulent, et ce dont ils ont besoin."
-            },
-            "evaluate": {
-                "title": "Évaluer",
-                "description": "Le principal objectif de l'évaluation, en plus de mieux comprendre les initiatives antérieures ou existantes, est de permettre la réflexion et d'aider à l'identification des changements futurs."
-            },
-            "design": {
-                "title": "Concevoir",
-                "description": "Nous adaptons votre vision du concept à l'intégration pour apporter à votre projet une conception élégante et optimisée pour l'utilisateur."
-            },
-            "develop": {
-                "title": "Développer",
-                "description": "La phase de développement est l'implémentation du programme dans un language machine. Nous traduisons les spécifications de conception dans le code source."
-            },
-            "test": {
-                "title": "Tester",
-                "description": "Les tests permettent aux développeurs de fournir des logiciels qui répondent aux attentes, empêchent les résultats inattendus et améliorent la maintenance à long terme de l'application."
-            },
-            "release": {
-                "title": "Déployer",
-                "description": "Un déploiement est la distribution de la version finale d'une application. Nous nous assurons que le projet est livré à temps et que nous sommes en accord avec nos clients."
-            },
-            "support": {
-                "title": "Assister",
-                "description": "Nous nous assurons de répondre aux besoins de maintenance pour prendre en charge les nouvelles fonctionnalités souhaitées par les utilisateurs ou pour modifier différents types de fonctionnalités du système en fonction des demandes des clients."
-            }
-        },
-        "expertise": {
-            "title": "Un ensemble de compétences puissantes et solides",
-            "description": "Des solutions variées et innovantes pour tirer le meilleur parti de votre potentiel.",
-            "software": {
-                "title": "Logiciel",
-                "mobileDevelopment": "Développement mobile",
-                "desktopApplications": "Applications de bureau",
-                "scriptAutomation": "Automatisation de scripts",
-                "fullStack": "Full Stack",
-                "QATesting": "Contrôle qualité et tests",
-                "websiteDevelopment": "Développement de site Web",
-                "ourPhilosophy": "Lors de la création d'un logiciel, nous mettons l'utilisateur final au cœur du processus de conception. Nous veillons à performer au-delà des attentes. Nous nous soucions de l'expérience utilisateur, de l'interface utilisateur, mais aussi de la portabilité, de la fiabilité, de la flexibilité, de la maintenabilité et de la rentabilité. Nos logiciels font ce pour quoi ils sont conçus, ni plus ni moins."
-            },
-            "marketingAndDesign": {
-                "title": "Marketing & Design",
-                "uiUxDesign": "Design UI/UX",
-                "illustration": "Illustration",
-                "designConsulting": "Conseil en Design",
-                "branding": "Image de Marque",
-                "dataAnalysis": "Analyse des Données",
-                "seoSocialCampaigns": "Référencement & Campagnes Sociales",
-                "businessPlanning": "Planning d'affaires",
-                "advertisementAndContent": "Publicité & Contenu",
-                "ourPhilosophy": "Notre philosophie marketing repose vraiment sur une empathie honnête avec vos clients. Notre objectif est de permettre aux entreprises de communiquer avec les gens aussi efficacement que possible. En ce qui concerne notre conception, nous créons de l'art à partir des attentes des clients. Notre objectif est de nous intégrer à votre équipe pour vous aider à identifier et atteindre vos objectifs et développer votre entreprise."
-            }
-        },
-        "technology": {
-            "title": "La technologie est ce que nous sommes",
-            "description": "Nous utilisons de nombreux outils et technologies pour réaliser votre vision."
-        }
+    "expertise": {
+      "title": "",
+      "description": "Inc•Digital veille à comprendre vos attentes en concordance avec la méthodologie Agile, nous plaçons vos besoins en première ligne.",
+      "description2": "Dans un contexte d'évolution rapide, le respect des délais et des coûts de production sont nos priorités.",
+      "description3": "Nos solutions sont centrées Utilisateur, ce qui caractérise notre valeur core : l'inclusivité.",
+      "description4": "Afin d'obtenir un produit market fit idéal, nous sommes aussi sensibles à l'esthétique des nos oeuvres.",
+      "software": {
+        "title": "Logiciel",
+        "mobileDevelopment": "Développement mobile",
+        "desktopApplications": "Applications de bureau",
+        "scriptAutomation": "Automatisation de scripts",
+        "fullStack": "Full Stack",
+        "QATesting": "Contrôle qualité et tests",
+        "websiteDevelopment": "Développement de site Web",
+        "ourPhilosophy": "Lors de la création d'un logiciel, nous mettons l'utilisateur final au cœur du processus de conception. Nous veillons à performer au-delà des attentes. Nous nous soucions de l'expérience utilisateur, de l'interface utilisateur, mais aussi de la portabilité, de la fiabilité, de la flexibilité, de la maintenabilité et de la rentabilité. Nos logiciels font ce pour quoi ils sont conçus, ni plus ni moins."
+      },
+      "marketingAndDesign": {
+        "title": "Marketing & Design",
+        "uiUxDesign": "Design UI/UX",
+        "illustration": "Illustration",
+        "designConsulting": "Conseil en Design",
+        "branding": "Image de Marque",
+        "dataAnalysis": "Analyse des Données",
+        "seoSocialCampaigns": "Référencement & Campagnes Sociales",
+        "businessPlanning": "Planning d'affaires",
+        "advertisementAndContent": "Publicité & Contenu",
+        "ourPhilosophy": "Notre philosophie marketing repose vraiment sur une empathie honnête avec vos clients. Notre objectif est de permettre aux entreprises de communiquer avec les gens aussi efficacement que possible. En ce qui concerne notre conception, nous créons de l'art à partir des attentes des clients. Notre objectif est de nous intégrer à votre équipe pour vous aider à identifier et atteindre vos objectifs et développer votre entreprise."
+      }
+    },
+    "technology": {
+      "title": "La technologie est ce que nous sommes",
+      "description": "Nous utilisons de nombreux outils et technologies pour réaliser votre vision."
+    },
+    "contactForm": {
+      "title": "contact",
+      "subtitle": "Nous joindre",
+      "titleStepContact": "Commencer un projet",
+      "descriptionStepContact": "Merci de l'intérêt porté à notre future collaboration. Complétez les détails qui suivent et nous vous ferons un retour sous une journée.",
+      "fieldName": "Comment devons-nous vous appeler ?",
+      "placeholderName": "Votre nom ici",
+      "fieldCompanyName": "Quel est le nom de votre compagnie/organisation ?",
+      "placeholderCompanyName": "Widgets Inc",
+      "fieldEmail": "Comment vous contacter ?",
+      "placeholderEmail": "Adresse email",
+      "placeholderPhoneNumber": "Numéro de téléphone",
+      "titleStepTechnology": "Que pouvons-nous faire pour vous aider ?",
+      "descriptionStepTechnology1": "Ravi de vous rencontrer",
+      "descriptionStepTechnology2": "Sélectionnez votre projet",
+      "titleStepBudget": "Quel est votre budget ?",
+      "descriptionStepBudget": "Un budget transparent nous permettra d'assurer que vos attentes soient menées à bien. Vous n'êtes pas sûr ? Vous pouvez laisser une fourchette.",
+      "unknownBudget": "Je ne connais pas mon budget.",
+      "titleFinalStep": "Finalement ...",
+      "descriptionFinalStep": "Pour conclure",
+      "fieldTimeFrame": "Quelle est votre créneau idéal ?",
+      "placeholderTimeFrame": "Une date en tête ?",
+      "fieldHearAboutUs": "Comment nous avez-vous connu ?",
+      "placeholderHearAboutUs": "Bouche à oreille ?",
+      "buttonNext": "Suivant",
+      "buttonCancel": "Annuler",
+      "buttonSubmit": "Envoyer",
+      "sending": "En cours d'envoi",
+      "sent": "Envoyé",
+      "sendingFailed": "Envoi échoué"
     }
+  }
 }

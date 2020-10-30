@@ -4,16 +4,16 @@
       <v-img id="img1" src="/Background1.png"></v-img>
       <v-container id="home">
         <div>
-          <h2>{{ $t("index.home.whoWeAre") }}</h2>
+          <h2>{{ $t('index.home.whoWeAre') }}</h2>
           <h1>
-            <span class="accent--text">{{ $t("index.home.bannerLine1") }}</span>
-            {{ $t("index.home.bannerLine2") }}
+            <span class="accent--text">{{ $t('index.home.bannerLine1') }}</span>
+            {{ $t('index.home.bannerLine2') }}
           </h1>
           <blockquote
             class="grey--text px-4 my-6"
             style="border-left: 5px solid LightGrey; font-size: 24px"
           >
-            {{ $t("index.home.incDigitalStory") }}
+            {{ $t('index.home.incDigitalStory') }}
           </blockquote>
         </div>
       </v-container>
@@ -32,7 +32,7 @@
                   class="ma-4 align-self-center white--text"
                   style="font-size: 5vw; font-family: 'Signika', Roboto"
                 >
-                  {{ categoryItems[2].title.toUpperCase() }}
+                  {{ $t(categoryItems[2].title).toUpperCase() }}
                   <v-icon color="white">mdi-circle</v-icon>
                 </div>
               </v-slide-item>
@@ -47,7 +47,7 @@
                   style="font-family: 'Signika', Roboto"
                   :style="active ? 'font-size:8vw' : 'font-size:5vw'"
                 >
-                  {{ item.title.toUpperCase() }}
+                  {{ $t(item.title).toUpperCase() }}
                   <v-icon color="white">mdi-circle</v-icon>
                 </div>
               </v-slide-item>
@@ -57,7 +57,7 @@
                   class="ma-4 align-self-center white--text"
                   style="font-size: 5vw; font-family: 'Signika', Roboto"
                 >
-                  {{ categoryItems[0].title.toUpperCase() }}
+                  {{ $t(categoryItems[0].title).toUpperCase() }}
                 </div>
               </v-slide-item>
             </v-slide-group>
@@ -83,7 +83,7 @@
                 :key="index"
                 class="mx-4 pa-0"
                 style="font-size: 16px; font-weight: 600"
-                >{{ item.title.toUpperCase() }}</v-tab
+                >{{ $t(item.title).toUpperCase() }}</v-tab
               >
             </v-tabs>
           </v-col>
@@ -146,7 +146,13 @@
           </v-tabs-items>
         </v-container>
 
-        <workflowGroupItem></workflowGroupItem>
+        <!--<workflowGroupItem></workflowGroupItem>-->
+        <h2 id="expertise">{{ $t('index.expertise.sectionTitle') }}</h2>
+        <h1>{{ $t('index.expertise.title') }}</h1>
+        <h3>{{ $t('index.expertise.description') }}</h3>
+        <h3>{{ $t('index.expertise.description2') }}</h3>
+        <h3>{{ $t('index.expertise.description3') }}</h3>
+        <h3>{{ $t('index.expertise.description4') }}</h3>
       </div>
 
       <div id="scroll">
@@ -159,7 +165,7 @@
                 font-weight: 550;
                 border-bottom: 2px solid white;
               "
-              >{{ $t("index.home.scrollToDiscover") }}</span
+              >{{ $t('index.home.scrollToDiscover') }}</span
             >
           </v-col>
         </v-row>
@@ -168,19 +174,25 @@
       <div id="workflow" style="padding: 5vw 0px 10px 100px">
         <v-row align="center">
           <v-col cols="12" lg="8" align="center">
-            <h1 class="white--text">{{ $t("index.workflow.title") }}</h1>
+            <h1 class="white--text">{{ $t('index.workflow.title') }}</h1>
             <v-divider color="white"></v-divider>
             <p
               class="white--text pa-2 pt-5"
               style="font-size: 20px; text-align: start; letter-spacing: 1px"
             >
-              {{ $t("index.workflow.ourStrategy") }}
+              {{ $t('index.workflow.ourStrategy') }}
+            </p>
+            <p
+              class="white--text pa-2 pt-5"
+              style="font-size: 20px; text-align: start; letter-spacing: 1px"
+            >
+              {{ $t('index.workflow.ourStrategy2') }}
             </p>
           </v-col>
         </v-row>
       </div>
 
-      <expertise id="expertise" class="pt-8"></expertise>
+      <expertise id="expertise-block" class="pt-8"></expertise>
       <v-img
         id="img2"
         class="ma-4"
@@ -193,8 +205,8 @@
     </v-container>
 
     <v-container class="text-center mt-10" style="width: 76%">
-      <h1>{{ $t("index.technology.title") }}</h1>
-      <h3>{{ $t("index.technology.description") }}</h3>
+      <h1>{{ $t('index.technology.title') }}</h1>
+      <h3>{{ $t('index.technology.description') }}</h3>
       <v-divider
         class="my-8 primary"
         width="150px"
@@ -203,9 +215,9 @@
       <v-img src="/section-tech2.png"></v-img>
 
       <h2 id="contact" style="margin-top: 150px">
-        {{ $t("index.contactForm.title") }}
+        {{ $t('index.contactForm.title') }}
       </h2>
-      <h1 class="py-4">{{ $t("index.contactForm.subtitle") }}</h1>
+      <h1 class="py-4">{{ $t('index.contactForm.subtitle') }}</h1>
       <multiStepForm></multiStepForm>
     </v-container>
   </v-layout>
@@ -214,10 +226,10 @@
 
 
 <script>
-import MultiStepForm from "~/layouts/contactForm/multiStepForm.vue";
-import WorkflowGroupItem from "~/components/workflowGroupItem.vue";
-import Expertise from "~/components/expertise.vue";
-import Software from "~/components/software.vue";
+import MultiStepForm from '~/layouts/contactForm/multiStepForm.vue';
+import WorkflowGroupItem from '~/components/workflowGroupItem.vue';
+import Expertise from '~/components/expertise.vue';
+import Software from '~/components/software.vue';
 
 export default {
   data() {
@@ -228,19 +240,19 @@ export default {
 
       categoryItems: [
         {
-          title: "research",
-          imagePath: "/research-icon.svg",
-          description: "index.threeSteps.researchDescription",
+          title: 'index.home.research',
+          imagePath: '/research-icon.svg',
+          description: 'index.threeSteps.researchDescription',
         },
         {
-          title: "planning",
-          imagePath: "/planning-icon.png",
-          description: "index.threeSteps.planningDescription",
+          title: 'index.home.planning',
+          imagePath: '/planning-icon.png',
+          description: 'index.threeSteps.planningDescription',
         },
         {
-          title: "delivery",
-          imagePath: "/delivery-icon.png",
-          description: "index.threeSteps.deliveryDescription",
+          title: 'index.home.delivery',
+          imagePath: '/delivery-icon.png',
+          description: 'index.threeSteps.deliveryDescription',
         },
       ],
     };
@@ -251,7 +263,7 @@ export default {
     expertise: Expertise,
   },
   middleware(ctx) {
-    ctx.$gtm.push({ event: "nuxtRoute" });
+    ctx.$gtm.push({ event: 'nuxtRoute' });
   },
   computed: {
     modelCarrousel() {
@@ -266,9 +278,9 @@ export default {
 
 <style >
 @font-face {
-  font-family: "Signika";
-  src: local("Signika"),
-    url(/fonts/Signika/Signika-SemiBold.ttf) format("truetype");
+  font-family: 'Signika';
+  src: local('Signika'),
+    url(/fonts/Signika/Signika-SemiBold.ttf) format('truetype');
 }
 
 h1 {
@@ -388,7 +400,7 @@ html {
   z-index: 3;
 }
 
-#expertise {
+#expertise-block {
   grid-column: 2 / span 2;
   grid-row: 30 / span 6;
   z-index: 5;

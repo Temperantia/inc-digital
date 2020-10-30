@@ -11,20 +11,20 @@
     "contact": "Contact Us"
   },
   "footer": {
-    "copyright": "INC-Digital All Rights reserved.",
+    "copyright": "Inc•Digital All Rights reserved.",
     "clientSupport": "Client Support",
     "termsAndPrivacy": "Terms & Privacy",
-    "descriptionPrefix": "INC-DIGITAL IS AN",
+    "descriptionPrefix": "Inc•Digital IS AN",
     "descriptionSuffix": "COMPANY",
     "useOfThisSite": "Use of this site is subject to the following",
     "termsOfUse": "terms of use"
   },
   "index": {
     "home": {
-      "bannerLine1": "WE'RE A NEW KIND",
-      "bannerLine2": "OF DIGITAL AGENCY",
-      "whoWeAre": "We're inc digital",
-      "incDigitalStory": "INC Digital is an experience design and product development agency. We bring your ideas into reality with beautiful execution to drive your business solutions.",
+      "bannerLine1": "We imagine",
+      "bannerLine2": "Your 2.0 business",
+      "whoWeAre": "Inc•Digital supports you in your new phase.",
+      "incDigitalStory": "Inc•Digital is an experience design and product development agency. We bring your ideas into reality with beautiful execution to drive your business solutions.",
       "weFocusOn": "We focus on",
       "research": "Research",
       "planning": "Planning",
@@ -37,8 +37,9 @@
       "deliveryDescription": "And results will be there, your expectations delivered thanks to our method."
     },
     "workflow": {
-      "title": "Workflow",
-      "ourStrategy": "Our strategy is to help you improve the efficiency, overall revenue, and day-to-day operations of your business. The workflow allows us anticipates the need for flexibility and applies a level of pragmatism to the delivery of the finished product.",
+      "title": "TAILOR-MADE SOLUTIONS",
+      "ourStrategy": "Make your expectations converge with our know-how thanks to benevolent exchanges with our digital experts around our Meta workshops.",
+      "ourStrategy2": "Transform your expectations or ideas into a mature project ready for any eventuality.",
       "communicate": {
         "title": "Communicate",
         "description": "We begin every client project with strategic curiosity. We ask questions designed to understand what our clients want and need."
@@ -71,7 +72,10 @@
     "expertise": {
       "sectionTitle": "expertise",
       "title": "A powerful and robust skillset",
-      "description": "Extensive and innovative to get the most out of your bottom line.",
+      "description": "Inc•Digital ensures that you understand your expectations in accordance with the Agile methodology, we put your needs at the forefront.",
+      "description2": "In a context of rapid change, meeting deadlines and production costs are our priorities.",
+      "description3": "Our solutions are user-centric, which characterizes our core value: inclusiveness.",
+      "description4": "In order to obtain an ideal market fit product, we are also sensitive to the aesthetics of our works.",
       "software": {
         "title": "Software",
         "mobileDevelopment": "Mobile Development",
@@ -105,8 +109,12 @@
       "titleStepContact": "Start a project",
       "descriptionStepContact": "Thanks for your interest in working with us. Please complete the details below and we'll get back to you in one business day.",
       "fieldName": "What should we call you ?",
-      "fieldCompanyName": "What the name of compagny / organization?",
+      "placeholderName": "Your Name here",
+      "fieldCompanyName": "What the name of company / organization?",
+      "placeholderCompanyName": "Widgets Inc",
       "fieldEmail": "How shall we contact you ?",
+      "placeholderEmail": "Email address",
+      "placeholderPhoneNumber": "Phone number",
       "titleStepTechnology": "What can we help you with ?",
       "descriptionStepTechnology1": "Nice to meet you",
       "descriptionStepTechnology2": "Select all that apply",
@@ -116,7 +124,9 @@
       "titleFinalStep": "Lastly...",
       "descriptionFinalStep": "Let's wrap this up",
       "fieldTimeFrame": "What's your ideal timeframe ?",
+      "placeholderTimeFrame": "Have a date in mind?",
       "fieldHearAboutUs": "How did you heard about us ?",
+      "placeholderHearAboutUs": "Word of mouth?",
       "buttonNext": "Next",
       "buttonCancel": "Cancel",
       "buttonSubmit": "Submit",

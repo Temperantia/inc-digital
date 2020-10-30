@@ -1,31 +1,35 @@
 <template>
   <v-card class="ma-0 pa-0" flat>
     <v-form ref="form" align="start" justify="start">
-      <p class="titleForm">{{$t('index.contactForm.titleStepContact')}}</p>
-      <p class="subtitleForm">{{$t('index.contactForm.descriptionStepContact')}}</p>
+      <p class="titleForm">{{ $t('index.contactForm.titleStepContact') }}</p>
+      <p class="subtitleForm">
+        {{ $t('index.contactForm.descriptionStepContact') }}
+      </p>
 
-      <div class="fieldTitle">{{$t('index.contactForm.fieldName')}}</div>
+      <div class="fieldTitle">{{ $t('index.contactForm.fieldName') }}</div>
       <v-text-field
         id="name"
         v-model="contactName"
         class="fieldTextInput"
-        placeholder="Your Name here"
+        :placeholder="$t('index.contactForm.placeholderName')"
         name="contactName"
         type="text"
-        :rules="[rules.required,]"
+        :rules="[rules.required]"
       ></v-text-field>
 
-      <div class="fieldTitle">{{$t('index.contactForm.fieldCompanyName')}}</div>
+      <div class="fieldTitle">
+        {{ $t('index.contactForm.fieldCompanyName') }}
+      </div>
       <v-text-field
         id="company"
         v-model="company"
         class="fieldTextInput"
-        placeholder="Widgets Inc"
+        :placeholder="$t('index.contactForm.placeholderCompanyName')"
         name="compagny"
         type="text"
-        :rules="[rules.required,]"
+        :rules="[rules.required]"
       ></v-text-field>
-      <div class="fieldTitle">{{$t('index.contactForm.fieldEmail')}}</div>
+      <div class="fieldTitle">{{ $t('index.contactForm.fieldEmail') }}</div>
 
       <v-row justify="center">
         <v-col cols="12" md="6">
@@ -33,10 +37,10 @@
             id="email"
             v-model="email"
             class="fieldTextInput"
-            placeholder="Email address"
+            :placeholder="$t('index.contactForm.placeholderEmail')"
             name="contactemail"
             type="email"
-            :rules="[rules.required,rules.matchEmail]"
+            :rules="[rules.required, rules.matchEmail]"
           ></v-text-field>
         </v-col>
         <v-col cols="12" md="6">
@@ -44,10 +48,10 @@
             id="phoneNumber"
             v-model="phone"
             class="fieldTextInput"
-            placeholder="Phone number"
+            :placeholder="$t('index.contactForm.placeholderPhoneNumber')"
             name="contactphone"
             type="phone"
-            :rules="[rules.required,]"
+            :rules="[rules.required]"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -65,9 +69,9 @@ export default {
       phone: null,
       formHasErrors: false,
       rules: {
-        required: (value) => !!value || "Required.",
+        required: (value) => !!value || 'Required.',
         matchEmail: (value) =>
-          /.+@.+\..+/.test(value) || "E-mail must be valid",
+          /.+@.+\..+/.test(value) || 'E-mail must be valid',
       },
     };
   },

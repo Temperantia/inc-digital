@@ -19,6 +19,7 @@
           }}</span>
           {{ $t("index.home.bannerLine2") }}
         </h1>
+
         <blockquote
           class="white--text px-4 my-6"
           style="border-left: 5px solid LightGrey; font-size: 24px"
@@ -39,7 +40,7 @@
                 :key="index"
                 class="mx-4 pa-0 white--text"
                 style="font-size: 16px; font-weight: 600"
-                >{{ item.title.toUpperCase() }}</v-tab
+                >{{ $t(item.title).toUpperCase() }}</v-tab
               >
             </v-tabs>
           </v-col>
@@ -74,7 +75,7 @@
       </v-tabs-items>
     </v-container>
     <v-container class="px-4">
-      <workflowGroupItem></workflowGroupItem>
+      <!--<workflowGroupItem></workflowGroupItem>-->
       <h1>{{ $t("index.workflow.title") }}</h1>
       <v-divider
         color="primary"
@@ -125,17 +126,17 @@ export default {
 
       categoryItems: [
         {
-          title: "research",
+          title: "index.home.research",
           imagePath: "/research-icon.svg",
           description: "index.threeSteps.researchDescription",
         },
         {
-          title: "planning",
+          title: "index.home.planning",
           imagePath: "/planning-icon.png",
           description: "index.threeSteps.planningDescription",
         },
         {
-          title: "delivery",
+          title: "index.home.delivery",
           imagePath: "/delivery-icon.png",
           description: "index.threeSteps.deliveryDescription",
         },
