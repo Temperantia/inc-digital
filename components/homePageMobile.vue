@@ -11,20 +11,20 @@
     >
       <v-container id="home" class="px-4">
         <h2 class="white--text" style="margin-top: 100px">
-          {{ $t("index.home.whoWeAre") }}
+          {{ $t('index.home.whoWeAre') }}
         </h2>
         <h1 class="white--text">
           <span class="secondary--text">{{
-            $t("index.home.bannerLine1")
+            $t('index.home.bannerLine1')
           }}</span>
-          {{ $t("index.home.bannerLine2") }}
+          {{ $t('index.home.bannerLine2') }}
         </h1>
 
         <blockquote
           class="white--text px-4 my-6"
           style="border-left: 5px solid LightGrey; font-size: 24px"
         >
-          {{ $t("index.home.incDigitalStory") }}
+          {{ $t('index.home.incDigitalStory') }}
         </blockquote>
 
         <v-row align="center" class="ma-0">
@@ -76,7 +76,7 @@
     </v-container>
     <v-container class="px-4">
       <!--<workflowGroupItem></workflowGroupItem>-->
-      <h1>{{ $t("index.workflow.title") }}</h1>
+      <h1>{{ $t('index.workflow.title') }}</h1>
       <v-divider
         color="primary"
         style="border-width: 1px; width: 30%"
@@ -85,15 +85,114 @@
         class="pa-2 pt-5"
         style="font-size: 20px; text-align: start; letter-spacing: 1px"
       >
-        {{ $t("index.workflow.ourStrategy") }}
+        {{ $t('index.workflow.ourStrategy') }}
       </p>
 
       <software></software>
       <expertise id="expertise" class="pt-8"></expertise>
-
+      <v-container class="text-center mt-10">
+        <h4 class="py-3">{{ $t('index.creations.title') }}</h4>
+        <v-divider
+          class="my-5 primary"
+          width="150px"
+          style="border-width: 1px"
+        ></v-divider>
+        <v-row>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img style="width: 50%" src="/filinfos.png" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client1') }}
+            </div>
+            <img src="/filinfos.webp" style="width: 100%;" />
+          </v-col>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img src="/instylelogo.png" style="width: 50%" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client2') }}
+            </div>
+            <img src="/instyle.png" style="width: 100%;" />
+          </v-col>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img src="/vulcainlogo.png" style="width: 50%" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client3') }}
+            </div>
+            <img style="width: 100%" src="/vulcain.png" />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img src="/artboxlogo.png" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client4') }}
+            </div>
+            <img style="width: 100%" src="/artboxresp.png" />
+          </v-col>
+        </v-row>
+      </v-container>
       <v-container class="text-center">
-        <h1>{{ $t("index.technology.title") }}</h1>
-        <h3>{{ $t("index.technology.description") }}</h3>
+        <h1>{{ $t('index.technology.title') }}</h1>
+        <h3>{{ $t('index.technology.description') }}</h3>
         <v-divider
           class="my-8 primary"
           width="150px"
@@ -101,8 +200,8 @@
         ></v-divider>
         <v-img src="/section-tech2.png"></v-img>
 
-        <h2 id="contact" class="mt-8">{{ $t("index.contactForm.title") }}</h2>
-        <h1 class="py-4">{{ $t("index.contactForm.subtitle") }}</h1>
+        <h2 id="contact" class="mt-8">{{ $t('index.contactForm.title') }}</h2>
+        <h1 class="py-4">{{ $t('index.contactForm.subtitle') }}</h1>
         <multiStepForm></multiStepForm>
       </v-container>
     </v-container>
@@ -112,10 +211,10 @@
 
 
 <script>
-import MultiStepForm from "~/layouts/contactForm/multiStepForm.vue";
-import WorkflowGroupItem from "~/components/workflowGroupItem.vue";
-import Expertise from "~/components/expertise.vue";
-import Software from "~/components/software.vue";
+import MultiStepForm from '~/layouts/contactForm/multiStepForm.vue';
+import WorkflowGroupItem from '~/components/workflowGroupItem.vue';
+import Expertise from '~/components/expertise.vue';
+import Software from '~/components/software.vue';
 
 export default {
   data() {
@@ -126,19 +225,19 @@ export default {
 
       categoryItems: [
         {
-          title: "index.home.research",
-          imagePath: "/research-icon.svg",
-          description: "index.threeSteps.researchDescription",
+          title: 'index.home.research',
+          imagePath: '/research-icon.svg',
+          description: 'index.threeSteps.researchDescription',
         },
         {
-          title: "index.home.planning",
-          imagePath: "/planning-icon.png",
-          description: "index.threeSteps.planningDescription",
+          title: 'index.home.planning',
+          imagePath: '/planning-icon.png',
+          description: 'index.threeSteps.planningDescription',
         },
         {
-          title: "index.home.delivery",
-          imagePath: "/delivery-icon.png",
-          description: "index.threeSteps.deliveryDescription",
+          title: 'index.home.delivery',
+          imagePath: '/delivery-icon.png',
+          description: 'index.threeSteps.deliveryDescription',
         },
       ],
     };
@@ -149,7 +248,7 @@ export default {
     expertise: Expertise,
   },
   middleware(ctx) {
-    ctx.$gtm.push({ event: "nuxtRoute" });
+    ctx.$gtm.push({ event: 'nuxtRoute' });
   },
   computed: {
     modelCarrousel() {
@@ -164,9 +263,9 @@ export default {
 
 <style >
 @font-face {
-  font-family: "Signika";
-  src: local("Signika"),
-    url(/fonts/Signika/Signika-SemiBold.ttf) format("truetype");
+  font-family: 'Signika';
+  src: local('Signika'),
+    url(/fonts/Signika/Signika-SemiBold.ttf) format('truetype');
 }
 
 h1 {

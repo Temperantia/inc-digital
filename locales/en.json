@@ -99,6 +99,13 @@
         "ourPhilosophy": "Our marketing philosophy is really all about honest empathy with your customers. Our goal is to be able to make business communicating with people as efficiently as possible. As for our design thinking, We create Art from client expectations. Our goal is to integrate with your team to help you identify and achieve your objectives and grow your business."
       }
     },
+    "creations": {
+      "title": "Our creations",
+      "client1": "Burkina Faso company Filinfos desired a News Mobile App for their new website",
+      "client2": "A mother wished her daughters could sort and try out their clothes in a Mobile App",
+      "client3": "Start of fire reporting tool for firemen in France",
+      "client4": "Artbox, a local business, wanted to enter the digital world with an ecommerce platform"
+    },
     "technology": {
       "title": "Technology is who we are",
       "description": "We utilize many platforms and frameworks to accomplish your vision."

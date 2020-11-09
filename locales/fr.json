@@ -99,6 +99,13 @@
         "ourPhilosophy": "Notre philosophie marketing repose vraiment sur une empathie honnête avec vos clients. Notre objectif est de permettre aux entreprises de communiquer avec les gens aussi efficacement que possible. En ce qui concerne notre conception, nous créons de l'art à partir des attentes des clients. Notre objectif est de nous intégrer à votre équipe pour vous aider à identifier et atteindre vos objectifs et développer votre entreprise."
       }
     },
+    "creations": {
+      "title": "Nos créations",
+      "client1": "L'entreprise Filinfos au Burkina Faso désirait une Application Mobile d'actualités pour leur nouveau site web",
+      "client2": "Une mère souhaitait que ses filles puissent ranger et essayer leurs vêtements dans une Application Mobile",
+      "client3": "Un outil de signalement de départ de feu pour les pompiers en France",
+      "client4": "Artbox, une entreprise locale, voulait entrer dans le monde digital avec une plateforme ecommerce"
+    },
     "technology": {
       "title": "La technologie est ce que nous sommes",
       "description": "Nous utilisons de nombreux outils et technologies pour réaliser votre vision."

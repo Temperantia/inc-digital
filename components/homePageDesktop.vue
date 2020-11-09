@@ -203,7 +203,90 @@
       <v-img id="img3" contain src="/section-software.png"></v-img>
       <software id="software" class="pl-8"></software>
     </v-container>
-
+    <v-container class="text-center mt-10">
+      <h4 class="py-3">{{ $t('index.creations.title') }}</h4>
+      <v-divider
+        class="my-5 primary"
+        width="150px"
+        style="border-width: 1px"
+      ></v-divider>
+      <v-row style="height: 700px">
+        <v-col cols="4" class="px-15">
+          <div
+            style="
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img style="width: 50%" src="/filinfos.png" />
+          </div>
+          <div style="height: 25%; display: flex; justify-content: center">
+            {{ $t('index.creations.client1') }}
+          </div>
+          <div style="height: 50%">
+            <img style="width: 100%;" src="/filinfos.webp" />
+          </div>
+        </v-col>
+        <v-col cols="4" class="px-15">
+          <div
+            style="
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img src="/instylelogo.png" style="width: 50%" />
+          </div>
+          <div style="height: 25%; display: flex; justify-content: center">
+            {{ $t('index.creations.client2') }}
+          </div>
+          <div style="height: 50%">
+            <img style="width: 100%;" src="/instyle.png" />
+          </div>
+        </v-col>
+        <v-col cols="4" class="px-15">
+          <div
+            style="
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img src="/vulcainlogo.png" style="width: 50%" />
+          </div>
+          <div style="height: 25%; display: flex; justify-content: center">
+            {{ $t('index.creations.client3') }}
+          </div>
+          <div style="height: 50%">
+            <img style="width: 100%;" src="/vulcain.png" />
+          </div>
+        </v-col>
+      </v-row>
+      <v-row class="pa-15" style="height: 900px">
+        <v-col cols="12" class="px-15">
+          <div
+            style="
+              height: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img src="/artboxlogo.png" />
+          </div>
+          <div style="height: 10%; display: flex; justify-content: center">
+            {{ $t('index.creations.client4') }}
+          </div>
+          <div style="height: 60%">
+            <img style="width: 100%" src="/artbox.png" />
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
     <v-container class="text-center mt-10" style="width: 76%">
       <h1>{{ $t('index.technology.title') }}</h1>
       <h3>{{ $t('index.technology.description') }}</h3>
