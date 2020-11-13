@@ -282,7 +282,7 @@
             {{ $t('index.creations.client4') }}
           </div>
           <div style="height: 60%">
-            <img style="width: 100%" src="/artbox.png" />
+            <img style="width: 500px" src="/artbox.png" />
           </div>
         </v-col>
       </v-row>
