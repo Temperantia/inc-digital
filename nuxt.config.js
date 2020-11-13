@@ -63,7 +63,7 @@ export default {
   ],
 
   generate: {
-    routes: ["/", "/fr"]
+    routes: ["/", "/privacy-policy", "/terms-of-use", "/fr", "/fr/privacy-policy", "/fr/terms-of-use"]
   },
 
   /*

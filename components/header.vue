@@ -1,41 +1,66 @@
 <template>
-  <v-app-bar flat :color="backgroundColor" fixed v-scroll="onScroll" :style="navbarStyle">
+  <v-app-bar
+    flat
+    :color="backgroundColor"
+    fixed
+    v-scroll="onScroll"
+    :style="navbarStyle"
+  >
     <v-img
       src="/logo_black_text.png"
       max-height="40px"
       contain
       class="ma-2 pa-2 ml-8 hidden-sm-and-down"
     ></v-img>
-    <v-img src="/incDigitalLogoSmall.png" max-height="40px" contain class="ml-8 hidden-md-and-up"></v-img>
+    <v-img
+      src="/incDigitalLogoSmall.png"
+      max-height="40px"
+      contain
+      class="ml-8 hidden-md-and-up"
+    ></v-img>
     <v-spacer></v-spacer>
 
-    <v-app-bar-nav-icon color="white" class="hidden-md-and-up" @click="changeDrawerStatus()"></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon
+      color="white"
+      class="hidden-md-and-up"
+      @click="changeDrawerStatus()"
+    ></v-app-bar-nav-icon>
+
     <a
-      v-for="(item, i) in items"
+      v-for="(item, i) in $route.path === '/' || $route.path === '/fr'
+        ? items
+        : items.filter((item) => !item.home)"
       :key="i"
       class="text-no-wrap my-2 mx-6 white--text hidden-sm-and-down"
-      style="text-decoration: none; font-size:22px;"
+      style="text-decoration: none; font-size: 22px"
       @click="scrollToElement(item.route)"
-    >{{$t(item.text)}}</a>
+      >{{ $t(item.text) }}</a
+    >
 
     <a
+      v-if="$route.path === '/' || $route.path === '/fr'"
       class="text-no-wrap py-1 px-6 accent--text hidden-sm-and-down"
-      style="text-decoration: none;
-            font-size:22px;
-            border-width: 1px;
-            border-style: solid;
-            "
+      style="
+        text-decoration: none;
+        font-size: 22px;
+        border-width: 1px;
+        border-style: solid;
+      "
       @click="scrollToElement('contact')"
-    >{{$t('navbar.contact')}}</a>
+      >{{ $t('navbar.contact') }}</a
+    >
 
     <div>
-      <LanguagePicker class="hidden-sm-and-down" mainColor="lightText"></LanguagePicker>
+      <LanguagePicker
+        class="hidden-sm-and-down"
+        mainColor="lightText"
+      ></LanguagePicker>
     </div>
   </v-app-bar>
 </template>
 
 <script>
-import languagePicker from "@/components/languagePicker";
+import languagePicker from '@/components/languagePicker';
 
 export default {
   props: {
@@ -45,20 +70,26 @@ export default {
     offsetTop: 0,
     items: [
       {
-        route: "home",
-        text: "navbar.home",
+        route: 'home',
+        text: 'navbar.home',
       },
       {
-        route: "expertise",
-        text: "navbar.expertise",
+        route: 'expertise',
+        text: 'navbar.expertise',
+        home: true,
+      },
+      {
+        route: 'creations',
+        text: 'navbar.creations',
+        home: true,
       },
       // TO DO : update this when this tab exist
       /*{
-        route: "home", 
+        route: "home",
         text: "navbar.work",
       },
       {
-        route: "home", 
+        route: "home",
         text: "navbar.team",
       },
       */
@@ -66,7 +97,8 @@ export default {
   }),
   computed: {
     backgroundColor() {
-      const opacity = Math.min(this.offsetTop / 200, 0.6);
+      //const opacity = Math.min(this.offsetTop / 200, 0.6);
+      const opacity = 0.6;
       return `rgba(105, 105, 105, ${opacity})`;
     },
     navbarStyle() {
@@ -76,7 +108,7 @@ export default {
   },
   methods: {
     onScroll(e) {
-      if (typeof window === "undefined") return;
+      if (typeof window === 'undefined') return;
       const top = window.pageYOffset;
       this.offsetTop = top;
     },
@@ -85,7 +117,7 @@ export default {
       el.scrollIntoView();
     },
     changeDrawerStatus() {
-      this.$emit("fromChild");
+      this.$emit('fromChild');
     },
   },
   components: {

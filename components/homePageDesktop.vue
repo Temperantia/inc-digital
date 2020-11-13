@@ -203,7 +203,7 @@
       <v-img id="img3" contain src="/section-software.png"></v-img>
       <software id="software" class="pl-8"></software>
     </v-container>
-    <v-container class="text-center mt-10">
+    <v-container id="creations" class="text-center mt-10">
       <h4 class="py-3">{{ $t('index.creations.title') }}</h4>
       <v-divider
         class="my-5 primary"
