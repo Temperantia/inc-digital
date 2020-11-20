@@ -269,7 +269,7 @@ export default {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 500;
   text-align: left;

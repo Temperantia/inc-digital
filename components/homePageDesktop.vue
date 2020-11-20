@@ -193,14 +193,8 @@
       </div>
 
       <expertise id="expertise-block" class="pt-8"></expertise>
-      <v-img
-        id="img2"
-        class="ma-4"
-        max-height="900px"
-        contain
-        src="/section-marketingdesign.png"
-      ></v-img>
-      <v-img id="img3" contain src="/section-software.png"></v-img>
+      <img id="img2" class="ma-4" src="/section-marketingdesign.png" />
+      <img id="img3" src="/section-software.png" />
       <software id="software" class="pl-8"></software>
     </v-container>
     <v-container id="creations" class="text-center mt-10">
@@ -210,7 +204,7 @@
         width="150px"
         style="border-width: 1px"
       ></v-divider>
-      <v-row style="height: 700px">
+      <v-row>
         <v-col cols="4" class="px-15">
           <div
             style="
@@ -226,7 +220,7 @@
             {{ $t('index.creations.client1') }}
           </div>
           <div style="height: 50%">
-            <img style="width: 100%;" src="/filinfos.webp" />
+            <img style="width: 100%" src="/filinfos.webp" />
           </div>
         </v-col>
         <v-col cols="4" class="px-15">
@@ -244,7 +238,7 @@
             {{ $t('index.creations.client2') }}
           </div>
           <div style="height: 50%">
-            <img style="width: 100%;" src="/instyle.png" />
+            <img style="width: 100%" src="/instyle.png" />
           </div>
         </v-col>
         <v-col cols="4" class="px-15">
@@ -262,11 +256,11 @@
             {{ $t('index.creations.client3') }}
           </div>
           <div style="height: 50%">
-            <img style="width: 100%;" src="/vulcain.png" />
+            <img style="width: 100%" src="/vulcain.png" />
           </div>
         </v-col>
       </v-row>
-      <v-row class="pa-15" style="height: 900px">
+      <v-row class="pa-15">
         <v-col cols="12" class="px-15">
           <div
             style="
@@ -295,9 +289,9 @@
         width="150px"
         style="border-width: 1px"
       ></v-divider>
-      <v-img src="/section-tech2.png"></v-img>
+      <img style="height: 200px" src="/section-tech2.png">
 
-      <h2 id="contact" style="margin-top: 150px">
+      <h2 id="contact">
         {{ $t('index.contactForm.title') }}
       </h2>
       <h1 class="py-4">{{ $t('index.contactForm.subtitle') }}</h1>
@@ -367,7 +361,7 @@ export default {
 }
 
 h1 {
-  font-size: 3.5vw;
+  font-size: 3vw;
   text-transform: uppercase;
   font-weight: 500;
   text-align: left;
@@ -479,7 +473,7 @@ html {
 
 #workflow {
   grid-column: 4 / span 1;
-  grid-row: 14 / span 6;
+  grid-row: 12 / span 6;
   z-index: 3;
 }
 
@@ -493,9 +487,13 @@ html {
   grid-column: 4 / span 1;
   grid-row: 30 / span 6;
   z-index: 5;
+  max-height: 500px;
+  padding-left: 200px;
 }
 
 #img3 {
+  width: 100%;
+  max-height: 800px;
   grid-column: 1 / span 3;
   grid-row: 24 / span 6;
   z-index: 5;
