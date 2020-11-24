@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="pa-0">
-    <home-page-desktop v-if="this.$vuetify.breakpoint.mdAndUp"></home-page-desktop>
+    <home-page-desktop v-if="this.$vuetify.breakpoint.smAndUp"></home-page-desktop>
     <home-page-mobile v-else></home-page-mobile>
   </v-container>
 </template>

@@ -204,7 +204,7 @@
         width="150px"
         style="border-width: 1px"
       ></v-divider>
-      <v-row>
+      <v-row style="height: 700px">
         <v-col cols="4" class="px-15">
           <div
             style="
@@ -219,7 +219,14 @@
           <div style="height: 25%; display: flex; justify-content: center">
             {{ $t('index.creations.client1') }}
           </div>
-          <div style="height: 50%">
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
             <img style="width: 100%" src="/filinfos.webp" />
           </div>
         </v-col>
@@ -234,11 +241,18 @@
           >
             <img src="/instylelogo.png" style="width: 50%" />
           </div>
-          <div style="height: 25%; display: flex; justify-content: center">
+          <div style="height: 25%">
             {{ $t('index.creations.client2') }}
           </div>
-          <div style="height: 50%">
-            <img style="width: 100%" src="/instyle.png" />
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img style="width: 100%;" src="/instyle.png" />
           </div>
         </v-col>
         <v-col cols="4" class="px-15">
@@ -255,7 +269,14 @@
           <div style="height: 25%; display: flex; justify-content: center">
             {{ $t('index.creations.client3') }}
           </div>
-          <div style="height: 50%">
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
             <img style="width: 100%" src="/vulcain.png" />
           </div>
         </v-col>
@@ -289,7 +310,7 @@
         width="150px"
         style="border-width: 1px"
       ></v-divider>
-      <img style="height: 200px" src="/section-tech2.png">
+      <img style="height: 200px" src="/section-tech2.png" />
 
       <h2 id="contact">
         {{ $t('index.contactForm.title') }}
