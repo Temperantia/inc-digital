@@ -10,7 +10,6 @@
           <v-container class="pa-4">
             <div
               :class="disabled ? 'grey--text':'black--text'"
-              style="font-size:20px; font-weight:500"
             >${{range[0]/1000}}K — ${{range[1]/1000}}K</div>
           </v-container>
         </template>
@@ -29,10 +28,10 @@
             class="align-center"
           >
             <template v-slot:prepend>
-              <div style="font-size:20px">${{min/1000}}K</div>
+              <div>${{min/1000}}K</div>
             </template>
             <template v-slot:append>
-              <div style="font-size:20px">${{max/1000}}K</div>
+              <div>${{max/1000}}K</div>
             </template>
           </v-range-slider>
         </v-col>

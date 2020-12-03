@@ -3,7 +3,7 @@
     <v-col cols="12" sm="8">
       <v-row>
         <v-col cols="6" md="3">
-          <div class="grey--text ma-4" style="font-size: 18px">
+          <div class="grey--text ma-4">
             {{ $t('footer.clientSupport') }}
           </div>
         </v-col>
@@ -12,7 +12,7 @@
             :to="`${
               $route.params.lang ? `/${$route.params.lang}` : ''
             }/privacy-policy`"
-            ><div class="grey--text ma-4" style="font-size: 18px">
+            ><div class="grey--text ma-4">
               {{ $t('footer.termsAndPrivacy') }}
             </div></router-link
           >

@@ -32,7 +32,7 @@
         : items.filter((item) => !item.home)"
       :key="i"
       class="text-no-wrap my-2 mx-6 white--text hidden-sm-and-down"
-      style="text-decoration: none; font-size: 22px"
+      style="text-decoration: none;"
       @click="scrollToElement(item.route)"
       >{{ $t(item.text) }}</a
     >
@@ -42,7 +42,6 @@
       class="text-no-wrap py-1 px-6 accent--text hidden-sm-and-down"
       style="
         text-decoration: none;
-        font-size: 22px;
         border-width: 1px;
         border-style: solid;
       "

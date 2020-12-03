@@ -27,7 +27,7 @@
             </div>
           </v-col>
         </v-row>
-        <p class="pr-6 my-4" style="font-size: 18px">
+        <p class="pr-6 my-4" >
           {{ $t("index.expertise.software.ourPhilosophy") }}
         </p>
       </v-col>

@@ -11,7 +11,7 @@
           </h1>
           <blockquote
             class="grey--text px-4 my-6"
-            style="border-left: 5px solid LightGrey; font-size: 24px"
+            style="border-left: 5px solid LightGrey; font-size: 1.7vw"
           >
             {{ $t('index.home.incDigitalStory') }}
           </blockquote>
@@ -82,7 +82,7 @@
                 v-for="(item, index) in categoryItems"
                 :key="index"
                 class="mx-4 pa-0"
-                style="font-size: 16px; font-weight: 600"
+                style="font-size: 1vw; font-weight: 600"
                 >{{ $t(item.title).toUpperCase() }}</v-tab
               >
             </v-tabs>
@@ -161,7 +161,7 @@
             <span
               class="white--text"
               style="
-                font-size: 22px;
+                font-size: 1vw;
                 font-weight: 550;
                 border-bottom: 2px solid white;
               "
@@ -172,19 +172,19 @@
       </div>
 
       <div id="workflow" style="padding: 5vw 0px 10px 100px">
-        <v-row align="center">
+        <v-row align="center" style="justify-content: center">
           <v-col cols="12" lg="8" align="center">
             <h1 class="white--text">{{ $t('index.workflow.title') }}</h1>
             <v-divider color="white"></v-divider>
             <p
               class="white--text pa-2 pt-5"
-              style="font-size: 20px; text-align: start; letter-spacing: 1px"
+              style="font-size: 1vw; text-align: start; letter-spacing: 1px"
             >
               {{ $t('index.workflow.ourStrategy') }}
             </p>
             <p
               class="white--text pa-2 pt-5"
-              style="font-size: 20px; text-align: start; letter-spacing: 1px"
+              style="font-size: 1vw; text-align: start; letter-spacing: 1px"
             >
               {{ $t('index.workflow.ourStrategy2') }}
             </p>
@@ -204,8 +204,8 @@
         width="150px"
         style="border-width: 1px"
       ></v-divider>
-      <v-row style="height: 700px">
-        <v-col cols="4" class="px-15">
+      <v-row style="height: 40vw; min-height: 700px">
+        <v-col cols="4" class="px-5">
           <div
             style="
               height: 25%;
@@ -230,7 +230,7 @@
             <img style="width: 100%" src="/filinfos.webp" />
           </div>
         </v-col>
-        <v-col cols="4" class="px-15">
+        <v-col cols="4" class="px-5">
           <div
             style="
               height: 25%;
@@ -252,10 +252,10 @@
               align-items: center;
             "
           >
-            <img style="width: 100%;" src="/instyle.png" />
+            <img style="width: 100%" src="/instyle.png" />
           </div>
         </v-col>
-        <v-col cols="4" class="px-15">
+        <v-col cols="4" class="px-5">
           <div
             style="
               height: 25%;
@@ -281,11 +281,36 @@
           </div>
         </v-col>
       </v-row>
-      <v-row class="pa-15">
-        <v-col cols="12" class="px-15">
+      <v-row style="height: 40vw; min-height: 700px">
+        <v-col cols="4" class="px-5">
           <div
             style="
-              height: 20%;
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img src="/soiedivinelogo.jpg" style="width: 25%" />
+          </div>
+          <div style="height: 25%">
+            {{ $t('index.creations.client5') }}
+          </div>
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img style="width: 100%" src="/soiedivineLaptopMockup.png" />
+          </div>
+        </v-col>
+        <v-col cols="4" class="px-5">
+          <div
+            style="
+              height: 25%;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -293,11 +318,43 @@
           >
             <img src="/artboxlogo.png" />
           </div>
-          <div style="height: 10%; display: flex; justify-content: center">
+          <div style="height: 25%">
             {{ $t('index.creations.client4') }}
           </div>
-          <div style="height: 60%">
-            <img style="width: 500px" src="/artbox.png" />
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img style="width: 100%" src="/artbox.png" />
+          </div>
+        </v-col>
+        <v-col cols="4" class="px-5">
+          <div
+            style="
+              height: 25%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img src="/angegardienlogo.png" style="width: 50%" />
+          </div>
+          <div style="height: 25%">
+            {{ $t('index.creations.client6') }}
+          </div>
+          <div
+            style="
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <img style="width: 100%" src="/angegardienLaptopMockup.png" />
           </div>
         </v-col>
       </v-row>
@@ -382,7 +439,7 @@ export default {
 }
 
 h1 {
-  font-size: 3vw;
+  font-size: 2vw;
   text-transform: uppercase;
   font-weight: 500;
   text-align: left;
@@ -391,7 +448,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  font-size: 21px;
+  font-size: 1.8vw;
   text-align: left;
   padding: 6px;
   color: rgb(125, 125, 125);
@@ -401,19 +458,19 @@ h2 {
 h3 {
   text-align: left;
   padding: 4px 0 4px 0;
-  font-size: 28px;
+  font-size: 1.3vw;
   font-weight: 500;
 }
 
 h4 {
   text-align: left;
   padding: 4px 0 4px 0;
-  font-size: 28px;
+  font-size: 1vw;
   letter-spacing: 6px;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 600;
 }
 .col.custCol {
@@ -429,7 +486,7 @@ h5 {
 .fieldTitle {
   padding: 5px 0px 5px 0px;
   margin: 0px 0px 0px 0px;
-  font-size: 18px;
+  font-size: 1vw;
   font-weight: 500;
 
   color: black;
@@ -445,6 +502,7 @@ h5 {
 
 html {
   scroll-behavior: smooth;
+  font-size: 1vw;
 }
 
 .v-slide-group__prev {
@@ -463,14 +521,15 @@ html {
 
 #home {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 3 / span 3;
   z-index: 3;
   padding-top: 40px;
 }
 
 #tabs {
-  grid-column: 2 / span 2;
-  grid-row: 10 / span 13;
+  padding-left: 100px;
+  grid-column: 1 / span 2;
+  grid-row: 13 / span 3;
   z-index: 10;
 }
 
@@ -494,7 +553,7 @@ html {
 
 #workflow {
   grid-column: 4 / span 1;
-  grid-row: 12 / span 6;
+  grid-row: 16 / span 6;
   z-index: 3;
 }
 

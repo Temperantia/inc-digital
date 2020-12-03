@@ -22,7 +22,7 @@
 
         <blockquote
           class="white--text px-4 my-6"
-          style="border-left: 5px solid LightGrey; font-size: 24px"
+          style="border-left: 5px solid LightGrey; font-size: 1vw"
         >
           {{ $t('index.home.incDigitalStory') }}
         </blockquote>
@@ -39,7 +39,7 @@
                 v-for="(item, index) in categoryItems"
                 :key="index"
                 class="mx-4 pa-0 white--text"
-                style="font-size: 16px; font-weight: 600"
+                style="font-size: 1vw; font-weight: 600"
                 >{{ $t(item.title).toUpperCase() }}</v-tab
               >
             </v-tabs>
@@ -83,7 +83,7 @@
       ></v-divider>
       <p
         class="pa-2 pt-5"
-        style="font-size: 20px; text-align: start; letter-spacing: 1px"
+        style="font-size: 1vw; text-align: start; letter-spacing: 1px"
       >
         {{ $t('index.workflow.ourStrategy') }}
       </p>
@@ -118,7 +118,7 @@
             >
               {{ $t('index.creations.client1') }}
             </div>
-            <img src="/filinfos.webp" style="width: 100%;" />
+            <img src="/filinfos.webp" style="width: 100%" />
           </v-col>
           <v-col cols="12">
             <div
@@ -140,7 +140,7 @@
             >
               {{ $t('index.creations.client2') }}
             </div>
-            <img src="/instyle.png" style="width: 100%;" />
+            <img src="/instyle.png" style="width: 100%" />
           </v-col>
           <v-col cols="12">
             <div
@@ -174,6 +174,28 @@
                 align-items: center;
               "
             >
+              <img src="/soiedivinelogo.jpg" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client5') }}
+            </div>
+            <img style="width: 100%" src="/soiedivineMockup.png" />
+          </v-col>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
               <img src="/artboxlogo.png" />
             </div>
             <div
@@ -187,6 +209,28 @@
               {{ $t('index.creations.client4') }}
             </div>
             <img style="width: 100%" src="/artboxresp.png" />
+          </v-col>
+          <v-col cols="12">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <img src="/angegardienlogo.png" />
+            </div>
+            <div
+              class="py-10"
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              {{ $t('index.creations.client6') }}
+            </div>
+            <img style="width: 100%" src="/angegardienMockup.png" />
           </v-col>
         </v-row>
       </v-container>
@@ -268,41 +312,6 @@ export default {
     url(/fonts/Signika/Signika-SemiBold.ttf) format('truetype');
 }
 
-h1 {
-  font-size: 30px;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-align: left;
-  padding: 6px 0 6px 0;
-}
-
-h2 {
-  text-transform: uppercase;
-  font-size: 21px;
-  text-align: left;
-  padding: 6px;
-  color: rgb(125, 125, 125);
-  letter-spacing: 2px;
-}
-
-h3 {
-  text-align: left;
-  padding: 4px 0 4px 0;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-h4 {
-  text-align: left;
-  padding: 4px 0 4px 0;
-  font-size: 28px;
-  letter-spacing: 6px;
-}
-
-h5 {
-  font-size: 20px;
-  font-weight: 600;
-}
 .col.custCol {
   padding: 0;
   flex-grow: 0;
@@ -311,15 +320,6 @@ h5 {
 .v-btn {
   background-size: cover;
   border: none;
-}
-
-.fieldTitle {
-  padding: 5px 0px 5px 0px;
-  margin: 0px 0px 0px 0px;
-  font-size: 18px;
-  font-weight: 500;
-
-  color: black;
 }
 
 .fieldTextInput {

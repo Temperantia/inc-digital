@@ -192,12 +192,7 @@ export default {
 </script>
 
 <style>
-.titleForm {
-  font-size: 30px;
-  font-weight: 500;
-}
 .subtitleForm {
-  font-size: 20px;
   padding-bottom: 16px;
 }
 </style>
