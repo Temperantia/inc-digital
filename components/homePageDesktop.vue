@@ -69,7 +69,7 @@
         </div>
       </div>
 
-      <div id="tabs" class="pa-4" style="background-color: white">
+      <div id="tabs" style="background-color: white">
         <v-row align="center" class="ma-0">
           <v-col cols="10">
             <v-tabs
@@ -149,10 +149,10 @@
         <!--<workflowGroupItem></workflowGroupItem>-->
         <h2 id="expertise">{{ $t('index.expertise.sectionTitle') }}</h2>
         <h1>{{ $t('index.expertise.title') }}</h1>
-        <h3>{{ $t('index.expertise.description') }}</h3>
-        <h3>{{ $t('index.expertise.description2') }}</h3>
-        <h3>{{ $t('index.expertise.description3') }}</h3>
-        <h3>{{ $t('index.expertise.description4') }}</h3>
+        <p>{{ $t('index.expertise.description') }}</p>
+        <p>{{ $t('index.expertise.description2') }}</p>
+        <p>{{ $t('index.expertise.description3') }}</p>
+        <p>{{ $t('index.expertise.description4') }}</p>
       </div>
 
       <div id="scroll">
